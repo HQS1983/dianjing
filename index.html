@@ -1,0 +1,524 @@
+<!--时间：2018-07-10 11:21:22
+	作者：HQS
+	描述：贴吧电竞 主页
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>电竞首页</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="icon" href="img/favicon.ico" mce_href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/commonality.css"/>
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index1.css"/>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="pc" style="display: none;">
+		<!--头部导航菜单-->
+		<div class="top">
+			<div class="top_div">
+				<a class="logo" href="index.html"><img src="img/public/logo.png"/></a>
+				<ul><li><a href="index.html">首页</a></li>
+					<li><a href="game.html">游戏</a></li>
+					<li><a href="edg.html">战队</a></li>
+					<li><a href="guide.html">办赛指南</a></li>
+					<li><a href="userCenter.html">注册/登录</a></li>
+					<li><a href="javascript:;">创建战队</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--主体-->
+		<div class="main dis_block">
+
+			<!--顶部轮播海报-->
+			<div class="banner">
+				<div class="banner_bg banner_bg1"></div>
+				<div class="banner_bg banner_bg2"></div>
+				<div class="banner_bg banner_bg3"></div>
+				<div class="banner_bg banner_bg4"></div>
+				<div class="banner_bg banner_bg5"></div>
+			</div>
+			
+			<!--游戏列表-->
+			<div class="GamesList">
+				<div class="GamesList_div">
+					
+				</div>
+			</div>
+			
+			<!--时事-->
+			<div class="content" id="ambassador">
+				<div class="content_div">
+					<!--热门赛事-->
+					<div class="PopularEvents">
+						
+					</div>
+					<!--新闻资讯-->
+					<div class="news">
+						
+					</div>
+				</div>
+			</div>
+		
+			<!--榜单-->
+			<div class="crunchies">
+				<div class="crunchies_div">
+					<!--战队榜-->
+					<div class="edg">
+						
+					</div>
+					<!--赛事榜-->
+					<div class="Competition">
+						
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			<!--联系我们-->
+			<div class="about" id="about">
+				<div class="about_main">
+					<p class="about_title">联系我们</p>
+					<p class="about_describe">我们总是乐于帮助你，请选择最适合你的方式联系我们！ </p>
+					<div class="about_address">
+						<p style="margin-top: 8px;">总址：上海市闵行区虹井路288号B座703室</p>
+						<p>分部：广州市天河区广州信息港方圆E时光西座28楼</p>
+						<p>邮编：510000</p>
+						<p>电话：+86 13901779476</p>
+						<p>&nbsp;</p>
+						<p>网址：www.juyouxiao.com</p>
+						<p>E-mail：hr@tianchangtech.com</p>
+					</div>
+					
+					
+					<div class="toastInfo"><span>提醒</span></div>
+				</div>
+				<ul class="foot">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="javascript:;">校园大使</a></li>
+					<li><a href="javascript:;">关于我们</a></li>
+				</ul>
+				<p class="provider">京公网安备11010802023605号</p>
+			</div>
+		</div>
+		
+		<!--点击回到顶部-->
+		<a id="com_d" style="display: none;"></a>
+	</div>
+	
+	<div class="mobile" style="display: block;">
+		<!--底部 导航 菜单-->
+		<div class="top">
+			<ul><li class="avtie">
+					<a href="index.html">
+						<!--<img src="img/public/icon_navigation_1.png"/>-->
+						<img src="img/public/icon_navigation_11.png"/>
+						<p>首页</p>
+					</a>
+				</li>
+				<li><a href="javascript:;">
+						<img src="img/public/icon_navigation_2.png"/>
+						<p>看帖</p>
+					</a>
+				</li>
+				<li><a href="javascript:;"><img class="increase" src="img/public/icon_navigation_3.png"/></a></li>
+				<li><a href="edg.html">
+						<img src="img/public/icon_navigation_4.png"/>
+						<p>战队</p>
+					</a>
+				</li>
+				<li><a  id="_Usercenter">
+						<img src="img/public/icon_navigation_5.png"/>
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<!--顶部海报-->
+		<div class="banner fix">
+			<div class="swiper-container" id="bannerSwiper">
+				<div class="swiper-wrapper"></div>
+				<ul class="pagination" id="bannerpagination"></ul>
+			</div>
+		</div>
+		
+		<!--所有游戏-->
+		<div class="AllGames shadow fix">
+			<p class="contentHeader"><img src="img/public/icon_1.png"/>所有游戏</p>
+			<div class="content fix">
+				<a class="game" href="game.html">
+					<img src="img/allgame/1.png">
+					<p>王者荣耀</p>
+				</a>
+				<a class="game" href="game.html">
+					<img src="img/allgame/2.png">
+					<p>贪玩蓝月</p>
+				</a>
+				<a class="game" href="game.html">
+					<img src="img/allgame/3.png">
+					<p>楚留香</p>
+				</a>
+				<a class="game" href="game.html">
+					<img src="img/allgame/4.png">
+					<p>第五人格</p>
+				</a>
+				<a class="button AllGamesButton" href="allgame.html">…</a>
+			</div>
+		</div>
+		
+		<!--当前赛事-->
+		<div class="TheCurrentEvent shadow fix">
+			<p class="contentHeader"><img src="img/public/icon_2.png"/>当前赛事</p>
+			<div class="calendar fix">
+				<div class="calendar_top">
+					<p class="MONTH"></p>
+					<div class="module">
+						<div class="calendar_left"><a class="Aleft" data-month="" data-addUp="" data-num="1" href="javascript:;"></a></div>
+						<div class="calendar_middle">
+							<div class="swiper-container" id="bannerSwiper2">
+								<div class="swiper-wrapper"></div>
+							</div>
+							<div class="aperture"></div>
+						</div>
+						<div class="calendar_right"><a class="Aright" data-month="" data-addUp="" data-num="1" href="javascript:;"></a></div>
+					</div>
+				</div>
+				<div class="calendar_bottom">
+					<div class="indexModule">
+						<a class="pullDown" href="javascript:;" data-switch="">
+							<img class="imgClass imgClass1" src=""/>
+							<p class="pClass" id="pClass"> </p>
+							<span class="spanClass"></span>
+						</a>
+						<div class="EventList dis_none"></div>
+					</div>
+				</div>
+			</div>
+			<!-- 赛事安排 -->
+			<div class="content fix" id="arrangement"></div>
+		</div>
+		
+		<!--热门赛事-->
+		<div class="PopularEvents shadow fix">
+			<p class="contentHeader"><img src="img/public/icon_3.png"/>热门赛事</p>
+			<div class="content fix">
+				<div class="events shadow2 fix">
+					<a class="fix" href="competition.html">
+						<p class="description apostrophe">
+							<img src="img/public/icon_AllGames1.png">
+							2018 ZUEL 浙江省高校电子竞技联赛春季赛</p>
+						<p class="money apostrophe"><img src="img/public/icon_PopularEvents1.png">20000</p>
+						<p class="time"><img src="img/public/icon_PopularEvents2.png">2018-07-29 14:53:04报名开始</p>
+						<p class="number"><img src="img/public/icon_PopularEvents3.png">10/64</p>
+						<p class="condition"><span class="bgCondition1"></span>报名中</p>
+						<p class="category bgColor1"><span>官方赛</span></p>
+					</a>
+				</div>
+				<div class="events shadow2 fix">
+					<a class="fix" href="competition.html">
+						<p class="description apostrophe">
+							<img src="img/public/icon_AllGames2.png">
+							2018 ZUEL 浙江省高校电子竞技联赛春季赛</p>
+						<img class="advertising" src="img/index/EventsBanner1.jpg"/>
+						<p class="money apostrophe"><img src="img/public/icon_PopularEvents1.png">20000</p>
+						<p class="time"><img src="img/public/icon_PopularEvents2.png">2018-07-29 14:53:04报名开始</p>
+						<p class="number"><img src="img/public/icon_PopularEvents3.png">10/64</p>
+						<p class="condition"><span class="bgCondition2"></span>比赛中</p>
+						<p class="category bgColor2"><span>平台赛</span></p>
+					</a>
+				</div>
+				<div class="events shadow2 fix">
+					<a class="fix" href="competition.html">
+						<p class="description apostrophe">
+							<img src="img/public/icon_AllGames3.png">
+							2018 ZUEL 浙江省高校电子竞技联赛春季赛</p>
+						<img class="advertising" src="img/index/EventsBanner2.jpg"/>
+						<p class="money apostrophe"><img src="img/public/icon_PopularEvents1.png">20000</p>
+						<p class="time"><img src="img/public/icon_PopularEvents2.png">2018-07-29 14:53:04报名开始</p>
+						<p class="number"><img src="img/public/icon_PopularEvents3.png">10/64</p>
+						<p class="condition"><span class="bgCondition3"></span>比赛结束</p>
+						<p class="category bgColor3"><span>业余赛</span></p>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<!--排行榜-->
+		<div class="rankingList fix">
+			<p class="contentHeader"><img src="img/public/icon_4.png"/>排行榜</p>
+			<div class="content fix">
+				<div class="classify">
+					<a class="Crunchies avter" id="TeamLIst" href="javascript:;">战队榜</a>
+					<a class="Crunchies" id="ListOfEvents" href="javascript:;">赛事榜</a>
+				</div>
+				
+				<!--战队榜-->
+				<div class="TeamLIst">
+					<div class="CrunchiesChampion">
+						<div class="position position_one">
+							<a href="edg_website.html">
+								<div class="Chemistry">
+									<img src="img/public/icon_Crunchies1.png">
+									<p class="TeamName"><i class="apostrophe">22</i></p>
+									<span class="CrunchiesBG CrunchiesBG1"></span>
+									<span class="num">1</span>
+								</div>
+								<div class="include">
+									<div class="game location">
+										<img src="img/public/icon_AllGames1.png"/>
+										<img src="img/public/icon_AllGames3.png"/>
+										<img src="img/public/icon_AllGames2.png"/>
+									</div>
+									<p><img src="img/public/icon_medal.png"> 30</p>
+								</div>
+							</a>
+						</div>
+						<div class="position position_two">
+							<a href="edg_website.html">
+								<div class="Chemistry">
+									<img src="img/public/icon_Crunchies2.png">
+									<p class="TeamName"><i class="apostrophe">玩的就是心跳</i></p>
+									<span class="CrunchiesBG CrunchiesBG2"></span>
+									<span class="num">2</span>
+								</div>
+								<div class="include">
+									<div class="game location">
+										<img src="img/public/icon_AllGames3.png"/>
+										<img src="img/public/icon_AllGames2.png"/>
+									</div>
+									<p><img src="img/public/icon_medal.png"> 0</p>
+								</div>
+							</a>
+						</div>
+						<div class="position position_three">
+							<a href="edg_website.html">
+								<div class="Chemistry">
+									<img src="img/public/icon_Crunchies3.png">
+									<p class="TeamName"><i class="apostrophe">玩的就是心跳</i></p>
+									<span class="CrunchiesBG CrunchiesBG3"></span>
+									<span class="num">3</span>
+								</div>
+								<div class="include">
+									<div class="game location">
+										<img src="img/public/icon_AllGames2.png"/>
+									</div>
+									<p><img src="img/public/icon_medal.png"> 0</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="CrunchiesRanking fix">
+                        <div class="list">
+                        	<a href="edg_website.html">
+                                <span class="ranking">4</span>
+                                <span class="teamLogo"><img src="img/public/icon_Crunchies4.png"/></span>
+                                <span class="TeamName apostrophe">tem</span>
+                                <span class="correlationGame">
+                                	<img src="img/public/icon_AllGames1.png"/>
+                                	<img src="img/public/icon_AllGames2.png"/>
+                                	<img src="img/public/icon_AllGames3.png"/>
+                                </span>
+                                <span class="combatGains"><img src="img/public/icon_medal.png"/>70</span>
+                            </a>
+                        </div>
+                        <div class="list">
+                        	<a href="edg_website.html">
+                                <span class="ranking">5</span>
+                                <span class="teamLogo"><img src="img/public/icon_Crunchies5.png"/></span>
+                                <span class="TeamName apostrophe">tem</span>
+                                <span class="correlationGame">
+                                	<img src="img/public/icon_AllGames1.png"/>
+                                	<img src="img/public/icon_AllGames2.png"/>
+                                	<img src="img/public/icon_AllGames3.png"/>
+                                </span>
+                                <span class="combatGains"><img src="img/public/icon_medal.png"/>70</span>
+                            </a>
+                        </div>
+                        <div class="list">
+                        	<a href="edg_website.html">
+                                <span class="ranking">6</span>
+                                <span class="teamLogo"><img src="img/public/icon_Crunchies6.png"/></span>
+                                <span class="TeamName apostrophe">tem</span>
+                                <span class="correlationGame">
+                                	<img src="img/public/icon_AllGames1.png"/>
+                                	<img src="img/public/icon_AllGames2.png"/>
+                                	<img src="img/public/icon_AllGames3.png"/>
+                                </span>
+                                <span class="combatGains"><img src="img/public/icon_medal.png"/>70</span>
+                            </a>
+                        </div>
+                        <div class="list">
+                        	<a href="edg_website.html">
+                                <span class="ranking">7</span>
+                                <span class="teamLogo"><img src="img/public/icon_Crunchies7.png"/></span>
+                                <span class="TeamName apostrophe">tem</span>
+                                <span class="correlationGame">
+                                	<img src="img/public/icon_AllGames1.png"/>
+                                	<img src="img/public/icon_AllGames2.png"/>
+                                	<img src="img/public/icon_AllGames3.png"/>
+                                </span>
+                                <span class="combatGains"><img src="img/public/icon_medal.png"/>70</span>
+                            </a>
+                        </div>
+                        <div class="list">
+                        	<a href="edg_website.html">
+                                <span class="ranking">8</span>
+                                <span class="teamLogo"><img src="img/public/icon_Crunchies8.png"/></span>
+                                <span class="TeamName apostrophe">tem</span>
+                                <span class="correlationGame">
+                                	<img src="img/public/icon_AllGames1.png"/>
+                                	<img src="img/public/icon_AllGames2.png"/>
+                                	<img src="img/public/icon_AllGames3.png"/>
+                                </span>
+                                <span class="combatGains"><img src="img/public/icon_medal.png"/>70</span>
+                            </a>
+                        </div>
+                        <div class="list">
+                        	<a href="edg_website.html">
+                                <span class="ranking">9</span>
+                                <span class="teamLogo"><img src="img/public/icon_Crunchies9.png"/></span>
+                                <span class="TeamName apostrophe">tem</span>
+                                <span class="correlationGame">
+                                	<img src="img/public/icon_AllGames1.png"/>
+                                	<img src="img/public/icon_AllGames2.png"/>
+                                	<img src="img/public/icon_AllGames3.png"/>
+                                </span>
+                                <span class="combatGains"><img src="img/public/icon_medal.png"/>70</span>
+                            </a>
+                        </div>
+                        <div class="list">
+                        	<a href="edg_website.html">
+                                <span class="ranking">10</span>
+                                <span class="teamLogo"><img src="img/public/icon_Crunchies10.png"/></span>
+                                <span class="TeamName apostrophe">tem</span>
+                                <span class="correlationGame">
+                                	<img src="img/public/icon_AllGames1.png"/>
+                                	<img src="img/public/icon_AllGames2.png"/>
+                                	<img src="img/public/icon_AllGames3.png"/>
+                                </span>
+                                <span class="combatGains"><img src="img/public/icon_medal.png"/>70</span>
+                            </a>
+                        </div>
+                    </div>
+					<a class="viewMore viewMore1" href="edg.html">查看更多</a> 
+					
+					<!--无比赛-->
+					<!--<p class="noGame">暂无战事榜信息~</p>-->
+				</div>
+				
+				<!--赛事榜-->
+				<div class="EventsLIst dis_none">
+					<!--有赛事榜-->
+					<div class="CrunchiesRanking fix">
+						<a href="competition.html">
+							<div class="list">
+								<span class="TeamName apostrophe">51111</span>
+								<span class="sort">官方赛</span>
+								<span class="bonus">￥10000</span>
+								<span class="status fontColor2">比赛中</span>
+								<span class="statusMap"><i class="bgCondition2"></i></span>
+							</div>
+						</a>
+						<a href="competition.html">
+							<div class="list">
+								<span class="TeamName apostrophe">61111</span>
+								<span class="sort">官方赛</span>
+								<span class="bonus">￥10000</span>
+								<span class="status fontColor2">比赛中</span>
+								<span class="statusMap"><i class="bgCondition2"></i></span>
+							</div>
+						</a>
+						<a href="competition.html">
+							<div class="list">
+								<span class="TeamName apostrophe">71111</span>
+								<span class="sort">官方赛</span>
+								<span class="bonus">￥10000</span>
+								<span class="status fontColor2">比赛中</span>
+								<span class="statusMap"><i class="bgCondition2"></i></span>
+							</div>
+						</a>
+						<a href="competition.html">
+							<div class="list">
+								<span class="TeamName apostrophe">1一起玩耍</span>
+								<span class="sort">官方赛</span>
+								<span class="bonus">￥20000</span>
+								<span class="status fontColor1">报名中</span>
+								<span class="statusMap"><i class="bgCondition1"></i></span>
+							</div>
+						</a>
+						<a href="competition.html">
+							<div class="list">
+								<span class="TeamName apostrophe">2一起玩耍</span>
+								<span class="sort">官方赛</span>
+								<span class="bonus">￥20000</span>
+								<span class="status fontColor1">报名中</span>
+								<span class="statusMap"><i class="bgCondition1"></i></span>
+							</div>
+						</a>
+						<a href="competition.html">
+							<div class="list">
+								<span class="TeamName apostrophe">3一起玩耍</span>
+								<span class="sort">官方赛</span>
+								<span class="bonus">￥20000</span>
+								<span class="status fontColor1">报名中</span>
+								<span class="statusMap"><i class="bgCondition1"></i></span>
+							</div>
+						</a>
+						<a href="competition.html">
+							<div class="list">
+								<span class="TeamName apostrophe">41111</span>
+								<span class="sort">官方赛</span>
+								<span class="bonus">￥10000</span>
+								<span class="status fontColor1">报名中</span>
+								<span class="statusMap"><i class="bgCondition1"></i></span>
+							</div>
+						</a>
+						<a href="competition.html">
+							<div class="list">
+								<span class="TeamName apostrophe">8呵呵哒</span><span class="sort">官方赛</span>
+								<span class="bonus">￥15000</span><span class="status fontColor3">已结束</span>
+								<span class="statusMap"><i class="bgCondition3"></i></span>
+							</div>
+						</a>
+						<a href="competition.html">
+							<div class="list">
+								<span class="TeamName apostrophe">9摸摸哒</span><span class="sort">官方赛</span>
+								<span class="bonus">￥10000</span><span class="status fontColor3">已结束</span>
+								<span class="statusMap"><i class="bgCondition3"></i></span>
+							</div>
+						</a>
+						<a href="competition.html">
+							<div class="list">
+								<span class="TeamName apostrophe">10摸摸哒</span><span class="sort">官方赛</span>
+								<span class="bonus">￥10000</span><span class="status fontColor3">已结束</span>
+								<span class="statusMap"><i class="bgCondition3"></i></span>
+							</div>
+						</a>
+					</div>
+					
+					<!--无比赛-->
+					<!--<p class="noGame">暂无赛事榜信息~</p>-->
+				</div>
+			</div>
+		</div>
+		
+		<div class="navigation fix">
+			<a class="" id="navButtonCollege" href="trainingInstitute.html"><img class="navButtonCollege" src="img/index/navButtonCollege.png"/></a>
+			<a class="" id="navButtonAttention" href="javascript:;"><img class="navButtonAttention" src="img/index/navButtonAttention.png"/></a>
+		</div>
+	</div>
+	
+	<script src="js/sUserAgent.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper-3.4.2.min.js"></script>
+</body>
+</html>
+

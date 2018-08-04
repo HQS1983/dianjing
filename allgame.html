@@ -1,0 +1,233 @@
+<!--2018-07-17 19:50:08
+	HQS
+	贴吧电竞 游戏页
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>全部游戏</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="icon" href="img/favicon.ico" mce_href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/commonality.css"/>
+	<link rel="stylesheet" type="text/css" href="css/allgame.css"/>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		//[[【【没有做当前页面游戏数量控制，且下拉到底部自动更新功能】】[]]]
+		function AllGames(){
+			$.ajax({
+				type:"get",
+				url:"/api/game/",
+				async:true,
+				data:{"offset":0,"limit":100},   //前端传输的内容
+				contentType:"application/json",//前端 传内容的格式
+				dataType:"json",               //后端返回的格式
+				success:function(res){
+					if ( res.code == 0 ) {
+						var message = res.msg;
+						$.each(res.data,function(i,item){
+							$(".allGameList").append(
+								'<a class="check fix" href="game.html?game_id='+
+								item["id"]+'"><img src="'+
+								item["icon"]+'"/><p class="gameName">'+
+								item["game_name"]+'</p>');
+						});
+					} else{
+						console.log(res.msg);
+					}
+				},error:function(res){
+					console.log(res.message);
+				}
+			});
+		}
+//		AllGames();
+	</script>
+</head>
+<body>
+	<div class="pc" style="display: none;">
+		<!--头部导航菜单-->
+		<div class="top">
+			<div class="top_div">
+				<a class="logo" href="index.html"><img src="img/public/logo.png"/></a>
+				<ul><li><a href="index.html">首页</a></li>
+					<li><a href="game.html">游戏</a></li>
+					<li><a href="edg.html">战队</a></li>
+					<li><a href="guide.html">办赛指南</a></li>
+					<li><a href="userCenter.html">注册/登录</a></li>
+					<li><a href="javascript:;">创建战队</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--主体-->
+		<div class="main dis_block">
+
+			<!--顶部轮播海报-->
+			<div class="banner">
+				<div class="banner_bg banner_bg1"></div>
+				<div class="banner_bg banner_bg2"></div>
+				<div class="banner_bg banner_bg3"></div>
+				<div class="banner_bg banner_bg4"></div>
+				<div class="banner_bg banner_bg5"></div>
+			</div>
+			
+			<!--游戏列表-->
+			<div class="GamesList">
+				<div class="GamesList_div"></div>
+			</div>
+			
+			<!--时事-->
+			<div class="content" id="ambassador">
+				<div class="content_div">
+					<!--热门赛事-->
+					<div class="PopularEvents">
+						
+					</div>
+					<!--新闻资讯-->
+					<div class="news">
+						
+					</div>
+				</div>
+			</div>
+		
+			<!--榜单-->
+			<div class="crunchies">
+				<div class="crunchies_div">
+					<!--战队榜-->
+					<div class="edg">
+						
+					</div>
+					<!--赛事榜-->
+					<div class="Competition">
+						
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			<!--联系我们-->
+			<div class="about" id="about">
+				<div class="about_main">
+					<p class="about_title">联系我们</p>
+					<p class="about_describe">我们总是乐于帮助你，请选择最适合你的方式联系我们！ </p>
+					<div class="about_address">
+						<p style="margin-top: 8px;">总址：上海市闵行区虹井路288号B座703室</p>
+						<p>分部：广州市天河区广州信息港方圆E时光西座28楼</p>
+						<p>邮编：510000</p>
+						<p>电话：+86 13901779476</p>
+						<p>&nbsp;</p>
+						<p>网址：www.juyouxiao.com</p>
+						<p>E-mail：hr@tianchangtech.com</p>
+					</div>
+					
+					
+					<div class="toastInfo"><span>提醒</span></div>
+				</div>
+				<ul class="foot">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="javascript:;">校园大使</a></li>
+					<li><a href="javascript:;">关于我们</a></li>
+				</ul>
+				<p class="provider">京公网安备11010802023605号</p>
+			</div>
+		</div>
+		
+		<!--点击回到顶部-->
+		<a id="com_d" style="display: none;"></a>
+	</div>
+	
+	<div class="mobile" style="display: block;">
+		<!--底部 导航 菜单-->
+		<div class="top">
+			<ul><li><a href="index.html">
+						<img src="img/public/icon_navigation_1.png"/>
+						<p>首页</p>
+					</a>
+				</li>
+				<li><a href="javascript:;">
+						<img src="img/public/icon_navigation_2.png"/>
+						<p>看帖</p>
+					</a>
+				</li>
+				<li><a href="javascript:;"><img class="increase" src="img/public/icon_navigation_3.png"/></a></li>
+				<li><a href="edg.html">
+						<img src="img/public/icon_navigation_4.png"/>
+						<p>战队</p>
+					</a>
+				</li>
+				<li><a id="_Usercenter">
+						<img src="img/public/icon_navigation_5.png"/>
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<!--填充背景颜色容器-->
+		<div class="vessel scrollable">
+			<!--游戏列表-->
+			<div class="allGameList fix">
+				<div class="content fix">
+					<p class="noGame">暂时还没有游戏喔~</p>
+					
+					<!--<a class="check fix" href="javascript:;">
+						<img src="img/allgame/1.png"/>
+						<p class="apostrophe">王者荣耀</p>
+					</a>
+					<a class="check fix" href="javascript:;">
+						<img src="img/allgame/2.png"/>
+						<p class="apostrophe">贪玩蓝月</p>
+					</a>
+					<a class="check fix" href="javascript:;">
+						<img src="img/allgame/3.png"/>
+						<p class="apostrophe">楚留香</p>
+					</a>
+					<a class="check fix" href="javascript:;">
+						<img src="img/allgame/4.png"/>
+						<p class="apostrophe">第五人格</p>
+					</a>
+					<a class="check fix" href="javascript:;">
+						<img src="img/allgame/5.png"/>
+						<p class="apostrophe">荒野行动</p>
+					</a>
+					<a class="check fix" href="javascript:;">
+						<img src="img/allgame/6.png"/>
+						<p class="apostrophe">绝地逃生</p>
+					</a>
+					<a class="check fix" href="javascript:;">
+						<img src="img/allgame/7.png"/>
+						<p class="apostrophe">山海异闻录</p>
+					</a>
+					<a class="check fix" href="javascript:;">
+						<img src="img/allgame/8.png"/>
+						<p class="apostrophe">天涯明月刀</p>
+					</a>
+					<a class="check fix" href="javascript:;">
+						<img src="img/allgame/9.png"/>
+						<p class="apostrophe">阴阳师</p>
+					</a>
+					<a class="check fix fix" href="javascript:;">
+						<img src="img/allgame/10.png"/>
+						<p class="apostrophe">择天记</p>
+					</a>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/sUserAgent.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//moble/移动端部分js代码
+	    $(".Crunchies").on("click",function(){
+    		$(this).addClass("avter");
+    		$(this).siblings().removeClass("avter");
+    		$(".messageContent>div").eq($(this).index()).removeClass("dis_none");
+    		$(".messageContent>div").eq($(this).index()).siblings().addClass("dis_none");
+		});
+	</script>
+</body>
+</html>

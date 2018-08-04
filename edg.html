@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>战队</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="icon" href="img/favicon.ico" mce_href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/commonality.css"/>
+	<link rel="stylesheet" type="text/css" href="css/edg2.css"/>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="pc" style="display: none;">
+		<!--头部导航菜单-->
+		<div class="top">
+			<div class="top_div">
+				<a class="logo" href="index.html"><img src="img/public/logo.png"/></a>
+				<ul><li><a href="index.html">首页</a></li>
+					<li><a href="game.html">游戏</a></li>
+					<li><a href="edg.html">战队</a></li>
+					<li><a href="guide.html">办赛指南</a></li>
+					<li><a href="userCenter.html">注册/登录</a></li>
+					<li><a href="javascript:;">创建战队</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--主体-->
+		<div class="main dis_block">
+
+			<!--平台KV-->
+			<div class="banner">
+				<div class="banner_bg banner_bg1"></div>
+				<div class="banner_bg banner_bg2"></div>
+				<div class="banner_bg banner_bg3"></div>
+				<div class="banner_bg banner_bg4"></div>
+				<div class="banner_bg banner_bg5"></div>
+			</div>
+			
+			<!--战队排行-->
+			<div class="standings">
+				<div class="standings_div">
+					
+				</div>
+			</div>
+			
+			<!--明星战队-->
+			<div class="TopGamer" id="ambassador">
+				<p>赛事标题</p>
+				<div class="TopGamer_div">
+					<!--直播视频-->
+					<div class="sinatv">
+						
+					</div>
+					<!--赛事竞猜-->
+					<div class="guess">
+						
+					</div>
+				</div>
+			</div>
+		
+			<!--明星队长-->
+			<div class="StarCaptain">
+				<div class="StarCaptain_div">
+					<!--战队榜-->
+					<div class="edg">
+						
+					</div>
+					<!--赛事榜-->
+					<div class="Competition">
+						
+					</div>
+				</div>
+			</div>
+		
+			
+			
+			<!--联系我们-->
+			<div class="about" id="about">
+				<div class="about_main">
+					<p class="about_title">联系我们</p>
+					<p class="about_describe">我们总是乐于帮助你，请选择最适合你的方式联系我们！ </p>
+					<div class="about_address">
+						<p style="margin-top: 8px;">总址：上海市闵行区虹井路288号B座703室</p>
+						<p>分部：广州市天河区广州信息港方圆E时光西座28楼</p>
+						<p>邮编：510000</p>
+						<p>电话：+86 13901779476</p>
+						<p>&nbsp;</p>
+						<p>网址：www.juyouxiao.com</p>
+						<p>E-mail：hr@tianchangtech.com</p>
+					</div>
+					
+					
+					<div class="toastInfo"><span>提醒</span></div>
+				</div>
+				<ul class="foot">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="javascript:;">校园大使</a></li>
+					<li><a href="javascript:;">关于我们</a></li>
+				</ul>
+				<p class="provider">京公网安备11010802023605号</p>
+			</div>
+		</div>
+		
+		<!--点击回到顶部-->
+		<a id="com_d" style="display: none;"></a>
+	</div>
+	
+	<div class="mobile" style="display: block;">
+		<!--底部 导航 菜单-->
+		<div class="top">
+			<ul><li><a href="index.html">
+						<img src="img/public/icon_navigation_1.png"/>
+						<p>首页</p>
+					</a>
+				</li>
+				<li><a href="javascript:;">
+						<img src="img/public/icon_navigation_2.png"/>
+						<p>看帖</p>
+					</a>
+				</li>
+				<li><a href="edg.html"><img class="increase" src="img/public/icon_navigation_3.png"/></a></li>
+				<li class="avtie"><a href="javascript:;">
+						<!--<img src="img/public/icon_navigation_4.png"/>-->
+						<img src="img/public/icon_navigation_44.png"/>
+						<p>战队</p>
+					</a>
+				</li>
+				<li><a  id="_Usercenter">
+						<img src="img/public/icon_navigation_5.png"/>
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<!--顶部 海报与战队-->
+		<div class="banner shadow fix">
+			<img class="banner_wings" src="img/edg/banner_wings.jpg"/>
+			<div class="content fix">
+				<!--没有  战队-->
+				<div class="classTeam TeamManage fix">
+					<a class="CreateTeam" href="javascript:;">
+						<img src="img/edg/icon_establish.png"/>
+						<p>创建战队</p>
+					</a>
+				</div>
+				
+				<!--有战队-->
+				<div class="classTeam myTeam fix dis_none">
+					<a  id="team_id" href="">
+						<img class="teamLogoBG" title="战队徽章作为背景" src="img/public/icon_Crunchies3.png"/>
+						<div class="Obscuration"></div>
+						<img class="teamLogo" id="team_icon" src="img/public/icon_Crunchies3.png"/>
+						<p class="title">我的战队</p>
+					</a>
+				</div>
+			</div>
+			<div class="Team_search">
+				<input class="icon_input" id="icon_input" type="button" name="输入战队名称搜索" readonly="readonly" value="输入战队名称搜索" />
+			</div>
+		</div>
+		
+		<!--明星战队-->
+		<div class="StarTeam shadow fix">
+			<p class="contentHeader"><img src="img/public/icon_5.png"/>明星战队</p>
+			<div class="content fix">
+				<!--无  明星战队-->
+				<p class="noGame dis_none">暂无明星战队~</p>
+				
+				<!--有 明星战队-->
+				<a class="game" href="edg_website.html">
+					<img src="img/edg/icon_teamLogo1.png">
+				</a>
+				<a class="game" href="edg_website.html">
+					<img src="img/edg/icon_teamLogo2.png">
+				</a>
+				<a class="game" href="edg_website.html">
+					<img src="img/edg/icon_teamLogo3.png">
+				</a>
+				<a class="game" href="edg_website.html">
+					<img src="img/edg/icon_teamLogo4.png">
+				</a>
+				<a class="game" href="edg_website.html">
+					<img src="img/edg/icon_teamLogo5.png">
+				</a>
+			</div>
+		</div>
+		
+		<!--明星队长-->
+		<div class="TheCurrentEvent shadow fix">
+			<p class="contentHeader"><img src="img/public/icon_6.png"/>明星队长</p>
+			<div class="content fix">
+				
+				<!--无  明星队长-->
+				<p class="noGame dis_none">暂无明星队长~</p>
+				
+				<!--有  明星队长-->
+				<a class="game" href="personal.html">
+					<img src="img/edg/captain1.png">
+				</a>
+				<a class="game" href="personal.html">
+					<img src="img/edg/captain2.png">
+				</a>
+				<a class="game" href="personal.html">
+					<img src="img/edg/captain3.png">
+				</a>
+				<a class="game" href="personal.html">
+					<img src="img/edg/captain4.png">
+				</a>
+				<a class="game" href="personal.html">
+					<img src="img/edg/captain5.png">
+				</a>
+			</div>
+		</div>
+		
+		<!--排行榜-->
+		<div class="rankingList fix" id="rankingList">
+			<p class="contentHeader"><img src="img/public/icon_4.png"/>排行榜</p>
+			<div class="content fix">
+				<!--无信息-->
+				<p class="noGame dis_none">暂无排行榜信息~</p>
+				
+				<div class="gameList fix">
+					<div class="fix">
+						<a class="aButton avter" id="TheTotalList">总榜</a>
+						<a class="aButton" id="11">山海经异兽录</a>
+						<a class="aButton" id="10">阴阳师</a>
+						<a class="aButton" id="9">绝地求生</a>
+						<a class="aButton" id="8">荒野行动</a>
+						<a class="aButton" id="7">择天记</a>
+						<a class="aButton" id="6">天涯明月刀</a>
+						<a class="aButton" id="4">第五人格</a>
+						<a class="aButton" id="3">楚留香</a>
+						<a class="aButton" id="2">贪玩蓝月</a>
+						<a class="aButton" id="1">王者荣耀</a>
+					</div>
+				</div>
+				<div class="classify fix">
+					<a class="Crunchies avter" data-val="TheTotalList" id="historyResults" href="javascript:;">历史成绩</a>
+					<a class="Crunchies" data-val="TheTotalList" id="NearlyWeek" href="javascript:;">近一周</a>
+				</div>
+				<div class="classes fix">
+					<span class="list">排名</span>
+					<span class="list">战队名称</span>
+					<span class="list">战队徽章</span>
+					<span class="list">成员</span>
+					<span class="list">总场次</span>
+					<span class="list">赛点</span>
+				</div>
+				<div class="grade fix">
+					<!--历史成绩1-->
+					<div class="historyResults">
+						<div class="CrunchiesRanking pool fix">
+							<a href="edg_website.html">
+								<div class="list">
+									<span class="ranking">1</span><span class="TeamName apostrophe">22</span>
+									<span class="teamLogo"><img src="img/public/icon_Crunchies1.png"></span>
+									<span class="member"><i class="" id="">1</i>/50</span>
+									<span class="totalNumber">30</span><span class="combatGains"><img src="img/public/icon_medal.png">30</span>
+								</div>
+							</a>
+							<a href="edg_website.html">
+								<div class="list">
+									<span class="ranking">2</span><span class="TeamName apostrophe">fdgbdfbh</span>
+									<span class="teamLogo"><img src="img/public/icon_Crunchies2.png"></span>
+									<span class="member"><i class="" id="">2</i>/50</span>
+									<span class="totalNumber">0</span><span class="combatGains"><img src="img/public/icon_medal.png">0</span>
+								</div>
+							</a>
+							<a href="edg_website.html">
+								<div class="list">
+									<span class="ranking">3</span><span class="TeamName apostrophe">玩的就是心跳</span>
+									<span class="teamLogo"><img src="img/public/icon_Crunchies3.png"></span>
+									<span class="member"><i class="" id="">1</i>/50</span>
+									<span class="totalNumber">0</span><span class="combatGains"><img src="img/public/icon_medal.png">0</span>
+								</div>
+							</a>
+							<a href="edg_website.html">
+								<div class="list">
+									<span class="ranking">4</span><span class="TeamName apostrophe">333</span>
+									<span class="teamLogo"><img src="img/public/icon_Crunchies4.png"></span>
+									<span class="member"><i class="" id="">1</i>/50</span>
+									<span class="totalNumber">0</span><span class="combatGains"><img src="img/public/icon_medal.png">0</span>
+								</div>
+							</a>
+							<a href="edg_website.html">
+								<div class="list">
+									<span class="ranking">5</span><span class="TeamName apostrophe">546</span>
+									<span class="teamLogo"><img src="img/public/icon_Crunchies5.png"></span>
+									<span class="member"><i class="" id="">1</i>/50</span>
+									<span class="totalNumber">0</span><span class="combatGains"><img src="img/public/icon_medal.png">0</span>
+								</div>
+							</a>
+							<a href="edg_website.html">
+								<div class="list">
+									<span class="ranking">6</span><span class="TeamName apostrophe">方便</span>
+									<span class="teamLogo"><img src="img/public/icon_Crunchies6.png"></span>
+									<span class="member"><i class="" id="">1</i>/50</span>
+									<span class="totalNumber">0</span><span class="combatGains"><img src="img/public/icon_medal.png">0</span>
+								</div>
+							</a>
+							<a href="edg_website.html">
+								<div class="list">
+									<span class="ranking">7</span><span class="TeamName apostrophe">ffff</span>
+									<span class="teamLogo"><img src="img/public/icon_Crunchies7.png"></span>
+									<span class="member"><i class="" id="">1</i>/50</span>
+									<span class="totalNumber">0</span><span class="combatGains"><img src="img/public/icon_medal.png">0</span>
+								</div>
+							</a>
+							<a href="edg_website.html">
+								<div class="list">
+									<span class="ranking">8</span><span class="TeamName apostrophe">sssssss</span>
+									<span class="teamLogo"><img src="img/public/icon_Crunchies8.png"></span>
+									<span class="member"><i class="" id="">1</i>/50</span>
+									<span class="totalNumber">0</span><span class="combatGains"><img src="img/public/icon_medal.png">0</span>
+								</div>
+							</a>
+							<a href="edg_website.html">
+								<div class="list">
+									<span class="ranking">9</span><span class="TeamName apostrophe">sssssss</span>
+									<span class="teamLogo"><img src="img/public/icon_Crunchies9.png"></span>
+									<span class="member"><i class="" id="">1</i>/50</span>
+									<span class="totalNumber">0</span><span class="combatGains"><img src="img/public/icon_medal.png">0</span>
+								</div>
+							</a>
+							<a href="edg_website.html">
+								<div class="list">
+									<span class="ranking">10</span><span class="TeamName apostrophe">sssssss</span>
+									<span class="teamLogo"><img src="img/public/icon_Crunchies10.png"></span>
+									<span class="member"><i class="" id="">1</i>/50</span>
+									<span class="totalNumber">0</span><span class="combatGains"><img src="img/public/icon_medal.png">0</span>
+								</div>
+							</a>
+							<!--无  成绩信息-->
+						</div>
+					</div>
+					
+					<!--近一周1-->
+					<div class="NearlyWeek dis_none">
+						<div class="CrunchiesRanking fix">
+							 <div class="list">
+								<span class="ranking">①2</span>
+								<span class="TeamName apostrophe">DSAA</span>
+								<span class="teamLogo"><img src="img/public/icon_Crunchies1.png"/></span>
+								<span class="member"><i class="" id="">30</i>/50</span>
+								<span class="totalNumber">120</span>
+								<span class="combatGains"><img src="img/public/icon_medal.png"/>70</span>
+							</div>
+							<div class="list">
+								<span class="ranking">2</span>
+								<span class="TeamName apostrophe">DSAA</span>
+								<span class="teamLogo"><img src="img/public/icon_Crunchies2.png"/></span>
+								<span class="member"><i class="" id="">30</i>/50</span>
+								<span class="totalNumber">120</span>
+								<span class="combatGains"><img src="img/public/icon_medal.png"/>70</span>
+							</div>
+							<div class="list">
+								<span class="ranking">3</span>
+								<span class="TeamName apostrophe">DSAA</span>
+								<span class="teamLogo"><img src="img/public/icon_Crunchies3.png"/></span>
+								<span class="member"><i class="" id="">30</i>/50</span>
+								<span class="totalNumber">120</span>
+								<span class="combatGains"><img src="img/public/icon_medal.png"/>70</span>
+							</div>
+							<div class="list">
+								<span class="ranking">4</span>
+								<span class="TeamName apostrophe">DSAA</span>
+								<span class="teamLogo"><img src="img/public/icon_Crunchies4.png"/></span>
+								<span class="member"><i class="" id="">30</i>/50</span>
+								<span class="totalNumber">120</span>
+								<span class="combatGains"><img src="img/public/icon_medal.png"/>70</span>
+							</div>
+							<div class="list">
+								<span class="ranking">5</span>
+								<span class="TeamName apostrophe">SI</span>
+								<span class="teamLogo"><img src="img/public/icon_Crunchies5.png"/></span>
+								<span class="member"><i class="" id="">30</i>/50</span>
+								<span class="totalNumber">120</span>
+								<span class="combatGains"><img src="img/public/icon_medal.png"/>65</span>
+							</div>
+							<div class="list">
+								<span class="ranking">6</span>
+								<span class="TeamName apostrophe">KongG</span>
+								<span class="teamLogo"><img src="img/public/icon_Crunchies6.png"/></span>
+								<span class="member"><i class="" id="">30</i>/50</span>
+								<span class="totalNumber">120</span>
+								<span class="combatGains"><img src="img/public/icon_medal.png"/>60</span>
+							</div>
+							<div class="list">
+								<span class="ranking">7</span>
+								<span class="TeamName apostrophe">QIOI</span>
+								<span class="teamLogo"><img src="img/public/icon_Crunchies7.png"/></span>
+								<span class="member"><i class="" id="">30</i>/50</span>
+								<span class="totalNumber">120</span>
+								<span class="combatGains"><img src="img/public/icon_medal.png"/>58</span>
+							</div>
+							<div class="list">
+								<span class="ranking">8</span>
+								<span class="TeamName apostrophe">KdkjxiP</span>
+								<span class="teamLogo"><img src="img/public/icon_Crunchies8.png"/></span>
+								<span class="member"><i class="" id="">30</i>/50</span>
+								<span class="totalNumber">120</span>
+								<span class="combatGains"><img src="img/public/icon_medal.png"/>56</span>
+							</div>
+							<div class="list">
+								<span class="ranking">9</span>
+								<span class="TeamName apostrophe">SKKK</span>
+								<span class="teamLogo"><img src="img/public/icon_Crunchies9.png"/></span>
+								<span class="member"><i class="" id="">30</i>/50</span>
+								<span class="totalNumber">120</span>
+								<span class="combatGains"><img src="img/public/icon_medal.png"/>55</span>
+							</div>
+							<div class="list">
+								<span class="ranking">10</span>
+								<span class="TeamName apostrophe">KD</span>
+								<span class="teamLogo"><img src="img/public/icon_Crunchies10.png"/></span>
+								<span class="member"><i class="" id="">30</i>/50</span>
+								<span class="totalNumber">120</span>
+								<span class="combatGains"><img src="img/public/icon_medal.png"/>52</span>
+							</div>
+							
+							
+							<!--无  成绩信息-->
+							<p class="noGame dis_none">暂无成绩信息~</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--页面底部-->
+		<p class="bottomPage">这是底线了</p>
+		
+		<!--弹窗-->
+		<aside id="bg" class="bg" data-is-bind-scroll="true">
+			<!--遮罩层-->
+			<i class="bg_overlay hideAside"></i>
+			
+			<!--创建战队-->
+			<div class="bg_content fix">
+				<div class="module_title">创建战队</div>
+				<div class="main scrollable">
+					<div class="divClass fix type">
+						<label class="labelClass" for="type">战队类型</label>
+						<div class="typeListDiv">
+							<input class="inputClass inputClassColor inputClassBG" type="button" name="" id="type" value="电竞战队" />
+							<div class="typeList fix scrollable" data-open="0">
+								<p class="ubclass" data-value ="1">1电竞战队</p>
+								<p class="ubclass" data-value="2">2电竞战队</p>
+							</div>
+						</div>
+					</div>
+					<div class="divClass fix teamName">
+						<label class="labelClass" for="teamName">战队名称</label>
+						<input class="inputClass " type="text" name="" id="teamName" placeholder="请输入战队名称" value="" />
+					</div>
+					<div class="divClass fix badge">
+						<label class="labelClass labelClassLineHeight" for="badge">战队徽章</label>
+						<div class="uploading fix">
+							<div class="preview">
+								<img class="previewImg" src="img/edg/previewBG.png" />
+								<input type="file" class="inputUploading" name="file" id="file" multiple="multiple">
+								<input type="hidden" name="" id="imgBase" value="" />
+							</div>
+						</div>
+						
+					</div>
+					<div class="divClass fix manifesto">
+						<label class="labelClass" for="manifesto">战队宣言</label>
+						<textarea class="inputClass teamManifesto" name="" rows="" cols="" placeholder="不超过12个字"></textarea>
+					</div>
+					<div class="bottomButton">
+						<button class="found" type="button">创立</button>
+						<button class="ShutDownFound" type="button">取消</button>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</div>
+	
+	<script src="js/zepto.min.js"></script>
+	<script src="js/popup.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/sUserAgent.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/edg2.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+

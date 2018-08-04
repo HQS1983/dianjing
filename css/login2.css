@@ -1,0 +1,375 @@
+/*
+ * 2018-07-23 23:02:56 
+ * HQS
+ * 
+ * 贴吧电竞  首页
+ * */
+            
+
+.pc{width: 100%;position: relative;padding-top: 102px;}
+/*头部导航菜单*/
+.pc .top{height: 102px; position:fixed;top: 0;left: 0;border-bottom: 1px #000 solid;
+		-webkit-box-shadow:0 0  10px 1px #040404;  
+		-moz-box-shadow:0 0  10px 1px #040404;  
+		box-shadow:0 0  10px 1px #040404;z-index: 10;}
+.pc .top .top_div{display: block;width: 1158px;height: inherit;margin: 0 auto;}
+.pc .top .top_div a.logo{display: block; float: left;width: 162px; margin-top: 19px;}
+.pc .top .top_div a.logo img{display: block; width: 100%;}
+.pc .top .top_div ul{float: right;width: 606px; height: inherit;}
+.pc .top .top_div ul li{display: inline-block; float: left;width:80px;
+						height: inherit;line-height: 102px;text-align: center;}
+.pc .top .top_div ul li a{display: inline-block;width:inherit; color: #eb8b00;
+							height: inherit;line-height: inherit;font-size: 16px;}
+.pc .top .top_div ul li a:hover{border-top: 2px #eb8b00 solid; background: #e6e6e6;}
+
+
+.pc .main{width: 100%;min-width: 1158px;}
+
+/*顶部海报*/
+.pc .banner{height: 780px;position: relative;}
+.pc .banner .banner_bg{display: block;width: 100%;height: 158px;position: absolute;left: 0;z-index: 0;}
+.pc .banner .banner_bg1{top: 0px;  background: url(../img/banner_1.jpg) no-repeat center center;}
+.pc .banner .banner_bg2{top: 158px;background: url(../img/banner_2.jpg) no-repeat center center;}
+.pc .banner .banner_bg3{top: 316px;background: url(../img/banner_3.jpg) no-repeat center center;}
+.pc .banner .banner_bg4{top: 474px;background: url(../img/banner_4.jpg) no-repeat center center;}
+.pc .banner .banner_bg5{top: 632px;height: 148px;background: url(../img/banner_5.jpg) no-repeat center center;}
+
+.pc .banner .banner_content{display: block;width: 1158px;height: 780px;margin: 0 auto;padding-top: 200px;position: relative;}
+.pc .banner .banner_content .banner_character{display: block;width: 594px;height: 179px;
+											margin-left: 81px;}
+.pc .banner .banner_content .banner_android_app{display: block;width: 323px;height: 84px;
+											margin-left: 55px;margin-top: 117px; position: relative;}
+.pc .banner .banner_content .banner_android_app .banner_qr_code{display: none;width: 206px; height: 206px;
+															border-radius: 8px; padding-top: 4px;
+															position: absolute;top: 0; left: 351px;}
+.pc .banner .banner_content .banner_android_app .banner_qr_code p{display: block; width: 100%; color: #d58505;text-align: center;
+															  height: 43px;line-height:43px;font-size: 24.28px;}
+.pc .banner .banner_content .banner_android_app .banner_qr_code img{display: block;width: 140px; margin: 0 auto;}
+.pc .banner .banner_content .banner_android_app:hover .banner_qr_code{display: block;}
+
+.pc .banner .banner_content .banner_ios_app{display: block;width: 323px;height: 84px;
+											margin-left: 55px;margin-top: 38px;}
+
+
+
+/*游戏列表*/
+.pc .GamesList{height: 244px; padding-top: 32px;background: #CA4206;}
+.pc .GamesList .GamesList_div{display: block;width:1158px;height: 180px;margin: 0 auto;background: #A8A8A8;}
+
+
+
+
+/*时事*/
+.pc .content{height: 748px;position: relative;
+			background: #D58505;}
+.pc .content .content_div{ width: 1158px;height: inherit;}
+/*热门赛事*/
+.pc .content .PopularEvents{width: 50%;height: inherit;background: #E6E6E6;float: left;}
+
+/*新闻资讯*/
+.pc .content .news{width: 50%;height: inherit;background: #F00;float: right;}
+
+
+
+
+
+/*大使收获*/
+.pc .crunchies{height: 518px;background: #D58505;}
+.pc .crunchies .crunchies_div{display: block; width: 1158px; height: 498px;margin: 10px auto;}
+/*战队榜*/
+.pc .crunchies .edg{width: 50%;height: inherit;background: #794d4d;float: left;}
+/*赛事榜*/
+.pc .crunchies .Competition{width: 50%;height: inherit;background: #00e6ff;float: right;}
+
+
+
+
+/*联系我们*/
+.pc .about{height: 465px;background: #fff;}
+.pc .about .about_main{display: block;width:1158px;height: 380px;margin: 0 auto; padding-top: 57px;position: relative;}
+.pc .about .about_main p{color: #000;display: block;}
+.pc .about .about_main .about_title{width: 100%; font-size: 45.6px;height: 45.6px;line-height: 45.6px;margin-bottom: 20px; text-align: center;}
+.pc .about .about_main .about_describe{width: 100%; font-size: 20.85px;height: 20.85px;line-height: 20.85px;margin-bottom: 37px;text-align: center;}
+
+.pc .about .about_main .about_address{display: inline-block;width: 375px;height: 196px;float: left;margin-right: 50px;}
+.pc .about .about_main .about_address p{font-size: 16.33px;margin-bottom: 5px;}
+
+
+#qq::-webkit-inner-spin-button,#mobile::-webkit-inner-spin-button,#contact_number::-webkit-inner-spin-button { -webkit-appearance: none!important; ; }
+#qq,#mobile,#contact_number{ appearance: textfield;
+							-moz-appearance: textfield;
+							-webkit-appearance: textfield; }
+#qq:hover,#mobile:hover,#contact_number:hover{ appearance: textfield;
+												-moz-appearance: textfield;
+												-webkit-appearance: textfield; }
+.pc .about .about_main form .form_right{display: inline-block;width: 301px;height: inherit;margin-right: 22px;float: left;}
+.pc .about .about_main form .form_right #content{min-width: 302px;max-width: 302px; color: #a8a8a8;font-size: 13.54px;
+												margin-bottom: 10px;min-height: 79px;max-height: 79px;
+												line-height: 32px;
+												border: 1px #eca234 solid;padding-left: 7px;}
+
+.pc .about .about_main form .form_right #contact_submit{width: 302px;height: 34px; color: #fff;font-size: 11.94px;
+										  height: 32px; line-height: 32px;text-align: center;
+										  background: #e88901;-webkit-tap-highlight-color:transparent;}
+.pc .about .about_main form .form_right #contact_submit:hover{background: #cc7700;}
+
+.pc .about ul.foot{display: block;width: 290px;height: 20px;margin: 20px auto 10px;clear: both;}
+.pc .about ul.foot li{display: block;float: left;height: 20px;}
+.pc .about ul.foot li:nth-of-type(1){border-right: 1px #4b4b4b solid;}
+.pc .about ul.foot li:nth-of-type(2){border-right: 1px #4b4b4b solid;}
+.pc .about ul.foot li a{display: block; color: #000;font-size: 15.4px;height: 20px;line-height: 20px;
+								margin-left: 22px;margin-right: 22px;}
+.pc .about ul.foot li a:hover{background: #CCCCCC;}
+.pc .about .provider{display: block; color: #000; width: 100%;font-size: 16.72px;text-align: center;}
+
+
+
+.pc #com_d { cursor: pointer;  width: 90px; height: 90px;border: 0px;
+		 margin: 0px; padding: 0px;
+		 position: fixed; right: 40px; bottom: 40px;
+		 background: url("../img/top.png") no-repeat center center; z-index: 999; }
+.pc #com_d:hover { background: url("../img/top.png") no-repeat center center; }
+
+
+
+
+/*弹窗提示*/
+
+.pop_up_prompts,.toastInfo{display:none;position:absolute;width:100%;
+			text-align:center;font-size:1rem;height:30px;line-height:30px;color:#fff;}
+.pop_up_prompts span,.toastInfo span{background-color:#a5a3a3;display:inline-block;border-radius:5px;padding:0px 10px;}
+.toastInfo{bottom: 35px;}
+.pop_up_prompts{bottom: 160px;}
+
+/*PC端样式   结束*/
+
+
+
+
+
+/*
+ * 以下为移动端样式
+ * 2018-07-23  23:15:19
+ * HQS
+ * */
+
+
+.main{position: fixed;top: 0rem;left: 0;right: 0;bottom: 0;z-index: 1;}
+
+		/*登录页*/
+.main .loginBG{width: 100%;height: 100%;}
+.main .loginBG1{position: absolute;top: 0;left: 0;z-index: -1;}
+/*.main .loginBG2{position: absolute;top: 0;left: 0;z-index: 4;opacity: 0.3;}*/
+
+
+.main .topDiv{width: 100%; margin: 1rem auto;;}
+.main .topDiv img{display: block; width: 36%;margin: 0.5rem auto 0;background: transparent;}
+
+.main .content{width: 100%;}
+
+.login .toggle{width: 88%; height: 3rem;margin: 0rem auto;}
+.login .toggle .buttonlogin{display: block; width: 50%;height: 3rem;line-height: 3rem; background: transparent;border: none;
+					   color: #D4D4D4;font-size: 1rem;text-align: center;float: left;}
+.login .toggle .avtie{border-bottom: 2px #3DCBEC solid;}
+
+
+.login .content .divContent{width: 100%;}
+		/*一键登录*/
+.login .content .oneKey{padding-top: 2rem;}
+.login .content .oneKey .baiduButton{display: block;width: 34%;margin: 0rem auto 1rem; z-index: 5;}
+.login .content .oneKey .baiduButton img{width: 100%;}
+.login .content .oneKey p{width: 88%;margin: 0 auto;text-align: center;font-size: 1rem;}
+.login .content .oneKey .explain{color: #D4D4D4;height: 2rem;line-height: 2rem;}
+
+.login .content .useKey{padding-top: 1rem;}
+.login .content .useKey .inputBg{width: 88%;height: 2.5rem;border-radius: 0.2rem;position: relative;
+								background: rgba(255,255,255,0.15);margin: 0rem auto 0.5rem;}
+.login .content .useKey .inputClass{display: block;border-radius: 0.2rem;border: none;
+					background: transparent;font-size: 1rem;color: #fff;
+					height: 2.5rem;line-height: 2.5rem;text-indent: 0.5rem;}
+.login .content .useKey .inputUser{width: 88%;}
+.login .content .useKey .inputPassword{width: 76%;}
+
+
+.login .content .useKey .inputBg .telClear{position:absolute;width:1.5rem;top:0.5rem;right:0.5rem;}
+.login .content .useKey .inputBg .codeClear{position:absolute;width:1.5rem;top:0.5rem;right:2.5rem;}
+.login .content .useKey .inputBg .codeConvert{position:absolute;width:1.5rem;top:0.5rem;right:0.5rem;}
+
+.submit{display: block;width: 88%;height: 3rem;line-height: 3rem;background: #488afd;color: #fff;
+		border: none;text-align: center;margin: 1rem auto 0.5rem;font-size: 1rem;border-radius: 0.1rem;}
+.login .content .useKey .bottomDiv{display: block;width: 88%;height: 1rem;margin: 0 auto;}
+.login .content .useKey .bottomDiv a{display: block;width: 6rem;line-height: 1rem; color: #fff;font-size: 0.7rem;}
+.login .content .useKey .bottomDiv .register{float: left;}
+.login .content .useKey .bottomDiv .noteRegister{float: right;text-align: right;}
+
+.login .thirdParty{width: 88%;margin: 0 auto;text-align: center;font-size: 1rem;color: #fff;height: 2.8rem;line-height: 1.8rem;}
+.login .thirdParty span {display: block;     /*设置为块级元素会独占一行形成上下居中的效果*/
+			    		position: relative;   /*定位横线（当横线的父元素）*/}
+.login .thirdParty span:before,.thirdParty span:after {
+		    content: '';                 /*CSS伪类用法*/
+		    position: absolute;         /*定位背景横线的位置*/
+		    top: 50%;
+		    background: #fff;       /*宽和高做出来的背景横线*/
+		    width: 33%;height: 1px;}
+.login .thirdParty span:before{left: 0%;        /*调整背景横线的左右距离*/}
+.login .thirdParty span:after {right: 0%;}
+
+.login .diamonds{width: 100%;}
+.login .ClassDiv{display: inline-block;width: 45%;}
+.login .qqClassDiv{float: left;}
+.login .weChatClassDiv{float: right;}
+
+.login .ClassDiv .tencentButton{width: 38%;}
+.login .ClassDiv .tencentButton img{width: 100%;}
+.login .ClassDiv .qqClass{float: right;}
+.login .ClassDiv .weChatClass{float: left;}
+
+
+.login .Dialog{display: block;width: 96%;height: 26rem;margin: 14% auto;background: #fff;overflow: hidden;}
+
+
+/*用户登录   【非】微信提示登录弹窗*/
+.main .modules{width: 100%;}
+.main .modules2{}
+.main .modules2 .modulesDiv{width: 88%;background: #fff; margin: 0 auto;font-size: 0.6rem;color: #000;text-align: center;}
+.main .modules2 .modulesDiv .topTitle{height: 3rem;line-height: 3rem;}
+.main .modules2 .modulesDiv .topTitle span{}
+.main .modules2 .modulesDiv .topTitle .left{width: 5rem;float: left;font-size: 0.8rem;font-weight: 800;}
+.main .modules2 .modulesDiv .topTitle .right{width: 5rem;float: right;color: #0079FE;}
+.main .modules2 .modulesDiv .erweima{display: block;width: 80%;height: 16rem; margin: 1rem auto 0rem;border: 1px #ccc solid;}
+.main .modules2 .modulesDiv .title{}
+.main .modules2 .modulesDiv .bottomTips{width: 88%;margin: 0 auto; line-height: 3rem;text-align: left;}
+.main .modules2 .modulesDiv .bottomTips a{color: #0079FE;}
+
+
+		/*短信快捷登录  页面*/
+.loginnote .content{padding-top: 3rem;}
+.loginnote .module{width: 82%;height: 2.5rem;line-height: 2.5rem;margin: 0rem auto 0.5rem;font-size: 0.7rem;position: relative;}
+.loginnote .module label{display: inline-block; width: 20%;height: inherit;float: left;text-align: center;color: #D4D4D4;}
+.loginnote .module div{display: inline-block;height: inherit; position: relative;background: rgba(255,255,255,0.15);border-radius: 0.2rem;}
+.loginnote .module div input{display: inline-block;width: 84%; height: inherit;color: #D4D4D4;
+							 text-indent: 0.5rem;background: transparent;border: none;}
+
+.loginnote .module .MobileDIV{width: 80%;float: right;}
+.loginnote .module .CodeDiv{width: 38%;float: left;}
+
+.loginnote .module .telClear{position:absolute;width:1.5rem;top:0.5rem;right:0.5rem;}
+.loginnote .module .codeClear{position:absolute;width:1.5rem;top:0.5rem;right:43%;}
+
+.loginnote .module .acquire{display: inline-block; width: 38%;height: inherit;color: rgba(212, 212, 212, 0.6);border-radius: 0.2rem;float: right;
+							background: rgba(255,255,255,0.15);border: 1px rgba(136, 136, 136, 0.52) solid;font-size: 0.6rem;}
+
+.loginnote .content .ringUp{width: 82%;}
+
+
+
+
+		/*注册*/
+.register .content{padding-top: 3rem;}
+.register .module{width: 82%;height: 2.5rem;line-height: 2.5rem;margin: 0rem auto 0.5rem;font-size: 0.7rem;position: relative;}
+.register .module label{display: inline-block; width: 20%;height: inherit;float: left;text-align: center;color: #D4D4D4;}
+.register .module div{display: inline-block;height: inherit; position: relative;background: rgba(255,255,255,0.15);border-radius: 0.2rem;}
+.register .module div input{display: inline-block; height: inherit;color: #D4D4D4;
+							 text-indent: 0.5rem;background: transparent;border: none;}
+
+.register .module .MobileDIV{width: 80%;float: right;}
+.register .module .CodeDiv{width: 38%;float: left;}
+
+.register .module div .MobileNumber{width: 82%;}
+.register .module div .passWord{width: 68%;}
+.register .module div .VerificationCode{width: 68%;}
+.register .module .telClear{position:absolute;width:1.5rem;top:0.5rem;right:0.5rem;}
+.register .module .passClear{position:absolute;width:1.5rem;top:0.5rem;right:2.5rem;}
+.register .module .codeConvert{position:absolute;width:1.5rem;top:0.5rem;right:0.5rem;}
+.register .module .codeClear{position:absolute;width:1.5rem;top:0.5rem;right:43%;}
+
+.register .module .acquire{display: inline-block; width: 38%;height: inherit;color: rgba(212, 212, 212, 0.6);border-radius: 0.2rem;float: right;
+							background: rgba(255,255,255,0.15);border: 1px rgba(136, 136, 136, 0.52) solid;font-size: 0.6rem;}
+
+.register .content .ringUp{width: 82%;}
+
+.register .content .middleDiv{width: 82%;margin: 0rem auto 1rem;color:#fff;font-size: 0.7rem;}
+.register .content .middleDiv .TickDiv{display: inline-block;float: left; width: 0.8rem;height: 0.8rem;border: 1px #ccc solid;background:transparent;}
+.register .content .middleDiv .TickDiv span{display: block; width: 98%;height: 98%;margin: 1% auto; }
+.register .content .middleDiv .TickDiv span.spanBg1{background: transparent;}
+.register .content .middleDiv .TickDiv span.spanBg2{background: transparent url(../img/login/icon_tick.png) no-repeat center center / 130%;}
+.register .content .middleDiv p{display: inline-block;width: 92%;height: 1rem;margin: 0rem auto 1rem;color:#D4D4D4;font-size: 0.6rem;}
+.register .content .middleDiv p span{color: #6ca3fb;}
+
+
+/*弹窗*/
+		/*用户协议*/
+.mod_{position: absolute;top: 10%;left: 5%; width: 88%;height: auto;background: #fff;
+		padding:20px 6px 16px 6px;line-height: 22px;margin-bottom: 20px;text-align:left;}
+.mod_ .content{width: 100%;height: 25rem; overflow-y: scroll;}
+.mod_ .content h5{font-size: 12px;font-weight: bold;padding:1em 0px;}
+.mod_ .content h3,.mod_ .content p,.mod_ .content li{font-size: 0.6rem;line-height: 1.8em;}
+.mod_ .content li{text-indent: 2em;}
+.mod_ .content .yangshi{white-space: nowrap; color: #007AFF;}
+.mod_ .content .ayangshi{display: inline-block; width: 100%;}
+
+		/*隐私权保护声明*/
+.dwri_bule{ position: absolute;top: 10%;left: 5%; width: 88%;height: auto;background: #fff;
+			padding:20px 6px 16px 6px;line-height: 22px;margin-bottom: 20px;text-align:left;}
+.dwri_bule .content{width: 100%;height: 25rem; overflow-y: scroll;}
+.dwri_bule .content h5{font-size: 12px;font-weight: bold;padding:1em 0px;}
+.dwri_bule .content h3,.dwri_bule .content p,.dwri_bule .content li{line-height: 1.8em;}
+.dwri_bule .content p,.dwri_bule .content li{font-size: 0.6rem;text-align: justify;}
+.dwri_bule .content li{text-indent: 2em;}
+.dwri_bule .content table{display: block;width: 90%;margin: 0 auto;}
+.dwri_bule .content table tbody{display: block;width: 100%;margin: 0 auto;}
+.dwri_bule .content table tbody tr{display: block;width: 100%;margin: 0 auto;}
+.dwri_bule .content table tbody td{display: block;width: 100%;margin: 0 auto;}
+.dwri_bule .content table tbody td div{display: block;width: 100%;margin: 0 auto;}
+
+
+/*5.5英寸   414*736尺寸的屏幕  如iPhone6 Plus、iPhone6s Plus、iPhone7 Plus、魅族MX5    1920x1080  /3★*/
+@media only screen and (max-width: 414px) {
+	.main .content .divContent{height: 15rem;}
+	
+	.main .qqClass{bottom: 6.5rem;left: 6.5rem;}
+	.main .weChatClass{bottom: 6.5rem;right: 6.5rem;}
+}
+/*5.96英寸  412*732尺寸的屏幕  如谷歌Nexus 6   2K 2560x1440  /3.5★*/
+@media only screen and (max-width: 412px) {
+	.main .content .divContent{height: 15rem;}
+	
+	.main .qqClass{bottom: 6rem;left: 6.5rem;}
+	.main .weChatClass{bottom: 6rem;right: 6.5rem;}
+}
+/*5.2英寸   411*731尺寸的屏幕  如 谷歌Nexus 5x   1920x1080  /2.625★*/
+@media only screen and (min-width: 376px) and (max-width: 411px) {
+	.main .content .divContent{height: 15rem;}
+	
+	.main .qqClass{bottom: 6rem;left: 6.5rem;}
+	.main .weChatClass{bottom: 6rem;right: 6.5rem;}
+}
+/*iPhoneX*/
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+	.main .content .divContent{height: 14.5rem;}
+	
+	.main .qqClass{bottom: 6.5rem;left: 5rem;}
+	.main .weChatClass{bottom: 6.5rem;right: 5rem;}
+}
+
+/*4.7英寸   375*667尺寸的屏幕  如iPhone6、iPhone7、iPhone 6s   1334x750*/
+@media only screen and (min-width: 361px) and (max-width: 375px) {
+	.main .content .divContent{height: 14.5rem;}
+	
+	.main .qqClass{bottom: 5.5rem;left: 6rem;}
+	.main .weChatClass{bottom: 5.5rem;right: 6rem;}
+}
+/*4.95英寸  360*640尺寸的屏幕  如 谷歌Nexus 5    1920x1080 /3★ */
+@media only screen and (min-width: 321px) and (max-width: 360px) {
+	.main .content .divContent{height: 14rem;}
+	
+	.main .qqClass{bottom: 5rem;left: 5.5rem;}
+	.main .weChatClass{bottom: 5rem;right: 5.5rem;}
+}
+/*4.0英寸   320*568尺寸的屏幕  如iPhone5、iPhone SE   1136x640*/
+@media only screen and (max-width: 320px) {
+	.main .content .divContent{height: 13rem;}
+	
+	.main .qqClass{bottom: 4rem;left: 5rem;}
+	.main .weChatClass{bottom: 4rem;right: 5rem;}
+}

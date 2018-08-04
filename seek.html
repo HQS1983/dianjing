@@ -1,0 +1,307 @@
+<!--
+	2018-07-30   17：14：36
+	HQS
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>搜索</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="icon" href="img/favicon.ico" mce_href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/commonality.css"/>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+	</script>
+	<style type="text/css">
+		.Team_search{width: 66%;margin: 0.5rem auto 0.5rem;position: relative;border-radius: 0.3rem;background: #fff;}
+		.Team_search input{width: 76%;line-height: 1.8rem;text-indent: 2.5rem;margin-left: 1rem;margin-bottom: 0.5rem;
+							border-radius: 0.1rem;background: #E5E5E5;border: none;font-weight: 600;color: #616161; }
+		.Team_search .icon_search{position: absolute;top: 0;left: 5%;width: 2rem;height: 2rem;}
+		.Team_search .icon_search img{display: block; width: 50%;margin: 20% auto;}
+		.Team_search .abolish{position: absolute;top: 0;right: 5%;width: 2rem;line-height: 2rem;color: #6d6d6d;}
+		
+		/*以下为 移动端   我的消息 样式*/
+		.seek{position: fixed;top: 3.2rem;left: 0;right: 0;background: #F2F2F2; bottom: 4rem;overflow-y: scroll;}
+		.seek .classes{border-bottom: 1px #ededed solid;}
+		.seek .content{width: 100%;margin-bottom: 0.5rem;background: #fff;position: relative;}
+		.seek .content .icon_search{display: block;width: 100%;height: 100%;}
+		.seek .content .icon_search .abstract{width: 88%;color: #3D3D3D;font-size: 0.7rem;text-align: justify; line-height: 1rem;margin: 0 auto;}
+		.seek .content .icon_search .time{position: absolute;right: 0;bottom: 0; width: 44%;line-height: 2rem;font-size: 0.6rem;color: #3D3D3D;}
+		.seek .content .icon_search .time img{display: inline-block; width: 0.8rem;vertical-align: middle;}
+	</style>
+</head>
+<body>
+	<div class="pc" style="display: none;">
+		<!--头部导航菜单-->
+		<div class="top">
+			<div class="top_div">
+				<a class="logo" href="index.html"><img src="img/public/logo.png"/></a>
+				<ul><li><a href="index.html">首页</a></li>
+					<li><a href="game.html">游戏</a></li>
+					<li><a href="edg.html">战队</a></li>
+					<li><a href="guide.html">办赛指南</a></li>
+					<li><a href="userCenter.html">注册/登录</a></li>
+					<li><a href="javascript:;">创建战队</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--主体-->
+		<div class="main dis_block">
+
+			<!--主题海报-->
+			<div class="banner">
+				<div class="banner_bg banner_bg1"></div>
+				<div class="banner_bg banner_bg2"></div>
+				<div class="banner_bg banner_bg3"></div>
+				<div class="banner_bg banner_bg4"></div>
+				<div class="banner_bg banner_bg5"></div>
+			</div>
+			
+			<!--游戏新闻-->
+			<div class="GamesList">
+				<div class="GamesList_div">
+					
+				</div>
+			</div>
+			
+			<!--直播-->
+			<div class="live" id="ambassador">
+				<p>赛事标题</p>
+				<div class="live_div">
+					<!--直播视频-->
+					<div class="sinatv">
+						
+					</div>
+					<!--赛事竞猜-->
+					<div class="guess">
+						
+					</div>
+				</div>
+			</div>
+		
+			<!--赛事奖金-->
+			<div class="bonus">
+				<div class="bonus_div">
+					<!--战队榜-->
+					<div class="edg">
+						
+					</div>
+					<!--赛事榜-->
+					<div class="Competition">
+						
+					</div>
+				</div>
+			</div>
+		
+			<!--全场最佳-->
+			<div class="bestOfAll">
+				<div class="bestOfAll_div">
+					<!--战队榜-->
+					<div class="edg">
+						
+					</div>
+					<!--赛事榜-->
+					<div class="Competition">
+						
+					</div>
+				</div>
+			</div>
+		
+			<!--赛事赛程-->
+			<div class="schedule">
+				<div class="schedule_div">
+					<!--战队榜-->
+					<div class="edg">
+						
+					</div>
+					<!--赛事榜-->
+					<div class="Competition">
+						
+					</div>
+				</div>
+			</div>
+		
+			<!--赛事介绍-->
+			<div class="Introduction">
+				<div class="Introduction_div">
+					<!--战队榜-->
+					<div class="edg">
+						
+					</div>
+					<!--赛事榜-->
+					<div class="Competition">
+						
+					</div>
+				</div>
+			</div>
+		
+			<!--赛事标题-->
+			<div class="EventTitle">
+				<div class="EventTitle_div">
+					<!--战队榜-->
+					<div class="edg">
+						
+					</div>
+					<!--赛事榜-->
+					<div class="Competition">
+						
+					</div>
+				</div>
+			</div>
+			
+			<!--联系我们-->
+			<div class="about" id="about">
+				<div class="about_main">
+					<p class="about_title">联系我们</p>
+					<p class="about_describe">我们总是乐于帮助你，请选择最适合你的方式联系我们！ </p>
+					<div class="about_address">
+						<p style="margin-top: 8px;">总址：上海市闵行区虹井路288号B座703室</p>
+						<p>分部：广州市天河区广州信息港方圆E时光西座28楼</p>
+						<p>邮编：510000</p>
+						<p>电话：+86 13901779476</p>
+						<p>&nbsp;</p>
+						<p>网址：www.juyouxiao.com</p>
+						<p>E-mail：hr@tianchangtech.com</p>
+					</div>
+					
+					
+					<div class="toastInfo"><span>提醒</span></div>
+				</div>
+				<ul class="foot">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="javascript:;">校园大使</a></li>
+					<li><a href="javascript:;">关于我们</a></li>
+				</ul>
+				<p class="provider">京公网安备11010802023605号</p>
+			</div>
+		</div>
+		
+		<!--点击回到顶部-->
+		<a id="com_d" style="display: none;"></a>
+	</div>
+	
+	<div class="mobile fix" style="display: block;">
+		<!--底部 导航 菜单-->
+		<div class="top">
+			<ul><li><a href="index.html">
+						<img src="img/public/icon_navigation_1.png"/>
+						<p>首页</p>
+					</a>
+				</li>
+				<li><a href="javascript:;">
+						<img src="img/public/icon_navigation_2.png"/>
+						<p>看帖</p>
+					</a>
+				</li>
+				<li><a href="javascript:;"><img class="increase" src="img/public/icon_navigation_3.png"/></a></li>
+				<li><a href="edg.html">
+						<img src="img/public/icon_navigation_4.png"/>
+						<p>战队</p>
+					</a>
+				</li>
+				<li><a id="_Usercenter">
+						<img src="img/public/icon_navigation_5.png"/>
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="Team_search">
+			<a class="icon_search" id="icon_search"><img src="img/public/icon_search.png"/></a>
+			<input class="icon_input" id="icon_input" type="text" name="" placeholder="输入战队名称搜索" value=""  onkeyup="judgeIsNonNull1(event)" />
+			<a class="abolish telClear dis_none" id="abolish">取消</a>
+		</div>
+
+		<!--搜索记录-->
+		<div class="seek fix">
+			<div class="classes fix">
+				<span class="list">排名</span>
+				<span class="list">战队名称</span>
+				<span class="list">战队徽章</span>
+				<span class="list">成员</span>
+				<span class="list">总场次</span>
+				<span class="list">赛点</span>
+			</div>
+			<div class="content fix">
+				<div class="grade fix">
+					<!--历史成绩1-->
+					<div class="historyResults">
+						<div class="CrunchiesRanking pool fix">
+							
+							<!--暂无搜索记录-->
+							<p class="noGame dis_none">暂无搜索记录~</p>
+							
+							<!--<a href="edg_website.html">
+								<div class="list">
+									<span class="ranking">1</span><span class="TeamName apostrophe">22</span>
+									<span class="teamLogo"><img src="img/public/icon_Crunchies1.png"></span>
+									<span class="member"><i class="" id="">1</i>/50</span>
+									<span class="totalNumber">30</span><span class="combatGains"><img src="img/public/icon_medal.png">30</span>
+								</div>
+							</a>-->
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+	</div>
+	
+	<script src="js/sUserAgent.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function edg_website(){
+			var html="";
+			for(var o=0;o<=1;o++ ){
+				html += '<a href="edg_website.html">'+
+							'<div class="list">'+
+								'<span class="ranking">1</span><span class="TeamName apostrophe">22</span>'+
+								'<span class="teamLogo"><img src="img/public/icon_Crunchies1.png"></span>'+
+								'<span class="member"><i class="" id="">'+o+'</i>/50</span>'+
+								'<span class="totalNumber">30</span><span class="combatGains"><img src="img/public/icon_medal.png">30</span>'+
+							'</div>'+
+						'</a>';
+			}
+			$(".seek .content .CrunchiesRanking").append(html);
+		}
+		
+		var html1='<p class="noGame">暂无搜索记录~</p>';
+		$(".seek .content .CrunchiesRanking").append(html1);
+		
+		function judgeIsNonNull1(event){
+			
+			var value=$("#icon_input").val();
+			var x = event.which || event.keyCode;
+			if (x == 8 ) {
+		  		if(value !== "" ){
+			      	$(".noGame").addClass("dis_none");
+		  			edg_website();
+			      	$(".telClear").removeClass("dis_none");
+			    }else{
+			    	$(".telClear").addClass("dis_none");
+			    	$(".seek .content .CrunchiesRanking").html(html1);
+			    	$(".noGame").removeClass("dis_none");
+			    }
+			}
+			if(value !== "" ){
+				$(".noGame").addClass("dis_none");
+		  		edg_website();
+		    	$(".telClear").removeClass("dis_none");
+		    }else{
+		    	$(".telClear").addClass("dis_none");
+			    $(".seek .content .CrunchiesRanking").html(html1);
+		    	$(".noGame").removeClass("dis_none");
+		    }
+		}
+		
+		$('.telClear').click(function(){
+		    $('#icon_input').val("");
+		    $(".telClear").addClass("dis_none");
+		    $(".seek .content .CrunchiesRanking").html(html1);
+		    $(".noGame").removeClass("dis_none");
+		});
+	</script>
+</body>
+</html>

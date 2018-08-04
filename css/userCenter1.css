@@ -1,0 +1,682 @@
+/*
+ * 2018-07-13 
+ * HQS
+ * 
+ * 个人中心
+ * */
+            
+
+.pc{width: 100%;position: relative;padding-top: 102px;}
+/*头部导航菜单*/
+.pc .top{height: 102px; position:fixed;top: 0;left: 0;border-bottom: 1px #000 solid;
+		-webkit-box-shadow:0 0  10px 1px #040404;  
+		-moz-box-shadow:0 0  10px 1px #040404;  
+		box-shadow:0 0  10px 1px #040404;z-index: 10;}
+.pc .top .top_div{display: block;width: 1158px;height: inherit;margin: 0 auto;}
+.pc .top .top_div a.logo{display: block; float: left;width: 162px; margin-top: 19px;}
+.pc .top .top_div a.logo img{display: block; width: 100%;}
+.pc .top .top_div ul{float: right;width: 606px; height: inherit;}
+.pc .top .top_div ul li{display: inline-block; float: left;width:80px;
+						height: inherit;line-height: 102px;text-align: center;}
+.pc .top .top_div ul li a{display: inline-block;width:inherit; color: #eb8b00;
+							height: inherit;line-height: inherit;font-size: 16px;}
+.pc .top .top_div ul li a:hover{border-top: 2px #eb8b00 solid; background: #e6e6e6;}
+
+
+.pc .main{width: 100%;min-width: 1158px;}
+
+/*顶部海报*/
+.pc .banner{height: 780px;position: relative;}
+.pc .banner .banner_bg{display: block;width: 100%;height: 158px;position: absolute;left: 0;z-index: 0;}
+.pc .banner .banner_bg1{top: 0px;  background: url(../img/banner_1.jpg) no-repeat center center;}
+.pc .banner .banner_bg2{top: 158px;background: url(../img/banner_2.jpg) no-repeat center center;}
+.pc .banner .banner_bg3{top: 316px;background: url(../img/banner_3.jpg) no-repeat center center;}
+.pc .banner .banner_bg4{top: 474px;background: url(../img/banner_4.jpg) no-repeat center center;}
+.pc .banner .banner_bg5{top: 632px;height: 148px;background: url(../img/banner_5.jpg) no-repeat center center;}
+
+
+
+/*游戏列表*/
+.pc .GamesList{height: 244px; padding-top: 32px;background: #CA4206;}
+.pc .GamesList .GamesList_div{display: block;width:1158px;height: 180px;margin: 0 auto;background: #A8A8A8;}
+
+
+
+
+/*直播*/
+.pc .live{height: 748px;position: relative;
+			background: #D58505;}
+.pc .live .live_div{ width: 1158px;height: inherit;}
+/*直播视频*/
+.pc .live .sinatv{width: 50%;height: inherit;background: #E6E6E6;float: left;}
+
+/*赛事竞猜*/
+.pc .live .guess{width: 50%;height: inherit;background: #F00;float: right;}
+
+
+
+
+
+/*赛事奖金*/
+.pc .bonus{height: 518px;background: #D58505;}
+.pc .bonus .bonus_div{display: block; width: 1158px; height: 498px;margin: 10px auto;}
+/*战队榜*/
+.pc .bonus .edg{width: 50%;height: inherit;background: #794d4d;float: left;}
+/*赛事榜*/
+.pc .bonus .Competition{width: 50%;height: inherit;background: #00e6ff;float: right;}
+
+
+
+/*全场最佳*/
+.pc .bestOfAll{height: 518px;background: #D58505;}
+.pc .bestOfAll .bestOfAll_div{display: block; width: 1158px; height: 498px;margin: 10px auto;}
+/*战队榜*/
+.pc .bestOfAll .edg{width: 50%;height: inherit;background: #794d4d;float: left;}
+/*赛事榜*/
+.pc .bestOfAll .Competition{width: 50%;height: inherit;background: #00e6ff;float: right;}
+
+
+/*赛事赛程*/
+.pc .schedule{height: 518px;background: #D58505;}
+.pc .schedule .schedule_div{display: block; width: 1158px; height: 498px;margin: 10px auto;}
+/*战队榜*/
+.pc .schedule .edg{width: 50%;height: inherit;background: #794d4d;float: left;}
+/*赛事榜*/
+.pc .schedule .Competition{width: 50%;height: inherit;background: #00e6ff;float: right;}
+
+
+/*赛事介绍*/
+.pc .Introduction{height: 518px;background: #D58505;}
+.pc .Introduction .Introduction_div{display: block; width: 1158px; height: 498px;margin: 10px auto;}
+/*战队榜*/
+.pc .Introduction .edg{width: 50%;height: inherit;background: #794d4d;float: left;}
+/*赛事榜*/
+.pc .Introduction .Competition{width: 50%;height: inherit;background: #00e6ff;float: right;}
+
+
+/*赛事标题*/
+.pc .EventTitle{height: 518px;background: #D58505;}
+.pc .EventTitle .EventTitle_div{display: block; width: 1158px; height: 498px;margin: 10px auto;}
+/*战队榜*/
+.pc .EventTitle .edg{width: 50%;height: inherit;background: #794d4d;float: left;}
+/*赛事榜*/
+.pc .EventTitle .Competition{width: 50%;height: inherit;background: #00e6ff;float: right;}
+
+
+
+/*联系我们*/
+.pc .about{height: 465px;background: #fff;}
+.pc .about .about_main{display: block;width:1158px;height: 380px;margin: 0 auto; padding-top: 57px;position: relative;}
+.pc .about .about_main p{color: #000;display: block;}
+.pc .about .about_main .about_title{width: 100%; font-size: 45.6px;height: 45.6px;line-height: 45.6px;margin-bottom: 20px; text-align: center;}
+.pc .about .about_main .about_describe{width: 100%; font-size: 20.85px;height: 20.85px;line-height: 20.85px;margin-bottom: 37px;text-align: center;}
+
+.pc .about .about_main .about_address{display: inline-block;width: 375px;height: 196px;float: left;margin-right: 50px;}
+.pc .about .about_main .about_address p{font-size: 16.33px;margin-bottom: 5px;}
+
+
+#qq::-webkit-inner-spin-button,#mobile::-webkit-inner-spin-button,#contact_number::-webkit-inner-spin-button { -webkit-appearance: none!important; ; }
+#qq,#mobile,#contact_number{ appearance: textfield;
+							-moz-appearance: textfield;
+							-webkit-appearance: textfield; }
+#qq:hover,#mobile:hover,#contact_number:hover{ appearance: textfield;
+												-moz-appearance: textfield;
+												-webkit-appearance: textfield; }
+.pc .about .about_main form .form_right{display: inline-block;width: 301px;height: inherit;margin-right: 22px;float: left;}
+.pc .about .about_main form .form_right #content{min-width: 302px;max-width: 302px; color: #a8a8a8;font-size: 13.54px;
+												margin-bottom: 10px;min-height: 79px;max-height: 79px;
+												line-height: 32px;
+												border: 1px #eca234 solid;padding-left: 7px;}
+
+.pc .about .about_main form .form_right #contact_submit{width: 302px;height: 34px; color: #fff;font-size: 11.94px;
+										  height: 32px; line-height: 32px;text-align: center;
+										  background: #e88901;-webkit-tap-highlight-color:transparent;}
+.pc .about .about_main form .form_right #contact_submit:hover{background: #cc7700;}
+
+.pc .about ul.foot{display: block;width: 290px;height: 20px;margin: 20px auto 10px;clear: both;}
+.pc .about ul.foot li{display: block;float: left;height: 20px;}
+.pc .about ul.foot li:nth-of-type(1){border-right: 1px #4b4b4b solid;}
+.pc .about ul.foot li:nth-of-type(2){border-right: 1px #4b4b4b solid;}
+.pc .about ul.foot li a{display: block; color: #000;font-size: 15.4px;height: 20px;line-height: 20px;
+								margin-left: 22px;margin-right: 22px;}
+.pc .about ul.foot li a:hover{background: #CCCCCC;}
+.pc .about .provider{display: block; color: #000; width: 100%;font-size: 16.72px;text-align: center;}
+
+
+
+.pc #com_d { cursor: pointer;  width: 90px; height: 90px;border: 0px;
+		 margin: 0px; padding: 0px;
+		 position: fixed; right: 40px; bottom: 40px;
+		 background: url("../img/top.png") no-repeat center center; z-index: 999; }
+.pc #com_d:hover { background: url("../img/top.png") no-repeat center center; }
+
+
+
+
+/*弹窗提示*/
+
+.pop_up_prompts,.toastInfo{display:none;position:absolute;width:100%;
+			text-align:center;font-size:1rem;height:30px;line-height:30px;color:#fff;}
+.pop_up_prompts span,.toastInfo span{background-color:#a5a3a3;display:inline-block;border-radius:5px;padding:0px 10px;}
+.toastInfo{bottom: 35px;}
+.pop_up_prompts{bottom: 160px;}
+
+/*PC端样式   结束*/
+
+
+
+
+
+
+/*
+ * 以下为移动端样式
+ * 2018-07-12
+ * HQS
+ * */
+.mobile .head{padding-top: 0.7rem;}
+
+
+/*顶部个人信息*/
+.information{width: 96%;margin: 0 auto 0.5rem;background: #fff;}
+.information .info_left{width: 72%;float: left;}
+.information .info_left .info_left_top{width: 100%;}
+.information .info_left .info_left_top>div{float: left;}
+.information .info_left .info_left_top img{vertical-align: middle;}
+
+.information .info_left .info_left_top .icon_head{display: block; width: 38%;border-radius: 50%;}
+.information .info_left .info_left_top .icon_head img{display: block; width: 80%;margin: 1rem auto 1.5rem;border-radius: 50%;}
+
+.information .info_left .info_left_top .title{display: table-cell;color: #000;font-size: 1rem;font-weight: 600;width: 62%;height: 1.3134rem;
+											  margin-top: 1.5rem;text-align: left;margin-bottom: 0.5rem;}
+.information .info_left .info_left_top .title .gender{float: left;width: 21px;margin-right: 0.5rem;}
+.information .info_left .info_left_top .title p{display: inline-block;float: left;margin-right: 0.5rem;line-height: 1.3134rem;}
+.information .info_left .info_left_top .title .diadema{float: left;width: 21px;margin-top: 1.275px;}
+
+
+.information .info_left .info_left_top .gameList{width: 50%;}
+.information .info_left .info_left_top .gameList img{width: 1.2rem;margin-right: 0.3rem;}
+
+.information .info_left .info_left_bottom{width: 100%;}
+.information .info_left .info_left_bottom p{color: #666;font-size: 0.7rem;margin-bottom: 0.3rem;line-height: 1.5rem;}
+.information .info_left .info_left_bottom p:nth-of-type(1){width: 50%;float: left;text-indent: 1rem;}
+.information .info_left .info_left_bottom p:nth-of-type(2){width: 50%;float: left;}
+.information .info_left .info_left_bottom p:nth-of-type(3){width: 100%;text-indent: 1rem;}
+.information .info_left .info_left_bottom p:nth-of-type(4){width: 100%;text-indent: 1rem;}
+.information .info_left .info_left_bottom p span{color: #999;margin-left: 0.5rem;}
+
+
+.information .info_left .info_left_bottom p:nth-of-type(2) span{display: inline-block;vertical-align: bottom;max-width: 4rem;}
+
+.information .info_right{width: 26%;float: right;margin-top: 1.5rem;}
+.information .info_right p{display: table-cell; font-size: 0.7rem; color: #f18b22;width: 96%;}
+.information .info_right p img{display: inline-block;width: 0.8rem;vertical-align: middle; margin-right: 0.5rem;}
+.information .info_right button{display: inline-block;background: #488AFD;border-radius: 0.2rem;
+						    text-transform: none;overflow: visible;margin-bottom: 0.5rem;
+						    padding: 8px 10px;    -webkit-writing-mode: horizontal-tb;
+						    font-family: Arial;font-size: 0.7rem;
+						    line-height: 1.42857143;
+						    text-align: center;
+						    white-space: nowrap;
+						    vertical-align: middle;
+						    -ms-touch-action: manipulation;
+						    touch-action: manipulation;
+						    cursor: pointer;
+						    -webkit-user-select: none;
+						    -moz-user-select: none;
+						    -ms-user-select: none;
+						    user-select: none;
+						    background-image: none;
+						    border: 1px solid transparent;color: #fff;}
+.information .info_right button:nth-of-type(1){margin-top: 1rem;}
+.information .info_right button:nth-of-type(2){margin-top: 0rem;}
+.information .info_right .icon_teamLogo{display: block;width: 2rem;height:2rem;max-height:2rem;float: right;margin-right: 13%;
+										filter: drop-shadow(0px 0px 2px #999);margin-bottom: 0.5rem;border-radius: 50%;}
+
+
+/*绑定列表*/
+.head .Dblist{width: 96%;margin: 0.5rem auto;background: #fff;margin-bottom: 1rem;}
+.head .Dblist .main{width: 98%;margin: 0 auto;}
+.head .Dblist .main .content{width: 100%; height: 3rem; border-bottom: 1px #ededed solid;margin: 0 auto;}
+.head .Dblist .main .content .space{display: inline-block; width: 30%;float: left;line-height: 3rem;text-align: center;}
+.head .Dblist .main .content .space img{width: 2rem;vertical-align: middle;}
+.head .Dblist .main .content p{display: inline-block;width: 70%;text-align: center;height: inherit;line-height: 3rem;color: #525252;}
+.head .Dblist .main .content button{display: inline-block; width: 50%;text-align: center;height: 1.8rem;line-height: 1.8rem;
+							  border-radius: 0.3rem;border: 1px #9a9a9a solid;margin-top: 0.5rem;background: #fff;
+							  color: #969696;margin-left: 10%;}
+.head .Dblist .main .content .secede{display: block;margin: 1rem auto 0rem;font-size: 1rem;font-weight: 600;text-align: center;
+								    white-space: nowrap;line-height: 2.3rem;width: 86%;
+								    vertical-align: middle;
+								    -ms-touch-action: manipulation;
+								    touch-action: manipulation;
+								    cursor: pointer;
+								    -webkit-user-select: none;
+								    -moz-user-select: none;
+								    -ms-user-select: none;
+								    user-select: none;
+								    border-radius: 0.2rem;color: #fff;background-color: #488afd;border: none;}
+
+.head .Dblist .unfold{display: block;width: 50%;text-align: center;margin: 0.7rem auto;}
+.head .Dblist .unfold1{text-align: center;height: 2rem;line-height: 2rem;
+					  border-radius: 0.3rem;border: 1px #9a9a9a solid;background: #fff;
+					  color: #969696;}
+.head .Dblist .unfold2{text-align: center;height: 1rem;border: none;background: transparent;}
+
+
+/*功能列表*/
+.functionList{padding-bottom: 0.5rem;padding-top: 0.5rem;}
+.functionList .content{width: 100%; height: 2rem; line-height: 2rem;padding-left: 1rem;padding-right: 1rem;background: #fff;margin-bottom: 0.7rem;}
+.functionList .content a{display: block;width: 100%;height: inherit;}
+.functionList .content .icon_function{vertical-align: middle;width: 1.1rem;margin-right: 0.4rem;}
+.functionList .content .title{color: #2d2d2d;font-weight: 700;font-size: 0.8rem;}
+.functionList .content .news{color: #fff;font-size: 0.8rem;padding: 0rem 0.4rem;background: #ec4040;height: 1rem;line-height: 1rem;
+							 border-radius: 0.5rem;float: right;margin-top: 0.5rem;margin-right: 2rem;}
+.functionList .content .icon_open{float: right;display: block;width: 0.6rem;margin-top: 0.55rem;}
+
+
+/*我的赛事*/
+.PyEvents .events{width: 96%;margin: 0.5rem auto 0.8rem;padding-bottom: 0.6rem;background: #fff;position: relative;
+					  -webkit-box-shadow: 0px 2px 3px 0px #bbbbbb;  
+					  -moz-box-shadow: 0px 2px 3px 0px #bbbbbb;  
+					  box-shadow: 0px 2px 3px 0px #bbbbbb;}
+.PyEvents .events .left{width: 64%;float: left;}
+.PyEvents .events .left .description{width: 100%;height: 2.5rem;line-height:2.5rem;padding-left: 0.6rem;
+									font-size: 0.7rem;color: #515151;}
+.PyEvents .events .left .condition{width: 100%;float: left;font-size: 0.7rem;color: #979797;
+									  height: 1.5rem;line-height: 1.5rem;padding-left: 0.6rem;text-indent: 0.4rem;}
+.PyEvents .events .left .condition span{width: 0.8rem;height:0.8rem;float: left;margin-top: 0.28rem;}
+.PyEvents .events .viewDetails{display: inline-block;background: #488AFD;border-radius: 0.2rem;
+						    text-transform: none;overflow: visible;
+						    padding: 6px 6px;-webkit-writing-mode: horizontal-tb;
+						    font-family: Arial;font-size: 0.7rem;
+						    line-height: 1.42857143;float: right;
+						    text-align: center;margin: 1.5rem 0.5rem 0 0;
+						    white-space: nowrap;
+						    vertical-align: middle;
+						    -ms-touch-action: manipulation;
+						    touch-action: manipulation;
+						    cursor: pointer;
+						    -webkit-user-select: none;
+						    -moz-user-select: none;
+						    -ms-user-select: none;
+						    user-select: none;
+						    background-image: none;
+						    border: 1px solid transparent;color: #fff;}
+
+
+
+/*个人荣誉*/
+		/*有荣誉 开始*/
+.personalHonor .events{width: 96%;margin: 0.5rem auto 0.8rem;background: #fff;position: relative;}
+.personalHonor .events a{width: 100%;display: block;}
+.personalHonor .events .eventsMain{width: 80%;position: relative;float: left;}
+.personalHonor .events .eventsMain p{height: 1.5rem;line-height: 1.5rem;}
+.personalHonor .events .eventsMain p img{vertical-align: middle;margin-right: 0.2rem;}
+.personalHonor .events .eventsMain .EventsBanner{display: block; width: 95%;margin: 0 auto 0.5rem;}
+.personalHonor .events .eventsMain .description{width: 90%;height: 2rem;line-height:2rem;padding-left: 0.6rem;
+											font-size: 0.7rem;color: #515151;font-weight: 600;
+											white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.personalHonor .events .eventsMain .description img{display: inline-block;margin-right: 0.5rem;width: 10%;}
+
+.personalHonor .events .eventsName{font-size: 0.8rem;color: #515151;padding-left: 1.2rem;}
+.personalHonor .events .eventsTime{font-size: 0.6rem;color: #999;padding-left: 1.2rem;}
+
+
+.personalHonor .events .trophyx{display: inline-block; width: 20%;color: #fff;text-align: center;}
+.personalHonor .events .trophyx img{width: 80%;vertical-align: middle;margin: 1rem auto 0.5rem;}
+
+
+
+
+
+/*弹窗  弹出层*/
+.union{width: 80%;border-radius: 0.3rem;background: #fff; position: absolute;left: 10%;overflow: hidden;}
+.style{color: #3d3d3d;font-size: 1.5rem;text-align: center;font-weight: 800;}
+.marginHeight{margin-bottom: 5rem!important;}
+		/*敬请期待*/
+.comingSoon{margin-top: 40%;}
+.comingSoon .title{line-height: 7rem;}
+.comingSoon .buttonDiv{width: 100%;height: 3rem;position: absolute;left: 0;bottom: 1rem;}
+.comingSoon .buttonDiv .rightButton{background: #3dcbec;width: 55%;line-height: 2rem;text-align: center;float: inherit;
+									color: #fff;font-size: 1rem;border: none;margin: 0 auto;display: block;border-radius: 0.1rem;}
+
+		/*修改性别、更改昵称*/
+.change{margin-top: 24%;background: transparent;height: 16rem;}
+.change .modules{background: #fff;}
+.change .modules1{margin-bottom: 0.5rem;border-radius: 0.3rem;}
+.change .modules1 .line{height: 3rem;line-height: 3rem;text-align: center;font-weight: 800;}
+.change .modules1 .line label{display: block; width: 30%;float: left;}
+.change .modules1 .line .module{float: right;width: 30%;height: 3rem; background: #fff;}
+.change .modules1 .line .borderDiv{width: 1.2rem;height: 1.2rem; border: 2px #000 solid;border-radius: 50%;margin: 0.95rem auto;}
+.change .modules1 .line .borderDiv .pitchUp{display: block; width: 0.8rem;height: 0.8rem;border-radius: 50%;margin: 0.1rem auto;}
+.moduleBGcolor2{background: #000;}
+
+		/*绑定百度帐号*/
+.bindingBaidu{margin-top: 24%;}
+.bindingBaidu .title{line-height: 4rem;}
+.bindingBaidu .importArea{width: 80%;margin: 0 auto;}
+.bindingBaidu .importArea input{display: block;border: 1px #d4d4d4 solid;line-height: 2.5rem;text-indent: 0.5rem;font-size: 0.6rem;
+								 background: #fff;margin: 0rem auto 0.5rem;color: #a3a3a3;border-radius: 0.2rem;}
+.bindingBaidu .importArea .trueName{width: 100%;}
+.bindingBaidu .importArea .AlipayName{width: 100%;}
+.bindingBaidu .importArea .messageCode{width: 54%;float: left;}
+.bindingBaidu .importArea .readonly{width: 42%; line-height: 2.6rem;background: #3dcdec;border-radius: 0.2rem;
+									color: #fff;border: none;float: right;text-align: center;text-indent: inherit;}
+
+		/*绑定支付宝帐号*/
+.bindingAlipay{margin-top: 24%;}
+.bindingAlipay .title{line-height: 4rem;}
+.bindingAlipay .importArea{width: 80%;margin: 0 auto;}
+.bindingAlipay .importArea input{display: block;border: 1px #d4d4d4 solid;line-height: 2.5rem;text-indent: 0.5rem;font-size: 0.6rem;
+								 background: #fff;margin: 0rem auto 0.5rem;color: #a3a3a3;border-radius: 0.2rem;}
+.bindingAlipay .importArea .trueName{width: 100%;}
+.bindingAlipay .importArea .AlipayName{width: 100%;}
+.bindingAlipay .importArea .messageCode{width: 54%;float: left;}
+.bindingAlipay .importArea .readonly{width: 42%; line-height: 2.6rem;background: #3dcdec;border-radius: 0.2rem;
+									color: #fff;border: none;float: right;text-align: center;text-indent: inherit;}
+
+		/*信息确认*/
+.messageAffirm{margin-top: 24%;}
+.messageAffirm .title{line-height: 4rem;}
+.messageAffirm .importArea{width: 80%;margin: 0 auto 0.5rem;font-size: 0.8rem;}
+.messageAffirm .importArea label{color: #000;font-weight: 800;float: left;line-height: 2.5rem;}
+.messageAffirm .importArea input{display:inline-block;width: 50%; color: #3dcbec;background: transparent;
+								 border: none;float: left;line-height: 2.5rem;text-indent: 0.5rem;}
+		/*绑定QQ帐号*/
+.bindingQQ{margin-top: 24%;}
+.bindingQQ .title{line-height: 4rem;}
+.bindingQQ .importArea{width: 80%;margin: 0 auto;}
+.bindingQQ .importArea input{display: block;border: 1px #d4d4d4 solid;line-height: 2.5rem;text-indent: 0.5rem;font-size: 0.6rem;
+							 background: #fff;margin: 0rem auto 0.5rem;color: #a3a3a3;border-radius: 0.2rem;width: 100%;}
+.bindingQQ .importArea .messageCode{width: 54%;float: left;}
+.bindingQQ .importArea .readonly{width: 42%; line-height: 2.6rem;background: #3dcdec;border-radius: 0.2rem;
+									color: #fff;border: none;float: right;text-align: center;text-indent: inherit;}
+		/*绑定微信帐号*/
+
+		/*绑定手机号码*/
+.verify{height: 16rem; margin-top: 26%;padding-top: 1rem;}
+.verify .title{line-height: 4rem;}
+.verify .importArea{width: 80%;margin: 0 auto;}
+.verify .importArea input{display: block;border: 1px #d4d4d4 solid;line-height: 2.5rem;text-indent: 0.5rem;font-size: 0.6rem;
+								 background: #fff;margin: 0rem auto 0.5rem;color: #a3a3a3;border-radius: 0.2rem;}
+.verify .importArea .trueName{width: 100%;}
+.verify .importArea .messageCode{width: 54%;float: left;}
+.verify .importArea .readonly{width: 42%; line-height: 2.6rem;background: #3dcdec;border-radius: 0.2rem;
+									color: #fff;border: none;float: right;text-align: center;text-indent: inherit;}
+
+.verify .numberDiv{position: relative;width: 80%;margin: 0 auto 1rem;}
+.verify .numberDiv input{display: block;width: 100%; line-height: 2rem;background: #e5e5e5;border-radius: 0.2rem;font-weight: 600;
+						font-size: 0.7rem;text-indent: 0.5rem;color: #787878;border: none;}
+.verify .numberDiv .telClear{position:absolute;width:1.5rem;right:0.25rem;top:0.25rem;}
+
+.verify .verifyNumDiv{position: relative;width: 80%;margin: 0 auto 1rem;}
+.verify .verifyNumDiv .verifyNum{display: block;width: 50%; line-height: 2rem;background: #e5e5e5;border-radius: 0.2rem;font-weight: 600;
+								font-size: 0.7rem;text-indent: 0.5rem;color: #787878;border: none;float: left;}
+.verify .verifyNumDiv .codeClear{position:absolute;width:1.5rem;top:0.25rem;left:37%;}
+.verify .verifyNumDiv .readonly{display: block;width: 46%; line-height: 1.8rem;background: #fff;border-radius: 0.2rem;font-weight: 600;
+								font-size: 0.7rem;color: #787878;border: 2px #787878 solid;float: right;text-align: center;}
+
+
+
+.change .modules2{height: 6.5rem;padding-top: 2rem;border-top-left-radius: 0.3rem;border-top-right-radius: 0.3rem;}
+.change .modules2 input{border: 1px #d4d4d4 solid;line-height: 2.5rem;text-indent: 0.5rem;color: #A2A2A2;border-radius: 0.2rem;
+						background: #fff;margin: 0rem auto;display: block;width: 80%;}
+.change .buttonDiv{width: 100%;height: 3rem;line-height: 3rem;position: absolute;left: 0;bottom: 0;}
+.change .buttonDiv button{width: 50%;height: inherit;text-align: center;color: #fff;font-size: 1rem;float: left;border: none;}
+.change .buttonDiv .leftButton{background: #558efc;}
+.change .buttonDiv .rightButton{background: #e60111;}
+		/*完善收货地址*/
+.shippingAddress{ margin-top: 40%;}
+.shippingAddress .title{line-height: 4rem;}
+.shippingAddress .deliveryAddress{border: 1px #ccc solid;background: #fff;border-radius: 0.2rem;width: 80%;height: 5rem;
+								  color: #a2a2a2;font-size: 0.6rem;padding: 0.5rem;line-height: 1.2rem;display: block;margin: 0 auto 4rem;}
+
+
+
+
+/*5.5英寸   414*736尺寸的屏幕  如iPhone6 Plus、iPhone6s Plus、iPhone7 Plus、魅族MX5  1920x1080  /3★*/ 
+@media only screen and (max-width: 414px) {
+	.information .info_left .info_left_top .icon_head img{height: 5.436rem;}
+	.information .info_left .info_left_top .title p{max-width: 8rem;}
+	.personalHonor .events .eventsName,.personalHonor .events .eventsTime{padding-left: 2.86rem;}
+}
+/*5.96英寸  412*732尺寸的屏幕  如谷歌Nexus 6   2K 2560x1440  /3.5★*/
+@media only screen and (max-width: 412px) {
+	.information .info_left .info_left_top .icon_head img{height: 5.411rem;}
+	.information .info_left .info_left_top .title p{max-width: 8rem;}
+	.personalHonor .events .eventsName,.personalHonor .events .eventsTime{padding-left: 2.85rem;}
+}
+/*5.2英寸   411*731尺寸的屏幕  如 谷歌Nexus 5x   1920x1080  /2.625★*/
+@media only screen and (min-width: 376px) and (max-width: 411px) {
+	.information .info_left .info_left_top .icon_head img{height: 5.397rem;}
+	.information .info_left .info_left_top .title p{max-width: 7.5rem;}
+	.personalHonor .events .eventsName,.personalHonor .events .eventsTime{padding-left: 2.8rem;}
+}
+/*4.7英寸   375*667尺寸的屏幕  如iPhone6、iPhone7、iPhone 6s   1334x750*/
+@media only screen and (min-width: 361px) and (max-width: 375px) {
+	.information .info_left .info_left_top .icon_head img{height: 4.924rem;}
+	.information .info_left .info_left_top .title p{max-width: 7rem;}
+	.personalHonor .events .eventsName,.personalHonor .events .eventsTime{padding-left: 2.7rem;}
+}
+/*4.95英寸  360*640尺寸的屏幕  如 谷歌Nexus 5     1920x1080 /3★*/
+@media only screen and (min-width: 321px) and (max-width: 360px) {
+	.information .info_left .info_left_top .icon_head img{height: 4.727rem;}
+	.information .info_left .info_left_top .title p{max-width: 6rem;}
+	.personalHonor .events .eventsName,.personalHonor .events .eventsTime{padding-left: 2.6rem;}
+}
+/*4.0英寸   320*568尺寸的屏幕  如iPhone5、iPhone SE   1136x640*/
+@media only screen and (max-width: 320px) {
+	.information .info_left .info_left_top .icon_head img{height: 4.202rem;}
+	.information .info_left .info_left_top .title p{max-width: 4rem;}
+	.personalHonor .events .eventsName,.personalHonor .events .eventsTime{padding-left: 2.4rem;}
+}
+
+
+
+/*
+ * 2018-07-24  23: 52:29 
+ * HQS
+ * 
+ * 贴吧电竞  易战  个人中心  二级页面
+ * */
+.vessel{position: fixed;top: 0;left: 0;right: 0;background: #F2F2F2; bottom: 4rem;overflow-y: scroll;}
+.vessel1{ bottom: 7rem!important;}
+.vessel2{ bottom: 3rem!important;}
+/*以下为 移动端   我的游戏 样式*/
+.mygame{padding-bottom: 1rem;}
+.mygame .content{width: 100%;padding-top: 1rem;}
+.mygame .content .module{width: 92%;margin: 0rem auto 1rem;background: #fff;
+						-webkit-box-shadow: 0px 3px 11px -3px #a7a7a7;  
+						-moz-box-shadow: 0px 3px 11px -3px #a7a7a7;  
+						box-shadow: 0px 3px 11px -3px #a7a7a7;}
+.mygame .content .module>div{float: left;}
+.mygame .content .module .left{width: 26%;}
+.mygame .content .module .left img{display: block; width: 76%;border-radius: 0.7rem;margin: 1rem auto;}
+
+.mygame .content .module .middle{width: 36%;}
+.mygame .content .module .middle p{width: 100%;text-align: center;}
+.mygame .content .module .middle .gameName{color: #323232;font-size: 0.9rem;font-weight: 800;line-height: 2rem;margin-top: 0.5rem;}
+.mygame .content .module .middle .gameRegione{color: #676767;font-size: 0.6rem;line-height: 1.3rem;
+									  -webkit-transform: scale(0.8);
+									  transform: scale(0.8);
+    								  -o-transform: scale(0.5);    /*针对能识别-webkit的opera browser设置*/}
+.mygame .content .module .middle .gameGrade{color: #323232;font-size: 0.7rem;line-height: 1.5rem;}
+
+.mygame .content .module .right{width: 38%;}
+.mygame .content .module .right .buttonStyle{display: inline-block; float: left;border: none;}
+.mygame .content .module .right .alter{width: 70%;background: #3dcbec;color: #fff; text-align: center;}
+.mygame .content .module .right .delete{width: 30%;background: #fe0100;}
+.mygame .content .module .right .delete img{display: block; width: 1rem;margin: auto;vertical-align: middle;}
+
+.mygameNav{position: fixed;left: 0;bottom: 4rem;height: 3rem;}
+.mygameNav button{display: block;width: 100%;height: 100%;background: #558EFC;line-height: 3rem;
+				  border: none;color: #fff;text-align: center;font-size: 0.8rem;}
+.mygameNav button img{display: inline-block;vertical-align: text-top;width: 1rem;}
+		/*弹窗   添加游戏*/
+.addGame{margin-top: 16%;}
+.addGame .title{line-height: 4rem;}
+.addGame .main{width: 100%;overflow-y: scroll; margin: 0 auto;border-top: 1px #ccc solid;padding-bottom: 3rem;}
+.addGame .main a{display: block;float: left;width: 33%;border-right: 1px #ccc solid;border-bottom: 1px #ccc solid;}
+.addGame .main a:nth-of-type(3),.addGame .main a:nth-of-type(6),.addGame .main a:nth-of-type(9),
+.addGame .main a:nth-of-type(12),.addGame .main a:nth-of-type(15),.addGame .main a:nth-of-type(18),
+.addGame .main a:nth-of-type(21),.addGame .main a:nth-of-type(24),.addGame .main a:nth-of-type(27),
+.addGame .main a:nth-of-type(32),.addGame .main a:nth-of-type(35),.addGame .main a:nth-of-type(39),
+.addGame .main a:nth-of-type(42),.addGame .main a:nth-of-type(45),.addGame .main a:nth-of-type(48),
+.addGame .main a:nth-of-type(51),.addGame .main a:nth-of-type(54),.addGame .main a:nth-of-type(57),
+.addGame .main a:nth-of-type(60),.addGame .main a:nth-of-type(63),.addGame .main a:nth-of-type(66),
+.addGame .main a:nth-of-type(69),.addGame .main a:nth-of-type(72),.addGame .main a:nth-of-type(75){border-right: none;}
+.addGame .main a img{display: block; width: 40%;margin: 1.5rem auto 0.5rem;}
+.addGame .main a p{text-align: center;line-height: 1rem;color: #524E4E;font-size: 0.8rem;margin-bottom: 1rem;}
+.addGame .buttonDiv .rightButton{width: 100%;}
+		/*弹窗   删除游戏*/
+.removeGamePopup{margin-top: 24%;}
+.removeGamePopup .title{line-height: 7rem;margin-bottom: 5rem;}
+		/*弹窗   绑定新游戏*/
+.BindingGame{margin-top: 24%;}
+.BindingGame .title{line-height: 4rem;}
+.BindingGame .importArea{width: 100%;}
+.BindingGame .importArea div{width: 80%;margin: 0 auto;}
+.BindingGame .importArea div label{width: 20%;float: left;text-align: center;color: #A2A2A2;line-height: 2.5rem;}
+.BindingGame .importArea div input{display: block;width: 80%; border: 1px #d4d4d4 solid;line-height: 2.5rem;text-indent: 0.5rem;
+								 background: #fff;margin: 0rem auto 0.5rem;color: #a3a3a3;border-radius: 0.2rem;font-size: 0.6rem;}
+		/*弹窗   绑定角色*/
+.BindingRole{margin-top: 24%;}
+.BindingRole .title{line-height: 4rem;}
+.BindingRole .importArea{width: 100%;}
+.BindingRole .importArea div{width: 80%;margin: 0 auto;}
+.BindingRole .importArea div label{width: 20%;float: left;text-align: center;color: #A2A2A2;line-height: 2.5rem;}
+.BindingRole .importArea div input{display: block;width: 80%; border: 1px #d4d4d4 solid;line-height: 2.5rem;text-indent: 0.5rem;text-align: left;
+								 background: #fff;margin: 0rem auto 0.5rem;color: #a3a3a3;border-radius: 0.2rem;font-size: 0.6rem;}
+.BindingRole .importArea div .select{display: block;width: 80%; border: 1px #d4d4d4 solid;line-height: 2.5rem;height: 2.5rem;text-indent: 0.5rem;
+								 background: #fff;margin: 0rem auto 0.5rem;color: #a3a3a3;border-radius: 0.2rem;font-size: 0.6rem;}
+
+
+
+/*以下为 移动端   战队  审核  样式*/
+.audit .content{width: 100%;margin-bottom: 5rem;}
+.audit .content .module{width: 100%;margin-bottom: 0.5rem;background: #fff;}
+.audit .content .topDiv{width: 100%;}
+.audit .content .topDiv .left{width: 30%;float: left;}
+.audit .content .topDiv .left img{display: block; width: 68%;margin: 1.5rem auto;border-radius: 50%;}
+.audit .content .topDiv .right{width: 70%;float: left;padding-left: 1rem;}
+.audit .content .topDiv .right p{text-align: left;}
+.audit .content .topDiv .right .name{width: 100%;color: #000;height: 2rem;line-height: 2rem;font-size: 1rem;font-weight: 700;margin-top: 1rem;}
+.audit .content .topDiv .right .leaveWord{width: 80%;color: #424242;line-height: 1.1rem;font-size: 0.6rem; text-align: left;
+											margin-bottom: 1rem;max-height: 3.3rem;overflow-y: scroll;}
+.audit .content .buttonDIV{width: 100%;}
+.audit .content .buttonDIV .buttonStyle{color: #fff;border: none;height: 2rem;line-height: 2rem;font-size: 1rem;}
+.audit .content .buttonDIV .pass{width: 50%;float: left;background: #3dcbec;}
+.audit .content .buttonDIV .refuse{width: 49%;float: right;background: #aeaeae;}
+
+
+/*以下为 移动端   我的消息 样式*/
+.mynews .content{width: 100%;height: 6rem; margin-bottom: 0.5rem;background: #fff;
+				-webkit-box-shadow: 0px 1px 3px 0px #a7a7a7;  position: relative;
+				-moz-box-shadow: 0px 1px 3px 0px #a7a7a7;  
+				box-shadow: 0px 1px 3px 0px #a7a7a7;}
+.mynews .content a{display: block;width: 100%;height: 100%;padding-top: 1rem;}
+.mynews .content a .abstract{width: 88%;color: #3D3D3D;font-size: 0.7rem;text-align: justify; line-height: 1rem;margin: 0 auto;}
+.mynews .content a .time{position: absolute;right: 10px;bottom: 0; width: 42%;line-height: 2rem;font-size: 0.6rem;color: #3D3D3D;display: flex;}
+.mynews .content a .time img{display: inline-block; width: 0.8rem;margin: auto;}
+
+
+/*以下为 移动端   我的私信 样式*/
+.mymsg .content{}
+.mymsg .content .dialogBox{display: block;height: 5rem; margin-bottom: 0.5rem;background: #fff;
+							-webkit-box-shadow: 0px 1px 3px 0px #a7a7a7;
+							-moz-box-shadow: 0px 1px 3px 0px #a7a7a7;  
+							box-shadow: 0px 1px 3px 0px #a7a7a7;}
+.mymsg .content .dialogBox>div{float: left;}
+.mymsg .content .left{width: 26%;}
+.mymsg .content .left img{display: block; width: 66%;border-radius: 50%;margin: 1rem auto;}
+
+.mymsg .content .middle{width: 48%;}
+.mymsg .content .middle p{width: 100%;text-align: left;}
+.mymsg .content .middle .gameName{color: #323232;font-size: 1rem;font-weight: 600;line-height: 2rem;margin-top: 0.5rem;}
+.mymsg .content .middle .gameRegione{color: #949494;font-size: 0.6rem;line-height: 1.3rem;}
+.mymsg .content .right{width: 26%;line-height: 5rem; text-align: center;color: #969696;font-size: 0.7rem;}
+
+
+.mymsg .chat{position: fixed;top: 0;left: 0;right: 0;bottom: 0;}
+.mymsg .chat .main{position: fixed;top: 0;left: 0;right: 0;bottom: 3rem;}
+
+.mymsg .chat .spaceBG{position: absolute;left: 0%;bottom: 5px;width: 100%;height: 2rem;background: #fff;}
+.mymsg .chat .spaceBG .space{width: 90%;height: 2rem;margin: 0 auto;}
+.mymsg .chat .spaceBG .space .module{float: left;height: 2rem;display: grid;}
+.mymsg .chat .spaceBG .space .icon_voice{width: 12%;}
+.mymsg .chat .spaceBG .space .icon_voice img{display: block;width: 84%;margin: auto;}
+.mymsg .chat .spaceBG .space .icon_append{width: 12%;}
+.mymsg .chat .spaceBG .space .icon_append img{display: block;width: 84%;;margin: auto;}
+.mymsg .chat .spaceBG .space .character{width: 54%;}
+.mymsg .chat .spaceBG .space .character .inputArea{display: block;width: 92%;max-width: 92%;
+										  height: 1.5rem;line-height:1.1rem;max-height: 2.2rem;margin: 0.1rem auto;
+										  border-bottom: 1px #959595 solid;border-top: none;border-left: none;border-right: none;
+										  color: #333;caret-color: #3dcbec;font-size: 0.8rem;outline: none;resize:none;
+										  appearance: textfield;
+										  -moz-appearance: textfield;
+										  -webkit-appearance: textfield;}
+@supports (-webkit-mask: none) and (not (cater-color: #3dcbec)) {
+    .inputArea { color: #333; }
+    .inputArea::first-line { color: #333; }
+}
+
+.mymsg .chat .space .send{width: 22%;}
+.mymsg .chat .space .send .sendButton{display: block;width: 98%;height: 1.8rem;line-height:1.8rem;border: none;
+									  margin: 0.1rem auto;color: #fff;border-radius: 0.2rem;}
+
+/*以下为 移动端   我的竞猜 样式*/
+
+
+
+
+/*以下为 移动端   常见问题 样式*/
+.question{padding-top: 0.1rem;}
+.question .content{width: 100%;margin: 0.5rem  auto 0;background: #fff;padding-bottom: 1rem;}
+.question .content p{color: #333;text-indent: 1rem;font-size: 0.6rem;line-height: 2rem;}
+.question .content .describe{margin-bottom: 0.5rem;width: 96%;margin: 0 auto 1rem;line-height: 1.3rem;text-align: justify;}
+.question .content h1{width: 90%;margin: 0 auto;line-height: 1.3rem;color: #333;text-align: justify;}
+
+
+
+
+/*5.5英寸   414*736尺寸的屏幕  如iPhone6 Plus、iPhone6s Plus、iPhone7 Plus、魅族MX5  1920x1080  /3★*/ 
+@media only screen and (max-width: 414px) {
+	.mygame .content .right .buttonStyle{height: 6.7rem;}
+	.addGame .main{height: 24rem;}
+	.addGame .main a img{height: 2.708rem;}
+	.mygame .content .module .left img{height: 4.704rem;}
+}
+/*5.96英寸  412*732尺寸的屏幕  如谷歌Nexus 6   2K 2560x1440  /3.5★*/
+@media only screen and (max-width: 412px) {
+	.mygame .content .right .buttonStyle{height: 6.7rem;}
+	.addGame .main{height: 23rem;}
+	.addGame .main a img{height: 2.694rem;}
+	.mygame .content .module .left img{height: 4.681rem;}
+}
+/*5.2英寸   411*731尺寸的屏幕  如 谷歌Nexus 5x   1920x1080  /2.625★*/
+@media only screen and (min-width: 376px) and (max-width: 411px) {
+	.mygame .content .right .buttonStyle{height: 6.7rem;}
+	.addGame .main{height: 22rem;}
+	.addGame .main a img{height: 2.688rem;}
+	.mygame .content .module .left img{height: 4.669rem;}
+}
+/*4.7英寸   375*667尺寸的屏幕  如iPhone6、iPhone7、iPhone 6s   1334x750*/
+@media only screen and (min-width: 361px) and (max-width: 375px) {
+	.mygame .content .right .buttonStyle{height: 6.25rem;}
+	.addGame .main{height: 20rem;}
+	.addGame .main a img{height: 2.45rem;}
+	.mygame .content .module .left img{height: 4.26rem;}
+}
+/*4.95英寸  360*640尺寸的屏幕  如 谷歌Nexus 5     1920x1080 /3★*/
+@media only screen and (min-width: 321px) and (max-width: 360px) {
+	.mygame .content .right .buttonStyle{height: 6.05rem;}
+	.addGame .main{height: 19rem;}
+	.addGame .main a img{height: 2.351rem;}
+	.mygame .content .module .left img{height: 4.027rem;}
+}
+/*4.0英寸   320*568尺寸的屏幕  如iPhone5、iPhone SE   1136x640*/
+@media only screen and (max-width: 320px) {
+	.mygame .content .right .buttonStyle{height: 6rem;}
+	.addGame .main{height: 16rem;}
+	.addGame .main a img{height: 2.086rem;}
+	.mygame .content .module .left img{height: 3.635rem;}
+}

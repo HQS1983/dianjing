@@ -1,0 +1,537 @@
+<!--作者：HQS
+	时间：2018-07-15
+	描述：战队主页
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>战队主页</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="icon" href="img/favicon.ico" mce_href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/commonality.css"/>
+	<link rel="stylesheet" type="text/css" href="css/edg_website3.css"/>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="//cstaticdun.126.net/load.min.js"></script>
+	<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="pc" style="display: none;">
+		<!--头部导航菜单-->
+		<div class="top">
+			<div class="top_div">
+				<a class="logo" href="index.html"><img src="img/public/logo.png"/></a>
+				<ul><li><a href="index.html">首页</a></li>
+					<li><a href="game.html">游戏</a></li>
+					<li><a href="edg.html">战队</a></li>
+					<li><a href="guide.html">办赛指南</a></li>
+					<li><a href="userCenter.html">注册/登录</a></li>
+					<li><a href="javascript:;">创建战队</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--主体-->
+		<div class="main dis_block">
+
+			<!--平台KV-->
+			<div class="banner">
+				<div class="banner_bg banner_bg1"></div>
+				<div class="banner_bg banner_bg2"></div>
+				<div class="banner_bg banner_bg3"></div>
+				<div class="banner_bg banner_bg4"></div>
+				<div class="banner_bg banner_bg5"></div>
+			</div>
+			
+			<!--战队排行-->
+			<div class="standings">
+				<div class="standings_div">
+					
+				</div>
+			</div>
+			
+			<!--明星战队-->
+			<div class="TopGamer" id="ambassador">
+				<p>赛事标题</p>
+				<div class="TopGamer_div">
+					<!--直播视频-->
+					<div class="sinatv">
+						
+					</div>
+					<!--赛事竞猜-->
+					<div class="guess">
+						
+					</div>
+				</div>
+			</div>
+		
+			<!--明星队长-->
+			<div class="StarCaptain">
+				<div class="StarCaptain_div">
+					<!--战队榜-->
+					<div class="edg">
+						
+					</div>
+					<!--赛事榜-->
+					<div class="Competition">
+						
+					</div>
+				</div>
+			</div>
+		
+			
+			
+			<!--联系我们-->
+			<div class="about" id="about">
+				<div class="about_main">
+					<p class="about_title">联系我们</p>
+					<p class="about_describe">我们总是乐于帮助你，请选择最适合你的方式联系我们！ </p>
+					<div class="about_address">
+						<p style="margin-top: 8px;">总址：上海市闵行区虹井路288号B座703室</p>
+						<p>分部：广州市天河区广州信息港方圆E时光西座28楼</p>
+						<p>邮编：510000</p>
+						<p>电话：+86 13901779476</p>
+						<p>&nbsp;</p>
+						<p>网址：www.juyouxiao.com</p>
+						<p>E-mail：hr@tianchangtech.com</p>
+					</div>
+					
+					
+					<div class="toastInfo"><span>提醒</span></div>
+				</div>
+				<ul class="foot">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="javascript:;">校园大使</a></li>
+					<li><a href="javascript:;">关于我们</a></li>
+				</ul>
+				<p class="provider">京公网安备11010802023605号</p>
+			</div>
+		</div>
+		
+		<!--点击回到顶部-->
+		<a id="com_d" style="display: none;"></a>
+	</div>
+	
+	<div class="mobile fix" style="display: block;">
+		<!--底部 导航 菜单-->
+		<div class="top">
+			<ul><li><a href="index.html">
+						<img src="img/public/icon_navigation_1.png"/>
+						<p>首页</p>
+					</a>
+				</li>
+				<li><a href="javascript:;">
+						<img src="img/public/icon_navigation_2.png"/>
+						<p>看帖</p>
+					</a>
+				</li>
+				<li><a href="javascript:;"><img class="increase" src="img/public/icon_navigation_3.png"/></a></li>
+				<li><a href="edg.html">
+						<img src="img/public/icon_navigation_4.png"/>
+						<p>战队</p>
+					</a>
+				</li>
+				<li><a id="_Usercenter">
+						<img src="img/public/icon_navigation_5.png"/>
+						<p>我的</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="head shadow fix">
+			<!--顶部个人信息-->
+			<div class="information shadow2 fix">
+				<div class="info_left fix">
+					<div class="info_left_top fix">
+						<div class="icon_head">
+							<img class="headPortrait" src="img/edg_website/headPortrait.png">
+							<span class="apostrophe">333</span>
+							<img class="source" src="img/edg_website/icon_source.png">
+						</div>
+						<div class="title fix">
+							<img class="gender" src="img/edg_website/icon_nickname.png">
+							<p class="oneHP apostrophe">SIfY4Vx4</p>
+						</div>
+						<div class="gameList fix">
+							<img src="img/edg_website/icon_peopleNumber.png">
+							<span class="" id="peopleNumber">1</span>/50
+						</div>
+						<div class="signature fix">
+							<img src="img/edg_website/icon_signature.png">
+							<span>444</span>
+						</div>
+					</div>
+					<div class="info_left_bottom fix">
+						<p class="apostrophe"><img src="img/public/icon_4.png"> 排名<span>未知</span></p>
+						<p class="apostrophe"><img src="img/public/icon_medal.png">赛点<span>0</span></p>
+						<p class="apostrophe"><img src="img/edg_website/icon_attention.png">关注<span>0</span></p>
+						<p class="apostrophe"><img src="img/edg_website/icon_popularity.png">人气<span>0</span></p>
+					</div>
+				</div>
+				<div class="info_right fix">
+					<p class="dis_none">公开招募 
+						<a class="conscribe close" id="conscribe" href="javascript:;">
+                        <span class="span ONmove"><span>OFF</span></span>
+                        <span class="span OFFmove"><span>ON</span></span>
+                        <span class="Abutton"></span>
+                        </a>
+                    </p>
+                    <a class="focuson" id="focuson" href="javascript:;">关注</a>
+				</div>
+			</div>
+		</div>
+
+		<!--成员管理-->
+		<div class="management shadow fix">
+			<p class="contentHeader">
+				<img src="img/edg_website/icon_management.png">成员管理
+				<a class="dissolve" id="dissolve" href="javascript:;">解散战队</a>
+			</p>
+			<div class="content fix">
+				<div class="swiper-container" id="bannerSwiper">
+					<div class="swiper-wrapper"></div>
+					<ul class="pagination" id="bannerpagination"></ul>
+				</div>
+				<a class="ButtonStyle AleftButton" href="javascript:;"><img src="img/edg_website/icon_left2.png"/></a>
+				<a class="ButtonStyle ArightButton" href="javascript:;"><img src="img/edg_website/icon_right2.png"/></a>
+			</div>
+		</div>
+		
+		<!--赛事管理-->
+		<div class="OFFICIALS shadow fix">
+			<p class="contentHeader"><img src="img/public/icon_2.png"/>赛事管理</p>
+			<p class="notHave dis_none">暂时还没有赛事喔~</p>
+			
+			<div class="events shadow2 fix">
+                <div class="eventsMain">
+                    <p class="description apostrophe"><img src="img/public/icon_AllGames1.png"/>2018 ZUEL 浙江省高校电子竞...</p>
+                    <p class="money"><img src="img/public/icon_PopularEvents1.png"/>5,000</p>
+                    <p class="number"><img src="img/public/icon_PopularEvents3.png"/>30/50</p>
+                    <p class="time"><img src="img/edg_website/icon_calendar.png"/>A组第一轮</p>
+                    <p class="condition"><span class="bgCondition1"></span>报名中</p>
+                    <p class="category bgColor1"><span>官方</span></p>
+                </div>
+                <a class="regulate BGcolor1 fix">管理</a>
+            </div>
+			<div class="events shadow2 fix">
+                <div class="eventsMain">
+                    <p class="description apostrophe"><img src="img/public/icon_AllGames1.png"/>2018 ZUEL 浙江省高校电子竞...</p>
+                    <p class="money"><img src="img/public/icon_PopularEvents1.png"/>6,000</p>
+                    <p class="number"><img src="img/public/icon_PopularEvents3.png"/>30/50</p>
+                    <p class="time"><img src="img/edg_website/icon_calendar.png"/>B组第二轮</p>
+                    <p class="condition"><span class="bgCondition1"></span>比赛中</p>
+                    <p class="category bgColor1"><span>官方</span></p>
+                </div>
+                <a class="BGcolor2 fix">管理</a>
+            </div>
+		</div>
+		
+		<!--战队荣誉-->
+		<div class="personalHonor fix">
+			<p class="contentHeader"><img src="img/edg_website/icon_honor.png"/>战队荣誉</p>
+			
+			<p class="notHave dis_none">暂时还没有荣誉喔~</p>
+			
+			 <div class="events shadow2 fix">
+				<a class="fix" href="javascript:;">
+					<div class="eventsMain">
+						<p class="description apostrophe"><img src="img/public/icon_AllGames2.png"/>2018ZUEL 浙江省高校电子竞技联赛春季赛</p>
+						<p class="eventsName">联赛春季塞</p>
+						<p class="time">2018-05-29</p>
+					</div>
+					<div class="trophyx" href="javascript:;"><img src="img/edg_website/icon_copper.png"/></div>
+				</a>
+			</div> 
+		</div>
+		<button class="recruit dis_none" id="recruit" type="button">一键招募</button>
+		
+		<!--固定导航-->
+		<div class="navigation fix dis_none">
+			<a class="aButton fix giveReward" id="giveReward" href="javascript:;">
+				<img class="giveReward" src="img/edg_website/giveReward.png"/>
+			</a>
+			<a class="aButton fix like" id="like" href="javascript:;" data-num="0">
+				<img class="giveReward" id="likeGiveReward" src="img/edg_website/like.png"/>
+			</a>
+		</div>
+		
+		<!--弹窗-->
+		<aside id="bg" class="bg">
+			<i class="bg_overlay hideAside" title="遮罩层"></i>
+			
+			<!--退出战队-->
+			<div class="union leaveTeam dis_none">
+				<p class="style title">确定要退出战队吗？</p>
+				<div class="buttonDiv">
+					<button class="leftButton" id="leaveTeamAffirm" type="button">确定</button>
+					<button class="rightButton" id="dissolveCancel12" type="button">取消</button>
+				</div>
+			</div>
+			
+			<!--申请加入-->
+			<div class="union applyTeam fix dis_none">
+				<p class="style title">确定要申请加入吗？</p>
+				<textarea class="leaveWord" id="leaveWord" maxlength="20" placeholder="请输入您的申请留言"></textarea>
+				<div class="buttonDiv">
+					<button class="leftButton" id="applyTeamAffirm" type="button">确定</button>
+					<button class="rightButton" id="dissolveCancel3" type="button">取消</button>
+				</div>
+			</div>
+			
+			<!--解散战队-->
+			<div class="union dissolveTeam dis_none">
+				<p class="style title">确定要解散战队吗？</p>
+				<div class="buttonDiv">
+					<button class="leftButton" id="dissolveAffirm" type="button">确定</button>
+					<button class="rightButton" id="dissolveCancel1" type="button">取消</button>
+				</div>
+			</div>
+			
+			<!--解散战队  手机验证-->
+			<div class="union verify dis_none">
+				<p class="style title">请验证手机号码？</p>
+				<div class="numberDiv">
+					<input type="number" name="" id="telephone" placeholder="请输入手机号码" value="" maxlength="11" onkeyup="judgeIsNonNull1(event)" />
+					<img class="telClear dis_none" src="img/public/delicon.png">
+				</div>
+				<div class="verifyNumDiv fix">
+					<input class="verifyNum" type="number" id="messageCode" placeholder="请输入验证码" value="" maxlength="8" onkeyup="judgeIsNonNull2(event)" />
+					<img class="codeClear dis_none" src="img/public/delicon.png">
+					<input class="readonly" type="text" readonly="readonly" value="获取验证码" id="resend">
+				</div>
+				<div class="buttonDiv">
+					<button class="leftButton" id="verifyAffirm" type="button">确定</button>
+					<button class="rightButton" id="dissolveCancel2" type="button">取消</button>
+				</div>
+			</div>
+			
+			<!--参赛队员-->
+			<div class="union takePart fix dis_none">
+				 <p class="style title">参赛队员  <span><i class="num playerNum" id="takePartNum" data-value="6">1</i>/<i class="amount">6</i></span></p>
+				<div class="content fix scrollable">
+					<!--<div class="selectDiv fix">
+						<div class="module module1"><div class="borderDiv"><span class="pitchUp moduleBGcolor2" data-val="1"></span></div></div>
+						<div class="module module2"><img class="playerLogo" src="img/public/icon_head.png"></div>
+						<div class="module module3"><span class="playerName">1金刚狼</span></div>
+					</div>-->
+				</div>
+				<div class="buttonDiv"><button class="leftButton" id="EntryAffirm" type="button">确定</button></div>
+				
+				<span class="ShutDown" id="" onclick="ShutDown(this)">X</span> 
+				
+			</div>
+			
+			<!--队员管理-->
+			<div class="union manage dis_none">
+				<p class="style title">队员管理</p>
+				<div class="content fix">
+					<div class="module">
+						<div class="moduleLeft"><input type="checkbox" name="viceCaptain" class="onchange" id="viceCaptain" value=""/></div>
+						<div class="moduleRight"><label for="viceCaptain">副队长</label></div>
+					</div>
+					<div class="module">
+						<div class="moduleLeft"><input type="checkbox" name="teamMember" class="onchange" id="teamMember" value=""/></div>
+						<div class="moduleRight"><label for="teamMember">队员</label></div>
+					</div>
+					<div class="module">
+						<div class="moduleLeft"><input type="checkbox" name="kickOut" class="onchange" id="kickOut" value=""/></div>
+						<div class="moduleRight"><label for="kickOut">踢出</label></div>
+					</div>
+					<!--<button class="kickOut" id="kickOut" type="button">踢出</button>-->
+				</div>
+				<div class="buttonDiv">
+					<button class="leftButton" id="manageAffirm" type="button">确定</button>
+				</div>
+			</div>
+		
+			<!--分享至-->
+			<div class="share fix dis_none">
+				<div class="titleDiv"><p class="title">分享至</p></div>
+				
+				<div class="content fix">
+					<div class="styleHeight styleHeight1">
+						<a class="aShare" id="shareWehcat" href="javascript:;">
+							<img src="img/edg_website/icon_wehcat.png"/>
+							<p>微信好友</p>
+						</a>
+					</div>
+					<div class="styleHeight styleHeight2">
+						<a class="aShare" id="sharefriends" href="javascript:;">
+							<img src="img/edg_website/icon_friends.png"/>
+							<p>朋友圈</p>
+						</a>
+					</div>
+					<div class="styleHeight styleHeight3">
+						<a class="aShare" id="shareqqspace" href="javascript:;">
+							<img src="img/edg_website/icon_qqspace.png"/>
+							<p>QQ空间</p>
+						</a>
+					</div>
+					<div class="styleHeight styleHeight4">
+						<a class="aShare" id="shareqq" href="javascript:;">
+							<img src="img/edg_website/icon_qq.png"/>
+							<p>QQ好友</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</div>
+
+	<script src="js/sUserAgent.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/popup.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper-3.4.2.min.js"></script>
+	<script src="js/edg_website1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function judgeIsNonNull1(event){
+			var value=$("#telephone").val();
+			var x = event.which || event.keyCode;
+			if (x == 8 ) {
+		  		if(value !== "" ){
+			      	$(".telClear").removeClass("dis_none").addClass("dis_block");
+			    }else{
+			    	$(".telClear").removeClass("dis_block").addClass("dis_none");
+			    }
+			}
+			if(value !== "" ){
+				if( value.length <= 11 ){
+		    		console.log("符合11位数以内");
+		    	} else{
+		    		return $("#telephone").val(value.substr(0, 11));
+		    	}
+		    	$(".telClear").removeClass("dis_none").addClass("dis_block");
+		    }else{
+		    	$(".telClear").removeClass("dis_block").addClass("dis_none");
+		    }
+		}
+		function judgeIsNonNull2(event){
+		  	var value=$("#messageCode").val();
+		  	var x = event.which || event.keyCode;
+			if (x == 8 ) {
+			  	if(value !== ""){
+			      	$(".codeClear").removeClass("dis_none").addClass("dis_block");
+			    }else{
+			    	$(".codeClear").removeClass("dis_block").addClass("dis_none");
+			    }
+		  	}
+			if(value !== ""){
+				if( value.length <= 6 ){
+		    		console.log("符合 6位数以内");
+		    	} else{
+		    		return $("#messageCode").val(value.substr(0, 6));
+		    	}
+		    	$(".codeClear").removeClass("dis_none").addClass("dis_block");
+		    }else{
+		    	$(".codeClear").removeClass("dis_block").addClass("dis_none");
+		    }
+		}
+		$('.telClear').click(function(){
+		    $('#telephone').val("");
+		    $(".telClear").removeClass("dis_block").addClass("dis_none");
+		});
+		$('.codeClear').click(function(){
+		    $('#messageCode').val("");
+		    $(".codeClear").removeClass("dis_block").addClass("dis_none");
+		});
+
+	</script>
+	<!--微信分享-->
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
+	<script>
+//		url=location.href;
+//		$.ajax({
+//			type : "get",
+//			url : "http://xxxxxxxxx/jssdk.php?url="+url,//替换网址，xxx根据自己jssdk文件位置修改 
+//			dataType : "jsonp",
+//			jsonp: "callback",
+//			jsonpCallback:"success_jsonpCallback",
+//			success : function(data){
+//				wx.config({
+//					appId: data.appId,
+//					timestamp: data.timestamp,
+//					nonceStr: data.nonceStr,
+//					signature: data.signature,
+//					jsApiList: [
+//						"onMenuShareTimeline", //分享给好友 
+//						"onMenuShareAppMessage", //分享到朋友圈 
+//						"onMenuShareQQ", //分享到QQ
+//						"onMenuShareWeibo" //分享到微博 
+//					]
+//				});
+//			},
+//		    error:function(data){
+//		    	alert("连接失败！");
+//		    }
+//		});
+//		wx.ready(function (){
+//			var shareData = {
+//					title: '标题',
+//					desc: '简介',//这里请特别注意是要去除html
+//					link: '链接',
+//					imgUrl: '题图'
+//				};
+//			wx.onMenuShareAppMessage(shareData);
+//			wx.onMenuShareTimeline(shareData);
+//			wx.onMenuShareQQ(shareData);
+//			wx.onMenuShareWeibo(shareData);
+//		}); 
+	</script>
+	
+	<script type="text/javascript">
+		// 微信分享
+//  	var wx = require('wechat-sdk');
+//	    rewardsResultService.getWechatInfo().then(function(data) {
+//	        var conf = data;
+//	        wx.config({
+//	        debug: false,
+//	        appId: 'wx34e783920b37ee91',
+//	        timestamp: conf.timestamp,
+//	        nonceStr: conf.noncestr,
+//	        signature: conf.signature,
+//	        jsApiList: ['onMenuShareAppMessage', 'onMenuShareTimeline','onMenuShareQQ']
+//	        });
+//	        configWeChatInterface();
+//	    });
+// 
+//	    var iconUrl = 'http://'+location.host+'/images/icon-200yuan.png';
+//	    function configWeChatInterface() {
+//	        //分享给朋友
+//	        wx.onMenuShareAppMessage({
+//		        title: '一言不合就发红包，金蛛送您200元红包！',
+//		        desc: '一言不合就发红包，金蛛送您200元红包！',
+//		        link: location.href,
+//		        imgUrl: iconUrl,
+//		        type: 'link',
+//		        success: function() {
+//		        	// alert('share success');
+//		        },
+//		        cancel: function() {
+//		 
+//		        }
+//	        });
+//	        //分享到朋友圈
+//	        wx.onMenuShareTimeline({
+//		        title: '一言不合就发红包，金蛛送您200元红包！',
+//		        link: location.href, // 分享链接
+//		        imgUrl: iconUrl
+//	        });
+//	        //分享到QQ
+//	        wx.onMenuShareQQ({
+//		        title: '一言不合就发红包，金蛛送您200元红包！', // 分享标题
+//		        desc: '一言不合就发红包，金蛛送您200元红包！', // 分享描述
+//		        link: location.href, // 分享链接
+//		        imgUrl: iconUrl, // 分享图标
+//		        success: function () {
+//		        	// 用户确认分享后执行的回调函数
+//		        },
+//		        cancel: function () {
+//		       		// 用户取消分享后执行的回调函数
+//		        }
+//	        });
+//	    }
+	</script>
+</body>
+</html>

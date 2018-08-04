@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>用户登录</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="icon" href="img/favicon.ico" mce_href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/commonality.css"/>
+	<link rel="stylesheet" type="text/css" href="css/login2.css"/>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="pc" style="display: none;">
+		<!--头部导航菜单-->
+		<div class="top">
+			<div class="top_div">
+				<a class="logo" href="index.html"><img src="img/public/logo.png"/></a>
+				<ul><li><a href="index.html">首页</a></li>
+					<li><a href="game.html">游戏</a></li>
+					<li><a href="edg.html">战队</a></li>
+					<li><a href="guide.html">办赛指南</a></li>
+					<li><a href="userCenter.html">注册/登录</a></li>
+					<li><a href="javascript:;">创建战队</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--主体-->
+		<div class="main dis_block">
+
+			<!--游戏KV-->
+			<div class="banner">
+				<div class="banner_bg banner_bg1"></div>
+				<div class="banner_bg banner_bg2"></div>
+				<div class="banner_bg banner_bg3"></div>
+				<div class="banner_bg banner_bg4"></div>
+				<div class="banner_bg banner_bg5"></div>
+			</div>
+			
+			<!--游戏新闻-->
+			<div class="GamesList">
+				<div class="GamesList_div">
+					
+				</div>
+			</div>
+			
+			<!--直播-->
+			<div class="live" id="ambassador">
+				<p>赛事标题</p>
+				<div class="live_div">
+					<!--直播视频-->
+					<div class="sinatv">
+						
+					</div>
+					<!--赛事竞猜-->
+					<div class="guess">
+						
+					</div>
+				</div>
+			</div>
+		
+			<!--赛事奖金-->
+			<div class="bonus">
+				<div class="bonus_div">
+					<!--战队榜-->
+					<div class="edg">
+						
+					</div>
+					<!--赛事榜-->
+					<div class="Competition">
+						
+					</div>
+				</div>
+			</div>
+		
+			
+			<!--联系我们-->
+			<div class="about" id="about">
+				<div class="about_main">
+					<p class="about_title">联系我们</p>
+					<p class="about_describe">我们总是乐于帮助你，请选择最适合你的方式联系我们！ </p>
+					<div class="about_address">
+						<p style="margin-top: 8px;">总址：上海市闵行区虹井路288号B座703室</p>
+						<p>分部：广州市天河区广州信息港方圆E时光西座28楼</p>
+						<p>邮编：510000</p>
+						<p>电话：+86 13901779476</p>
+						<p>&nbsp;</p>
+						<p>网址：www.juyouxiao.com</p>
+						<p>E-mail：hr@tianchangtech.com</p>
+					</div>
+					
+					
+					<div class="toastInfo"><span>提醒</span></div>
+				</div>
+				<ul class="foot">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="javascript:;">校园大使</a></li>
+					<li><a href="javascript:;">关于我们</a></li>
+				</ul>
+				<p class="provider">京公网安备11010802023605号</p>
+			</div>
+		</div>
+		
+		<!--点击回到顶部-->
+		<a id="com_d" style="display: none;"></a>
+	</div>
+	
+	<div class="mobile" style="display: block;">
+		<div class="main login dis_block">
+			<img class="loginBG loginBG1" src="img/login/loginBG1.jpg"/>
+			<div class="topDiv fix"><img src="img/public/logo.png"/></div>
+			<div class="modules fix modules1">
+				<div class="toggle">
+					<button class="buttonlogin avtie" type="button">一键登录</button>
+					<button class="buttonlogin" type="button">用户名登录</button>
+				</div>
+				<div class="content fix">
+					<div class="divContent fix oneKey">
+						<a class="baiduButton baiduClass" id="baiduClass" title="百度贴吧的" href="https://openapi.baidu.com/oauth/2.0/authorize?response_type=code&client_id=BaqV85SxU8ub0YmfxXmAoi6X&redirect_uri=http%3a%2f%2fgzb.dev-juyouxiao.com%3a9088%2findex.html&display=mobile">
+							<img src="img/login/icon_Dblist1.png"/>
+						</a>
+						<p class="explain">点击上方图标一键登录</p>
+					</div>
+					<div class="divContent fix useKey dis_none">
+						<div class="inputBg">
+							<input class="inputClass inputUser" type="text" id="user" placeholder="请使用易战账户进行登录" value="" onkeyup="judgeIsNonNull1(event)" />
+							<img class="telClear dis_none" src="img/public/delicon.png">
+						</div>
+						<div class="inputBg">
+							<input class="inputClass inputPassword" type="password" id="password" placeholder="密码" value="" onkeyup="judgeIsNonNull2(event)" />
+							<img class="codeClear dis_none" src="img/public/delicon.png">
+							<img class="codeConvert" src="img/login/icon_close.png">
+						</div>
+						<button type="submit" class="submit" id="submit">登录</button>
+						<div class="bottomDiv">
+							<a class="register" href="register.html">立刻注册</a>
+							<a class="noteRegister" href="loginnote.html">短信快捷登录</a>
+						</div>
+					</div>
+				</div>
+
+				<p class="thirdParty"><span>第三方登录</span></p>
+				<div class="diamonds fix">
+					<div class="ClassDiv qqClassDiv">
+						<a class="tencentButton qqClass" id="qqClass" title="QQ的" href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101485201&redirect_uri=http%3a%2f%2fgzb.dev-juyouxiao.com%3a9088%2findex.html&state=test">
+							<img src="img/login/icon_Dblist3.png"/>
+						</a>
+					</div>
+					<div class="ClassDiv weChatClassDiv">
+						<a class="tencentButton weChatClass" id="weChatClass" title="微信的" href="javascript:;">
+							<img src="img/login/icon_Dblist4.png"/>
+						</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="modules fix modules2 dis_none">
+				<div class="modulesDiv">
+					<p class="topTitle"><span class="left">扫码登录</span><span class="right">账号登录</span></p>
+					<img class="erweima" src="img/login/erweima.png"/>
+					<p class="title">微信登录</p>
+					<p class="bottomTips">还没有易战帐号？&nbsp;<a href="register.html">立即注册</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/sUserAgent.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/popup.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$("#weChatClass").on("click",function(){
+			var ua = navigator.userAgent.toLowerCase();
+			if(ua.match(/MicroMessenger/i)=="micromessenger") {
+//				return true;
+				window.location="http://dianping.juyouxiao.com/get-weixin-code.html?appid=wx2535ac9f0488e2bf&scope=snsapi_base&state=wx&redirect_uri=http%3a%2f%2fgzb.dev-juyouxiao.com%3a9088%2findex.html";
+			} else {
+				$(".modules1").addClass("dis_none");
+				$(".modules2").removeClass("dis_none");
+//				return false;
+			}
+		});
+		$(".right").on("click",function(){
+			$(".modules1").removeClass("dis_none");
+			$(".modules2").addClass("dis_none");
+		});
+		
+		$(".buttonlogin").on("click",function(){
+			var numIndex = $(this).index();
+			$(this).addClass("avtie");
+			$(this).siblings().removeClass("avtie");
+			$(".divContent").eq(numIndex).removeClass("dis_none");
+			$(".divContent").eq(numIndex).siblings().addClass("dis_none");
+		});
+		
+		function judgeIsNonNull1(event){
+			var value=$("#user").val();
+			var x = event.which || event.keyCode;
+			if (x == 8 ) {
+		  		if(value !== "" ){
+			      	$(".telClear").removeClass("dis_none");
+			    }else{
+			    	$(".telClear").addClass("dis_none");
+			    }
+			}
+			if(value !== "" ){
+		    	$(".telClear").removeClass("dis_none");
+		    }else{
+		    	$(".telClear").addClass("dis_none");
+		    }
+		}
+		function judgeIsNonNull2(event){
+		  	var value=$("#password").val();
+		  	var x = event.which || event.keyCode;
+			if (x == 8 ) {
+			  	if(value !== ""){
+			      	$(".codeClear").removeClass("dis_none");
+			    }else{
+			    	$(".codeClear").addClass("dis_none");
+			    }
+		  	}
+			if(value !== ""){
+		    	$(".codeClear").removeClass("dis_none");
+		    }else{
+		    	$(".codeClear").addClass("dis_none");
+		    }
+		}
+		
+		$('.telClear').click(function(){
+		    $('#user').val("");
+		    $(".telClear").addClass("dis_none");
+		});
+		$('.codeClear').click(function(){
+		    $('#password').val("");
+		    $(".codeClear").addClass("dis_none");
+		});
+		$('.codeConvert').click(function(){
+			var type = $('#password').attr("type");
+			if ( type == "password" ) {
+				$('#password').attr("type","text");
+				$(".codeConvert").attr("src","img/login/icon_open.png");
+			} else{
+				$('#password').attr("type","password");
+				$(".codeConvert").attr("src","img/login/icon_close.png");
+			}
+		});
+		
+		//提交  登录
+		$("#submit").on("click",function(){
+			var user = $("#user").val();
+			var passWord = $("#password").val();
+			if( user == "" ){
+				layer.msg("用户名不能为空");
+				return false;
+			}
+			if( passWord == "" ){
+				layer.msg("密码不能为空");
+				return false;
+			}
+			
+			if( user !== "" && passWord !== "" ){
+		        $.ajax({
+		            type:"post",
+		            url:"/api/login/",
+		            async:true,
+		            data:JSON.stringify({"user":user,"passWord":passWord}),
+		            contentType:"application/json",
+		            dataType:"json",
+		            success:function(res){
+		                if ( res.code == 0 ) {
+			        		setCookie("yz_tk",res.token)
+			        		setCookie("yz_id",res.user_id)
+			        		window.location.href = 'index.html'		            		
+		                } else{
+		                    layer.msg(res.msg);
+		                }
+		            },error:function(res){
+		                layer.msg('系统出错');
+		            }
+		        });
+			}
+		});
+	</script>
+</body>
+</html>
+

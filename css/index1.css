@@ -1,0 +1,513 @@
+/*
+ * 2018-06-21 
+ * HQS
+ * 
+ * 贴吧电竞  首页
+ * */
+            
+
+.pc{width: 100%;position: relative;padding-top: 102px;}
+/*头部导航菜单*/
+.pc .top{height: 102px; position:fixed;top: 0;left: 0;border-bottom: 1px #000 solid;
+		-webkit-box-shadow:0 0  10px 1px #040404;  
+		-moz-box-shadow:0 0  10px 1px #040404;  
+		box-shadow:0 0  10px 1px #040404;z-index: 10;}
+.pc .top .top_div{display: block;width: 1158px;height: inherit;margin: 0 auto;}
+.pc .top .top_div a.logo{display: block; float: left;width: 162px; margin-top: 19px;}
+.pc .top .top_div a.logo img{display: block; width: 100%;}
+.pc .top .top_div ul{float: right;width: 606px; height: inherit;}
+.pc .top .top_div ul li{display: inline-block; float: left;width:80px;
+						height: inherit;line-height: 102px;text-align: center;}
+.pc .top .top_div ul li a{display: inline-block;width:inherit; color: #eb8b00;
+							height: inherit;line-height: inherit;font-size: 16px;}
+.pc .top .top_div ul li a:hover{border-top: 2px #eb8b00 solid; background: #e6e6e6;}
+
+
+.pc .main{width: 100%;min-width: 1158px;}
+
+/*顶部海报*/
+.pc .banner{height: 780px;position: relative;}
+.pc .banner .banner_bg{display: block;width: 100%;height: 158px;position: absolute;left: 0;z-index: 0;}
+.pc .banner .banner_bg1{top: 0px;  background: url(../img/banner_1.jpg) no-repeat center center;}
+.pc .banner .banner_bg2{top: 158px;background: url(../img/banner_2.jpg) no-repeat center center;}
+.pc .banner .banner_bg3{top: 316px;background: url(../img/banner_3.jpg) no-repeat center center;}
+.pc .banner .banner_bg4{top: 474px;background: url(../img/banner_4.jpg) no-repeat center center;}
+.pc .banner .banner_bg5{top: 632px;height: 148px;background: url(../img/banner_5.jpg) no-repeat center center;}
+
+.pc .banner .banner_content{display: block;width: 1158px;height: 780px;margin: 0 auto;padding-top: 200px;position: relative;}
+.pc .banner .banner_content .banner_character{display: block;width: 594px;height: 179px;
+											margin-left: 81px;}
+.pc .banner .banner_content .banner_android_app{display: block;width: 323px;height: 84px;
+											margin-left: 55px;margin-top: 117px; position: relative;}
+.pc .banner .banner_content .banner_android_app .banner_qr_code{display: none;width: 206px; height: 206px;
+															border-radius: 8px; padding-top: 4px;
+															position: absolute;top: 0; left: 351px;}
+.pc .banner .banner_content .banner_android_app .banner_qr_code p{display: block; width: 100%; color: #d58505;text-align: center;
+															  height: 43px;line-height:43px;font-size: 24.28px;}
+.pc .banner .banner_content .banner_android_app .banner_qr_code img{display: block;width: 140px; margin: 0 auto;}
+.pc .banner .banner_content .banner_android_app:hover .banner_qr_code{display: block;}
+
+.pc .banner .banner_content .banner_ios_app{display: block;width: 323px;height: 84px;
+											margin-left: 55px;margin-top: 38px;}
+
+
+
+/*游戏列表*/
+.pc .GamesList{height: 244px; padding-top: 32px;background: #CA4206;}
+.pc .GamesList .GamesList_div{display: block;width:1158px;height: 180px;margin: 0 auto;background: #A8A8A8;}
+
+
+
+
+/*时事*/
+.pc .content{height: 748px;position: relative;
+			background: #D58505;}
+.pc .content .content_div{ width: 1158px;height: inherit;}
+/*热门赛事*/
+.pc .content .PopularEvents{width: 50%;height: inherit;background: #E6E6E6;float: left;}
+
+/*新闻资讯*/
+.pc .content .news{width: 50%;height: inherit;background: #F00;float: right;}
+
+
+
+
+
+/*大使收获*/
+.pc .crunchies{height: 518px;background: #D58505;}
+.pc .crunchies .crunchies_div{display: block; width: 1158px; height: 498px;margin: 10px auto;}
+/*战队榜*/
+.pc .crunchies .edg{width: 50%;height: inherit;background: #794d4d;float: left;}
+/*赛事榜*/
+.pc .crunchies .Competition{width: 50%;height: inherit;background: #00e6ff;float: right;}
+
+
+
+
+/*联系我们*/
+.pc .about{height: 465px;background: #fff;}
+.pc .about .about_main{display: block;width:1158px;height: 380px;margin: 0 auto; padding-top: 57px;position: relative;}
+.pc .about .about_main p{color: #000;display: block;}
+.pc .about .about_main .about_title{width: 100%; font-size: 45.6px;height: 45.6px;line-height: 45.6px;margin-bottom: 20px; text-align: center;}
+.pc .about .about_main .about_describe{width: 100%; font-size: 20.85px;height: 20.85px;line-height: 20.85px;margin-bottom: 37px;text-align: center;}
+
+.pc .about .about_main .about_address{display: inline-block;width: 375px;height: 196px;float: left;margin-right: 50px;}
+.pc .about .about_main .about_address p{font-size: 16.33px;margin-bottom: 5px;}
+
+
+#qq::-webkit-inner-spin-button,#mobile::-webkit-inner-spin-button,#contact_number::-webkit-inner-spin-button { -webkit-appearance: none!important; ; }
+#qq,#mobile,#contact_number{ appearance: textfield;
+							-moz-appearance: textfield;
+							-webkit-appearance: textfield; }
+#qq:hover,#mobile:hover,#contact_number:hover{ appearance: textfield;
+												-moz-appearance: textfield;
+												-webkit-appearance: textfield; }
+.pc .about .about_main form .form_right{display: inline-block;width: 301px;height: inherit;margin-right: 22px;float: left;}
+.pc .about .about_main form .form_right #content{min-width: 302px;max-width: 302px; color: #a8a8a8;font-size: 13.54px;
+												margin-bottom: 10px;min-height: 79px;max-height: 79px;
+												line-height: 32px;
+												border: 1px #eca234 solid;padding-left: 7px;}
+
+.pc .about .about_main form .form_right #contact_submit{width: 302px;height: 34px; color: #fff;font-size: 11.94px;
+										  height: 32px; line-height: 32px;text-align: center;
+										  background: #e88901;-webkit-tap-highlight-color:transparent;}
+.pc .about .about_main form .form_right #contact_submit:hover{background: #cc7700;}
+
+.pc .about ul.foot{display: block;width: 290px;height: 20px;margin: 20px auto 10px;clear: both;}
+.pc .about ul.foot li{display: block;float: left;height: 20px;}
+.pc .about ul.foot li:nth-of-type(1){border-right: 1px #4b4b4b solid;}
+.pc .about ul.foot li:nth-of-type(2){border-right: 1px #4b4b4b solid;}
+.pc .about ul.foot li a{display: block; color: #000;font-size: 15.4px;height: 20px;line-height: 20px;
+								margin-left: 22px;margin-right: 22px;}
+.pc .about ul.foot li a:hover{background: #CCCCCC;}
+.pc .about .provider{display: block; color: #000; width: 100%;font-size: 16.72px;text-align: center;}
+
+
+
+.pc #com_d { cursor: pointer;  width: 90px; height: 90px;border: 0px;
+		 margin: 0px; padding: 0px;
+		 position: fixed; right: 40px; bottom: 40px;
+		 background: url("../img/top.png") no-repeat center center; z-index: 999; }
+.pc #com_d:hover { background: url("../img/top.png") no-repeat center center; }
+
+
+
+
+
+/*弹窗提示*/
+
+.pop_up_prompts,.toastInfo{display:none;position:absolute;width:100%;
+			text-align:center;font-size:1rem;height:30px;line-height:30px;color:#fff;}
+.pop_up_prompts span,.toastInfo span{background-color:#a5a3a3;display:inline-block;border-radius:5px;padding:0px 10px;}
+.toastInfo{bottom: 35px;}
+.pop_up_prompts{bottom: 160px;}
+
+/*PC端样式   结束*/
+
+
+
+
+
+/*
+ * 以下为移动端样式
+ * 2018-07-10
+ * HQS
+ * */
+
+/*顶部海报*/
+.mobile .banner{overflow: hidden;}
+.banner .swiper-container{height: inherit;}
+.banner .banner_con{width: 100%;}
+.banner .banner_con img{width: 100%;}
+
+.banner .pagination{width: 25%; height: 2rem;z-index: 1;
+					margin: -1rem auto; position: relative;}
+.swiper-pagination-bullet-active{background:#fff;}
+
+
+/*所有游戏*/
+		/*有游戏*/
+.AllGames .content{width: 96%;margin: 0.8rem auto 0.5rem;}
+.AllGames .content a{display: block;float: left;}
+.AllGames .content .game{width: 20%;margin-right: 2%;}
+.AllGames .content .game:nth-of-type(1){margin-left: %;}
+
+.AllGames .content .game img{width: 100%;border-radius: 1em;
+							 -webkit-box-shadow:0 0 6px 0px #777676;  
+							-moz-box-shadow:0 0 6px 0px #777676;  
+							box-shadow:0 0 6px 0px #777676;}
+.AllGames .content .game p{width: 100%;font-size: 0.7rem;text-align: center;color: #636363;}
+
+
+.AllGames .content .button{width: 12%;border: 1px #ccc solid;height: 4rem;line-height: 3rem;
+							text-align: center;border-radius: 0.8rem;
+							background: #fff;float: right;color: #969696;font-weight: 700;}
+
+/*当前赛事*/
+.TheCurrentEvent .calendar{width: 100%;}
+.TheCurrentEvent .calendar .calendar_top{width: 100%;}
+.TheCurrentEvent .calendar .calendar_top .MONTH{width: 100%;height: 1.5rem;font-size: 0.6rem;line-height: 1.5rem;text-align: center;color: #9e9e9e;}
+.TheCurrentEvent .calendar .calendar_top .module{width: 100%;height: 3rem;}
+.TheCurrentEvent .calendar .calendar_top .calendar_left{width: 2rem;height: 3rem;float: left;
+														background: url(../img/index/calendar_left.png) center center / 75% no-repeat;
+														padding: 0.4rem 0.5rem 0.5rem 0.7rem;font-size: 0.8rem;}
+.TheCurrentEvent .calendar .calendar_top .calendar_left a,.calendar_right a{display: block;width: 100%;height: 100%;color: #fff;}
+.TheCurrentEvent .calendar .calendar_top .calendar_right{width: 2rem;height: 3rem;float: right;color: #fff;
+														background: url(../img/index/calendar_right.png) center center / 75% no-repeat;
+														padding: 0.4rem 0.5rem 0.5rem 0.4rem;font-size: 0.8rem;} 
+.TheCurrentEvent .calendar .calendar_top .calendar_middle{width: 80%;height: 3rem;float: left;position: relative;}
+.TheCurrentEvent .calendar .calendar_top .calendar_middle .swiper-container{height: inherit;line-height: 3rem;}
+.TheCurrentEvent .calendar .calendar_top .calendar_middle .swiper-container .swiper-slide a{display: block;width: 100%;height: 100%;color: #9e9e9e;text-align: center;}
+.TheCurrentEvent .calendar .calendar_top .calendar_middle .swiper-container .swiper-slide-active a{color: #626262;
+																									font-size: 1.2rem;}
+
+
+
+.TheCurrentEvent .calendar .calendar_top .calendar_middle .aperture{position: absolute;top: 0;left: 44%;
+																	border: 1px #969696 solid;background: #f9f9f9;
+																	border-radius: 0.2rem;width: 2.5rem;height: 3rem;}
+.TheCurrentEvent .calendar .calendar_bottom{width: 100%;height: 3rem;}
+.TheCurrentEvent .calendar .calendar_bottom .indexModule{width: 10rem;height: inherit; margin: 0 auto;position: relative;}
+
+.TheCurrentEvent .calendar .calendar_bottom .indexModule .pullDown{display: block; width: 10rem;height: 2rem;margin: 0.5rem auto 0;
+																	border-radius: 0.3rem;background: #eae8e8;}
+.imgClass{display: inline-block;width: 19%;float: left;margin-right: 1rem;position: relative;border-radius: 0.3rem;}
+.imgClass1{opacity: 0;}
+.pClass{display: inline-block; float: left;height: 2rem;line-height: 2rem;font-size: 0.6rem; color: #2c2c2c;max-width: 5rem;}
+.pClass2{display: block!important;float: initial;margin: 0 auto;}
+.spanClass2{height: 0;}
+.TheCurrentEvent .calendar .calendar_bottom .indexModule .pullDown span{display: inline-block;width: 2rem;height: 2rem; font-weight: 700;font-size: 0.8rem;opacity: 0;
+																		background: url(../img/index/calendar_pullDown.png) center center / 60% no-repeat;float: right;}
+
+.TheCurrentEvent .calendar .calendar_bottom .EventList{position: absolute;top: 2rem;left: 0;width: 100%;height: 0rem; max-height: 10rem;overflow-y: scroll;
+														border-radius: 0.3rem;background: #eae8e8;}
+.TheCurrentEvent .calendar .calendar_bottom .EventList a{display: block;width: 100%;height: 2rem;}
+
+.TheCurrentEvent .content{width: 100%;background: #fff;margin-bottom: 0.5rem;}
+		/*有比赛*/
+.TheCurrentEvent .content .main{display: block;width: 100%;border-bottom: 1px #c4c4c4 solid;padding: 0.5rem;}
+.TheCurrentEvent .content .main:last-child{border-bottom: none;}
+.TheCurrentEvent .content .main .GamePreview{float: left;width: 28%;margin-right: 0.5rem;margin-top: 0.9rem;}
+.TheCurrentEvent .content .main .description{float: left;width: 36%; margin-right: 0.5rem;}
+.TheCurrentEvent .content .main .description p{width: 100%;}
+.TheCurrentEvent .content .main .description p:nth-of-type(1){font-size: 0.8rem;color: #3d3c3c;line-height: 2rem;font-weight: 600;}
+.TheCurrentEvent .content .main .description p:nth-of-type(2){font-size: 0.6rem;color: #868686;height: 1.5rem;line-height: 1.5rem;}
+
+.TheCurrentEvent .content .main .status{float: right;width: 28%;height: inherit;}
+.TheCurrentEvent .content .main .status p{width:100%;line-height: 2rem;font-size: 0.7rem;}
+.TheCurrentEvent .content .main .status p span{display: inline-block; width:0.8rem;height: 0.8rem;line-height: 1.5rem;
+												border-radius: 50%;float: left;margin-top: 0.5rem;margin-right: 0.3rem;}
+.TheCurrentEvent .content .main .status button{width: 74%; font-size: 0.6rem;color: #fff;display: block;text-align: center;border: none;
+											   background: #488afd;padding-top: 0.3rem;padding-bottom: 0.3rem;border-radius: 0.1rem;}
+.TheCurrentEvent .content .main .status button img{width: 0.6rem;vertical-align: middle;}
+
+/*热门赛事*/
+.PopularEvents .events{width: 96%;margin: 0.5rem auto 0.8rem;padding-bottom: 0.6rem;background: #fff;position: relative;}
+.PopularEvents .events a{display: block; width: 100%;height: 100%; position: relative;}
+.PopularEvents .events a p{line-height: 1.5rem;}
+.PopularEvents .events a p img{vertical-align: middle;margin-right: 0.2rem;}
+.PopularEvents .events .EventsBanner{display: block; width: 95%;margin: 0 auto 0.5rem;}
+.PopularEvents .events .description{width: 94%;height: 2.5rem;line-height:2.5rem;padding-left: 0.6rem;
+										font-size: 0.7rem;color: #515151;font-weight: 600;}
+.PopularEvents .events .description img{display: inline-block;margin-right: 0.5rem;width: 7%;}
+.PopularEvents .events .advertising{display: block; width: 94%;margin: 0 auto;}
+
+.PopularEvents .events .money{width: 34%; padding-left: 1.2rem;}
+.PopularEvents .events .money img{width: 13%;}
+.PopularEvents .events .time{width: 66%;}
+.PopularEvents .events .time img{width: 7%;;}
+.PopularEvents .events .number{width: 34%; padding-left: 1.2rem;}
+.PopularEvents .events .number img{width: 13%;}
+.PopularEvents .events .condition{width: 66%;}
+.PopularEvents .events .condition span{display: inline-block;margin-right: 0.2rem;float: left;}
+
+.PopularEvents .events .category{width: 0px;height: 0px;border-right: 0px solid transparent;position: absolute;top: 0rem;right: 0rem;}
+.PopularEvents .events .category span{color: #fff;width: 1.6rem;height: 1.6rem;overflow: hidden;position: absolute;}
+
+
+/*排行榜 */
+.rankingList .content{width: 100%;}
+.rankingList .content .classify{width: 100%;height: 2.5rem;background: #f2f2f2;position: relative;}
+.rankingList .content .classify a{display: block;width: 50%;height: inherit;line-height: 2.5rem;font-weight: 600;
+								  font-size: 1rem;color: #6f6f6f;text-align: center;float: left;}
+.rankingList .content .classify a.avter{color: #0459d3;border-bottom: 2px #025ad1 solid;}
+		/*排行榜    战队榜*/
+.rankingList .content .TeamLIst .CrunchiesChampion{width: 100%; height: 10rem;position: relative;
+												   background: #fff url(../img/public/CrunchiesChampionBG.png) center 5rem / 100% no-repeat;}
+.rankingList .content .TeamLIst .CrunchiesChampion .position{width: 33%;height: inherit;position: absolute;top: 0;}
+.rankingList .content .TeamLIst .CrunchiesChampion .position a{display: block;width: 100%;height: 86%;}
+.rankingList .content .TeamLIst .CrunchiesChampion .position .Chemistry{width: 100%;}
+.rankingList .content .TeamLIst .CrunchiesChampion .position .Chemistry img{display: block; width: 48%;margin: 1rem auto 0;}
+.rankingList .content .TeamLIst .CrunchiesChampion .position .Chemistry p.TeamName{text-align: center;font-size: 1rem;color: #2f2f2f;}
+.rankingList .content .TeamLIst .CrunchiesChampion .position .Chemistry p.TeamName i{width: 92%;margin: 0 auto;font-style: initial; text-align: center;display:block;}
+
+.rankingList .content .TeamLIst .CrunchiesChampion .position .Chemistry .CrunchiesBG{display: block; width: 1.2rem;height: 1.2rem;z-index: 1;
+																			margin-left: 68%;margin-top: -30%;
+																			transform:rotate(45deg);
+																			-ms-transform:rotate(45deg); 	/* IE 9 */
+																			-moz-transform:rotate(45deg); 	/* Firefox */
+																			-webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+																			-o-transform:rotate(45deg); 	/* Opera */}
+
+.rankingList .content .TeamLIst .CrunchiesChampion .position .Chemistry .num{display: block; position:absolute;z-index: 2;font-weight: 600;}
+
+.rankingList .content .TeamLIst .CrunchiesChampion .position .include .game{width: 88%;border-bottom: 1px #999 solid;margin: 0 auto;}
+.rankingList .content .TeamLIst .CrunchiesChampion .position .include .game img{width: 18%;}
+
+
+.rankingList .content .TeamLIst .CrunchiesChampion .position .include p{height: 1.5rem;line-height:1.5rem;color: #989898;text-align: center;}
+.rankingList .content .TeamLIst .CrunchiesChampion .position .include p img{width: 11%;vertical-align: middle;}
+
+.rankingList .content .TeamLIst .CrunchiesRanking{width: 100%;background: #fff;}
+.rankingList .content .TeamLIst .CrunchiesRanking .list{width: 100%;height: 3rem;border-top: 1px #ededed solid;line-height: 3rem;padding: 0 2%;}
+.rankingList .content .TeamLIst .CrunchiesRanking .list a{display: block;width: 100%;height: 100%;}
+.rankingList .content .TeamLIst .CrunchiesRanking .list span{display: inline-block; float: left;height: inherit;text-align: center;}
+.rankingList .content .TeamLIst .CrunchiesRanking .list span img{vertical-align: middle;}
+.rankingList .content .TeamLIst .CrunchiesRanking .list .ranking{width: 12%;height: inherit;text-align: center;color: #b1b1b1;}
+
+.rankingList .content .TeamLIst .CrunchiesRanking .list .teamLogo{width:10%;height: inherit;margin-right: 0.8rem;}
+.rankingList .content .TeamLIst .CrunchiesRanking .list .teamLogo img{width: 68%;}
+
+.rankingList .content .TeamLIst .CrunchiesRanking .list .TeamName{width: 24%;color: #606060;text-align: left;}
+
+.rankingList .content .TeamLIst .CrunchiesRanking .list .correlationGame{width: 30%;}
+.rankingList .content .TeamLIst .CrunchiesRanking .list .correlationGame img{width: 1.4rem;margin-right: 0.2rem;}
+
+.rankingList .content .TeamLIst .CrunchiesRanking .list .combatGains{width: 19%;color: #999;}
+.rankingList .content .TeamLIst .CrunchiesRanking .list .combatGains img{width: 1rem;margin-right: 0.2rem;}
+
+
+		/*排行榜    赛事榜*/
+.rankingList .content .EventsLIst .CrunchiesRanking{width: 100%;background: #fff;}
+.rankingList .content .EventsLIst .CrunchiesRanking .list{width: 100%;height: 3rem;border-top: 1px #ededed solid;line-height: 3rem;padding: 0 2%;}
+.rankingList .content .EventsLIst .CrunchiesRanking .list span{display: inline-block; float: left;height: inherit;text-align: center;font-size: 0.6rem;}
+
+.rankingList .content .EventsLIst .CrunchiesRanking .list .TeamName{width: 30%;color: #515151;text-align: left;}
+
+.rankingList .content .EventsLIst .CrunchiesRanking .list .sort{width: 20%;color: #7b7b7b;}
+
+.rankingList .content .EventsLIst .CrunchiesRanking .list .bonus{width: 20%;color: #7a7a7a;}
+
+.rankingList .content .EventsLIst .CrunchiesRanking .list .status{width: 20%;font-weight: 600;}
+
+.rankingList .content .EventsLIst .CrunchiesRanking .list .statusMap{width: 10%;}
+.rankingList .content .EventsLIst .CrunchiesRanking .list .statusMap i{display: inline-block; width: 1rem; vertical-align: middle;
+																	   margin: 0 auto;height: 1rem;border-radius: 50%;}
+
+
+
+.rankingList .content .viewMore{display: block;width: 88%;height: 2.9rem;line-height: 2.9rem; margin: 0.5rem auto 1rem;
+								color: #fff;background: #488afd;text-align: center;border-radius: 0.2rem;
+								-webkit-box-shadow: 0px 2px 4px 0px #a7a7a7;  
+								-moz-box-shadow: 0px 2px 4px 0px #a7a7a7;  
+								box-shadow: 0px 2px 4px 0px #a7a7a7;}
+
+
+
+
+/*以下为 移动端  新闻页news.html的  样式*/
+.news{background: #fff;}
+.news .content{width: 80%;margin: 0 auto;padding-top: 1rem;}
+.news .content p{color: #323232;}
+.news .content .title{text-align: center;font-size: 1.5rem;font-weight: 800;line-height: 2rem;}
+.news .content .time{text-align: center;font-size: 0.8rem;line-height: 2rem;}
+.news .content .illustration{display: block;width: 100%;margin: 0 auto 1rem;}
+.news .content .matter{text-align: justify;text-indent: 1.2rem;font-size: 0.6rem;line-height: 1.3rem;}
+.feature{font-size: 1rem!important;font-weight: 800;}
+
+/*
+ 2018-07-20  12:21:14
+ * HQS
+ * 
+ * 贴吧电竞  页面 响应式源码
+ * */
+
+
+/*首页  页面*/
+/*5.5英寸   414*736尺寸的屏幕  如iPhone6 Plus、iPhone6s Plus、iPhone7 Plus、魅族MX5    1920x1080  /3★*/
+@media only screen and (max-width: 414px) {
+	.mobile .banner{height: 13.375rem;}
+	.AllGames .content .game img{height: 4.968rem;}
+	.PopularEvents .events .description img{height: 1.697rem;}
+	.PopularEvents .events .condition span{margin-left: 0.55rem;width: 0.9rem;height:0.9rem;margin-top: 0.3rem;}
+	.PopularEvents .events .category{border-left: 2.5rem solid transparent;border-top: 2.5rem solid red;}
+	.PopularEvents .events .category span{font-size: 9px;top: -38px;right: -1px;
+										  transform: scale(0.9) rotate(45deg);
+									      -o-transform: scale(0.9) rotate(45deg);   /* Opera */
+										  -ms-transform: scale(0.9) rotate(45deg); 	/* IE 9 */
+										  -moz-transform: scale(0.9) rotate(45deg); 	/* Firefox */
+									      -webkit-transform: scale(0.9) rotate(45deg);/* Safari 和 Chrome */}
+	.position_one .num{top: 28%;}
+	.position_two .num{top: 31%;}
+	.position_three .num{top: 31%;}
+	.rankingList .content .TeamLIst .CrunchiesChampion{height: 12rem;background-position-y: 6.1rem;}
+	.position_one .include{margin-top: 1%;}
+	.position_two .include{margin-top: 12%;}
+	.position_three .include{margin-top: 15%;}
+	
+	.rankingList .content .TeamLIst .CrunchiesChampion .position .Chemistry{height: 6rem;}
+	.rankingList .content .TeamLIst .CrunchiesChampion .position .include .game{height: 1.8rem;}
+}
+/*5.96英寸  412*732尺寸的屏幕  如谷歌Nexus 6   2K 2560x1440  /3.5★*/
+@media only screen and (max-width: 412px) {
+	.mobile .banner{height: 13.313rem;}
+	.AllGames .content .game img{height: 4.944rem;}
+	.PopularEvents .events .description img{height: 1.688rem;}
+	.PopularEvents .events .condition span{margin-left: 0.55rem;width: 0.9rem;height:0.9rem;margin-top: 0.3rem;}
+	.PopularEvents .events .category{border-left: 2.5rem solid transparent;border-top: 2.5rem solid red;}
+	.PopularEvents .events .category span{font-size: 9px;top: -38px;right: -1px;
+										  transform: scale(0.9) rotate(45deg);
+									      -o-transform: scale(0.9) rotate(45deg);   /* Opera */
+										  -ms-transform: scale(0.9) rotate(45deg); 	/* IE 9 */
+										  -moz-transform: scale(0.9) rotate(45deg); 	/* Firefox */
+									      -webkit-transform: scale(0.9) rotate(45deg);/* Safari 和 Chrome */}
+	.position_one .num{top: 28%;}
+	.position_two .num{top: 31%;}
+	.position_three .num{top: 31%;}
+	.rankingList .content .TeamLIst .CrunchiesChampion{height: 12rem;background-position-y: 6rem;}
+	.position_one .include{margin-top: 1%;}
+	.position_two .include{margin-top: 12%;}
+	.position_three .include{margin-top: 14%;}
+	
+	.rankingList .content .TeamLIst .CrunchiesChampion .position .Chemistry{height: 6rem;}
+	.rankingList .content .TeamLIst .CrunchiesChampion .position .include .game{height: 1.8rem;}
+}
+/*5.2英寸   411*731尺寸的屏幕  如 谷歌Nexus 5x   1920x1080  /2.625★*/
+@media only screen and (min-width: 376px) and (max-width: 411px) {
+	.mobile .banner{height: 13.313rem;}
+	.AllGames .content .game img{height: 4.932rem;}
+	.PopularEvents .events .description img{height: 1.684rem;}
+	.PopularEvents .events .condition span{margin-left: 0.55rem;width: 0.9rem;height:0.9rem;margin-top: 0.3rem;}
+	.PopularEvents .events .category{border-left: 2.5rem solid transparent;border-top: 2.5rem solid red;}
+	.PopularEvents .events .category span{font-size: 9px;top: -38px;right: -1px;
+										  transform: scale(0.9) rotate(45deg);
+									      -o-transform: scale(0.9) rotate(45deg);   /* Opera */
+										  -ms-transform: scale(0.9) rotate(45deg); 	/* IE 9 */
+										  -moz-transform: scale(0.9) rotate(45deg); 	/* Firefox */
+									      -webkit-transform: scale(0.9) rotate(45deg);/* Safari 和 Chrome */}
+	.position_one .num{top: 28%;}
+	.position_two .num{top: 31%;}
+	.position_three .num{top: 31%;}
+	.rankingList .content .TeamLIst .CrunchiesChampion{height: 12rem;background-position-y: 6rem;}
+	.position_one .include{margin-top: 1%;}
+	.position_two .include{margin-top: 12%;}
+	.position_three .include{margin-top: 14%;}
+	
+	.rankingList .content .TeamLIst .CrunchiesChampion .position .Chemistry{height: 6rem;}
+	.rankingList .content .TeamLIst .CrunchiesChampion .position .include .game{height: 1.7rem;}
+}
+/*iPhoneX*/
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+
+}
+
+/*4.7英寸   375*667尺寸的屏幕  如iPhone6、iPhone7、iPhone 6s   1334x750*/
+@media only screen and (min-width: 361px) and (max-width: 375px) {
+	.mobile .banner{height: 12.188rem;}
+	.AllGames .content .game img{height: 4.5rem;}
+	.PopularEvents .events .description img{height: 1.595rem;}
+	.PopularEvents .events .condition span{margin-left: 0.5rem;width: 0.9rem;height:0.9rem;margin-top: 0.3rem;}
+	.PopularEvents .events .category{border-left: 2.5rem solid transparent;border-top: 2.5rem solid red;}
+	.PopularEvents .events .category span{font-size: 9px;top: -38px;right: -1px;
+										  transform: scale(1) rotate(45deg);
+									      -o-transform: scale(0.9) rotate(45deg);   /* Opera */
+										  -ms-transform: scale(0.9) rotate(45deg); 	/* IE 9 */
+										  -moz-transform: scale(0.9) rotate(45deg); 	/* Firefox */
+									      -webkit-transform: scale(0.9) rotate(45deg);/* Safari 和 Chrome */}
+	.position_one .num{top: 29%;}
+	.position_two .num{top: 32%;}
+	.position_three .num{top: 32%;}
+	.rankingList .content .TeamLIst .CrunchiesChampion{height: 11rem;background-position-y: 5.7rem;}
+	.position_one .include{margin-top: -4%;}
+	.position_two .include{margin-top: 9%;}
+	.position_three .include{margin-top: 6%;}
+	
+	.rankingList .content .TeamLIst .CrunchiesChampion .position .Chemistry{height: 6rem;}
+	.rankingList .content .TeamLIst .CrunchiesChampion .position .include .game{height: 1.6rem;}
+}
+/*4.95英寸  360*640尺寸的屏幕  如 谷歌Nexus 5    1920x1080 /3★ */
+@media only screen and (min-width: 321px) and (max-width: 360px) {
+	.mobile .banner{height: 11.688rem;}
+	.AllGames .content .game img{height: 4.32rem;}
+	.PopularEvents .events .description img{height: 1.47rem;}
+	.PopularEvents .events .condition span{margin-left: 0.5rem;width: 0.85rem;height:0.85rem;margin-top: 0.325rem;}
+	.PopularEvents .events .category{border-left: 2.4rem solid transparent;border-top: 2.4rem solid red;}
+	.PopularEvents .events .category span{font-size: 9px;top: -37px;right: -1px;
+										  transform: scale(0.9) rotate(45deg);
+									      -o-transform: scale(0.9) rotate(45deg);   /* Opera */
+										  -ms-transform: scale(0.9) rotate(45deg); 	/* IE 9 */
+										  -moz-transform: scale(0.9) rotate(45deg); 	/* Firefox */
+									      -webkit-transform: scale(0.9) rotate(45deg);/* Safari 和 Chrome */}
+	.position_one .num{top: 29%;}
+	.position_two .num{top: 32%;}
+	.position_three .num{top: 32%;}
+	.rankingList .content .TeamLIst .CrunchiesChampion{height: 11rem;background-position-y: 5.6rem;}
+	.position_one .include{margin-top: -7%;}
+	.position_two .include{margin-top: 5%;}
+	.position_three .include{margin-top: 6%;}
+	
+	.rankingList .content .TeamLIst .CrunchiesChampion .position .Chemistry{height: 6rem;}
+	.rankingList .content .TeamLIst .CrunchiesChampion .position .include .game{height: 1.6rem;}
+}
+/*4.0英寸   320*568尺寸的屏幕  如iPhone5、iPhone SE   1136x640*/
+@media only screen and (max-width: 320px) {
+	.mobile .banner{height: 10.16114rem;}
+	.AllGames .content .game img{height: 3.84rem;}
+	.PopularEvents .events .description img{height: 1.302rem;}
+	.PopularEvents .events .condition span{margin-left: 0.45rem;width: 0.8rem;height:0.8rem;margin-top: 0.35rem;}
+	.PopularEvents .events .category{border-left: 2.2rem solid transparent;border-top: 2.2rem solid red;}
+	.PopularEvents .events .category span{font-size: 9px;top: -34px;right: -2px;
+										  transform: scale(0.8) rotate(45deg);
+									      -o-transform: scale(0.8) rotate(45deg);   /* Opera */
+										  -ms-transform: scale(0.8) rotate(45deg); 	/* IE 9 */
+										  -moz-transform: scale(0.8) rotate(45deg); 	/* Firefox */
+									      -webkit-transform: scale(0.8) rotate(45deg);/* Safari 和 Chrome */}
+	.position_one .num{top: 28%;}
+	.position_two .num{top: 31%;}
+	.position_three .num{top: 31%;}
+	.rankingList .content .TeamLIst .CrunchiesChampion{height: 11rem;background-position-y: 5.2rem;}
+	
+	.rankingList .content .TeamLIst .CrunchiesChampion .position .Chemistry{height: 5rem;}
+	.rankingList .content .TeamLIst .CrunchiesChampion .position .include .game{height: 1.5rem;}
+	
+}
