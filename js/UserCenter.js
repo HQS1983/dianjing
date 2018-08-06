@@ -89,7 +89,7 @@ $(function(){
                         if (item.team_icon!=""){
                             src = 'src="'+item.team_icon+'"'
                         }
-                        rihgt_html +='<p class="apostrophe"><img src="img/public/icon_Hoovies.png"/>0</p>'+
+                        rihgt_html +='<p class="apostrophe"><img src="img/icon_Hoovies.png"/>0</p>'+
                                         '<button class="acquire" id="acquire">获取彩豆</button>'+
                                         '<button class="ItemMall" id="ItemMall">道具商城</button>'+
                                         '<img class="icon_teamLogo" '+src+'/>'

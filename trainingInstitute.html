@@ -140,10 +140,13 @@
 		<!--顶部海报-->
 		<div class="banner">
 			<img class="banner_bg" src="img/trainingInstitute/banner.png"/>
-			<button type="button" class="button_con">
+			<div class="buttonDiv fix">
 				<img class="button_bg" src="img/trainingInstitute/buttonBG.png"/>
-				<p class="fix" id="appointment"><img src="img/trainingInstitute/right_circle_fill.png"/>立即预约</p>
-			</button>
+				<p class="fix" id="appointment">
+					<span class="spanImg"><img src="img/trainingInstitute/icon_right.png"/></span>
+					<span class="spanTitle">立即预约</span>
+				</p>
+			</div>
 		</div>
 		
 		<!--我们的优势-->
@@ -213,9 +216,33 @@
 				<p class="describe">优质合作伙伴推荐就业</p>
 			</div>
 		</div>
+		
+		<!--弹窗-->
+		<aside id="bg" class="bg">
+			<i class="bg_overlay hideAside" title="遮罩层"></i>
+			
+			<!--前往登录-->
+			<div class="union leaveTeam ToLogIn dis_none">
+				<p class="style title">尚未登录，请前往登录</p>
+				<div class="buttonDiv">
+					<button class="leftButton bgCondition1" id="leaveTeamAffirm goLogin" type="button">前往登录</button>
+				</div>
+				<span class="ShutDown" id="" onclick="ShutDown(this)">X</span> 
+			</div>
+			
+			<!--预约成功-->
+			<div class="union leaveTeam bookSuccessfully dis_none">
+				<p class="style title">预约成功！</p>
+				<div class="buttonDiv">
+					<button class="leftButton bgCondition1" id="leaveTeamAffirm" type="button">确定</button>
+				</div>
+			</div>
+		</aside>
 	</div>
 
-	<script src="js/sUserAgent.js" type="text/javascript" charset="utf-8"></script><script type="text/javascript">
+	<script src="js/sUserAgent.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/popup.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
 		$("#appointment").on("click",function(){
 			var user_id = getCookie("yz_id");
 			var token = getCookie("yz_tk")
@@ -228,15 +255,25 @@
 					contentType:"application/json",
 					dataType:"json",
 					success:function(res){
-						layer.msg(res.msg)
+						popupArise();
+						$(".bookSuccessfully").removeClass("dis_none");
+						
+						$("#leaveTeamAffirm").on("click",function(){
+							popupClose();
+							$(".bookSuccessfully").addClass("dis_none");
+						});
 					},error:function(res){
-						layer.msg("系统出错")
+						layer.msg("系统出错");
 					}
-				});			
-				
+				});
 			}else{
-				layer.msg("请登陆")
+				popupArise();
+				$(".ToLogIn").removeClass("dis_none");
 			}
+		});
+		
+		$("#goLogin").on("click",function(){
+			window.location="login.html";
 		});
 	</script>
 </body>

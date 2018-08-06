@@ -44,23 +44,23 @@ $(function(){
 	
     function send_authcode(validate){
 	   	$.ajax({
-   			type:"post",
-	        url: '/api/phonequickeck/', 
-	        data: JSON.stringify({
-	          	mobile: $('#MobileNumber').val(),
-	          	img_validate: validate 
-	        }), 
-	        contentType:"application/json",
-	        dataType: "json",
-	        success: function(res) {
-	        	if(res.code == 0){
-		            i=60;
-		            e=setInterval(resendVal,1000);
-	        	}else{
-	        		layer.msg(res.msg)
-	        	}
-	        }
-	    });
+	   			type:"post",
+		        url: '/api/phonequickeck/', 
+		        data: JSON.stringify({
+		          	mobile: $('#MobileNumber').val(),
+		          	img_validate: validate 
+		        }), 
+		        contentType:"application/json",
+		        dataType: "json",
+		        success: function(res) {
+		        	if(res.code == 0){
+			            i=60;
+			            e=setInterval(resendVal,1000);
+		        	}else{
+		        		layer.msg(res.msg)
+		        	}
+		        }
+		    });
     }
 
     function bind_mobile(authcode){

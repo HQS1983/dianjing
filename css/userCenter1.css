@@ -329,9 +329,6 @@
 
 
 /*弹窗  弹出层*/
-.union{width: 80%;border-radius: 0.3rem;background: #fff; position: absolute;left: 10%;overflow: hidden;}
-.style{color: #3d3d3d;font-size: 1.5rem;text-align: center;font-weight: 800;}
-.marginHeight{margin-bottom: 5rem!important;}
 		/*敬请期待*/
 .comingSoon{margin-top: 40%;}
 .comingSoon .title{line-height: 7rem;}

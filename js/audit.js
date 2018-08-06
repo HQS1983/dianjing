@@ -34,7 +34,7 @@ function audit(){
 	for(var QQ=1; QQ<=3; QQ++ ){
 		html += '<div class="module fix">'+
 					'<div class="topDiv fix">'+
-	                    '<div class="left"><img src="img/public/icon_head.png"/></div>'+
+	                    '<div class="left"><img src="img/icon_head.png"/></div>'+
 	                    '<div class="right">'+
 	                        '<p class="name apostrophe">'+QQ+'金刚狼</p>'+
 	                        '<p class="leaveWord">我想加入强大的你们，  为人民服务！</p>'+

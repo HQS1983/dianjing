@@ -107,7 +107,7 @@ $(function(){
 		for (var i=0; i <= 10; i++) {
 			Html += '<div class="selectDiv fix">'+
 						'<div class="module module1"><div class="borderDiv"><span id="'+i+'" class="pitchUp moduleBGcolor1" data-val="0"></span></div></div>'+
-						'<div class="module module2"><img class="playerLogo" src="img/public/icon_head.png"></div>'+
+						'<div class="module module2"><img class="playerLogo" src="img/icon_head.png"></div>'+
 						'<div class="module module3"><span class="playerName apostrophe">'+i+'金刚狼</span></div>'+
 					'</div>';
 		}

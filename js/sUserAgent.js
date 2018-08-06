@@ -29,7 +29,7 @@ $('#_Usercenter').on("click",function(){
 		window.location.href = 'userCenter.html';
 //	}else{
 		
-//		window.location.href = 'login.html';
+		//window.location.href = 'login.html';
 //	}
 });
 

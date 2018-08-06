@@ -28,9 +28,12 @@ $(function(){
     
     
     //moble/移动端部分js代码
-    
-    
-	
+        
+    //点击关注按钮
+    $("#navButtonAttention").on("click",function(){
+    	layer.msg("此功能暂未开放！");
+    });
+
 	//循环首页 顶部  海报
 	function bannerSwiper(){
 		var html="";
@@ -53,13 +56,17 @@ $(function(){
 	});
 	
     
-    
     //获取完整的日期
-	function getNowFormatDate() {
-	    window.date = new Date();
+    function acquisitionTime(){
+    	window.date = new Date();
 	    window.year = date.getFullYear();
 	    window.month = date.getMonth() + 1;
 	    window.strDate = date.getDate();
+    }
+    
+    //获取完整的日期
+	function getNowFormatDate() {
+	    acquisitionTime();
 	    NoCompetitiontoday(strDate);
 	    window.d = new Date(year, (date.getMonth()+1), 0);
 	    window.dataNum=d.getDate();
@@ -117,23 +124,19 @@ $(function(){
         	month = "十二月";
         	Aright = "新年一月";
         }
-        
-        
+
 	    $(".MONTH").text(month);
 	    $(".Aleft").text(Aleft);
 	    $(".Aright").text(Aright);
-		
 	}
 	getNowFormatDate();
 	
 	
     //当前赛事  月份选择 【左边】
 	$(".Aleft").on("click",function(){
-		window.date = new Date();
-	    window.year = date.getFullYear();
-	    window.month = date.getMonth() + 1;
-	    window.strDate = date.getDate();
-//	    NoCompetitiontoday(strDate);
+		acquisitionTime();
+//	    NoCompetitiontoday();
+		strDate=1;
 	    window.d = new Date(year, (date.getMonth()+1), 0);
 	    window.dataNum=d.getDate();
 
@@ -143,10 +146,11 @@ $(function(){
 		var addUp = parseInt($(this).attr("data-addUp"));//当前跳转月份
 		
 	    if (addUp>=1) {
-	   		month2 = date.getMonth() + 1-i;
+	   		
 	    	dd = new Date(year, (addUp), 0);
 	    	dataNum2=dd.getDate();
-	    	
+	    	month2 = date.getMonth() + 1-i;
+	    	console.log(addUp);
 	    	console.log(month2);
 		    console.log(dataNum2);
 		    html="";
@@ -208,11 +212,9 @@ $(function(){
 	
 	//当前赛事  月份选择 【右边】
 	$(".Aright").on("click",function(){
-		window.date = new Date();
-	    window.year = date.getFullYear();
-	    window.month = date.getMonth() + 1;
-	    window.strDate = date.getDate();
+		acquisitionTime();
 //	    NoCompetitiontoday(strDate);
+		strDate=1;
 	    window.d = new Date(year, (addUp), 0);
 	    window.dataNum=d.getDate();
 
@@ -221,10 +223,10 @@ $(function(){
 		var dataMonth = parseInt($(this).attr("data-month"));//当前月份
 		var addUp = parseInt($(this).attr("data-addUp"));//当前跳转月份
 	    if (addUp<12) {
-	   		month2 = date.getMonth() + 1+i;
+	   		
 	    	dd = new Date(year, (date.getMonth()+1+i), 0);
 	    	dataNum2=dd.getDate();
-	    	
+	    	month2 = date.getMonth() + 1+i;
 	    	console.log(month2);
 		    console.log(dataNum2);
 		    html="";
@@ -290,11 +292,11 @@ $(function(){
 	//循环每月的日子
 	function bannerSwiper2(dataNum){
 		var html="",playArea="";
-		for(var QQ=-1; QQ<=dataNum; QQ++ ){
+		for(var QQ=1; QQ<=dataNum; QQ++ ){
 			html += '<div class="swiper-slide"><a href="javascript:;">'+QQ+'</a></div>';
 		}
 		$("#bannerSwiper2 .swiper-wrapper").append(html);
-		$("#bannerSwiper2 .swiper-slide").eq(0).remove();
+		//$("#bannerSwiper2 .swiper-slide").eq(0).remove();
 	}
 	bannerSwiper2();
 	
@@ -440,7 +442,10 @@ $(function(){
 	        initialSlide:(strDate-1),//用来设定页面加载完成时，第几张图片先显示出来
     		centeredSlides: true,
     		observer:true,
+    		//observer:true,//修改swiper自己或子元素时，自动初始化swiper
+    		//observeParents:true,//修改swiper的父元素时，自动初始化swiper
     		onSlideChangeStart: function(swiper){ //回调函数，swiper从一个slide过渡到另一个slide结束时执行
+    			console.log(strDate);
     			pClass(swiper.activeIndex);  //当发生  滚动日历的操作，就自动循环当天的第一个游戏是否存在
     			EventList(swiper.activeIndex); //循环当前赛事当天包含的游戏【所有】
     			arrangement(swiper.activeIndex); //循环  当前赛事 的其中一种游戏的赛事情况
@@ -456,10 +461,12 @@ $(function(){
 			$(".EventList").removeClass("dis_none");
 			$(".EventList").css("height",lengthNum*2+"rem");
 			$(".pullDown").attr("data-switch","1");
+			$(".spanClass").css("background-image","url(img/index/calendar_pullUp.png)");
 		}else if($(".EventList").attr("class") == "EventList" && dataSwitch == 1 ){
 			$(".EventList").addClass("dis_none");
 			$(".EventList").css("height","0rem");
 			$(".pullDown").attr("data-switch","0");
+			$(".spanClass").css("background-image","url(img/index/calendar_pullDown.png)");
 		}
 	});
 	
@@ -516,15 +523,7 @@ $(function(){
 			}
 		});			
 	}
-    
-    
-    
-    
-    
-    $("#navButtonAttention").on("click",function(){
-    	layer.msg("此功能暂未开放！");
-    });
-    
+
     $(".Crunchies").on("click",function(){
     	if ( $(this).index() == 0 ) {
     		$(this).addClass("avter");
@@ -697,7 +696,7 @@ $(function(){
                             html += '<div class="CrunchiesChampion">'
                             html += '<div class="position position_one"><a href="edg_website.html?team_id='+item.id+'"><div class="Chemistry"><img src="'+item.team_icon+'"/>'
                             html += '<p class="TeamName"><i class="apostrophe">'+item.team_name+'</i></p><span class="CrunchiesBG CrunchiesBG1"></span><span class="num">'+rank+'</span></div>'
-                            html += '<div class="include"><div class="game">'+Img(item.game_icon_urls)+'</div><p><img src="img/public/icon_medal.png"/> '+item.competition_point+'</p></div></a></div>'
+                            html += '<div class="include"><div class="game">'+Img(item.game_icon_urls)+'</div><p><img src="img/icon_medal.png"/> '+item.competition_point+'</p></div></a></div>'
                         }else if (item.rank==2){
                             html +='<div class="position position_two"><a href="edg_website.html?team_id='+item.id+'">'+
                             '<div class="Chemistry">'+
@@ -816,7 +815,6 @@ $(function(){
 //  EventRank();
 
 	if (getCookie("token")=='null') {
-
         setCookie('token',getUrlParms('token'))
     }
     if(getCookie('user_id')=='null'){

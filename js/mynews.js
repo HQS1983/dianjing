@@ -77,5 +77,5 @@ $(function(){
             }
         });
     }
-//  mynews();
+    mynews();
 });

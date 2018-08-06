@@ -370,17 +370,14 @@
 
 
 /*弹窗  弹出层*/
-.union{width: 80%;height: 10rem; margin-top: 40%;border-radius: 0.3rem;background: #fff; position: absolute;left: 10%;overflow: hidden;}
-.style{color: #3d3d3d;font-size: 1.5rem;text-align: center;font-weight: 800;}
 		/*参赛队员*/
-.takePart{ padding-bottom: 4rem;height: auto;}
+.takePart{padding-bottom: 4rem;}
 .takePart .title{line-height: 4rem;}
 .takePart .title span{font-size: 1rem;}
 .takePart .title span i{font-style: initial;}
 
 .style1{width: 80%; color: #000;font-size: 0.8rem;line-height: 1.2rem;text-align: left;font-weight: 700;margin: 0 auto;}
 .style1 span{display: inline-block;width: 60%;text-align: center; color: #4B4B4B;font-size: 0.7rem;font-weight: normal;}
-
 
 .takePart .content{height: 182px;overflow-y: scroll;}
 .takePart .content .selectDiv{width: 80%;height: 3rem; margin: 0rem auto;}
@@ -398,8 +395,6 @@
 
 .takePart .content .selectDiv input{display: block;width: 100%; line-height: 2rem;background: #e5e5e5;border-radius: 0.2rem;font-weight: 600;
 									font-size: 0.7rem;text-indent: 0.5rem;color: #787878;border: none;}
-
-
 
 .takePart .buttonDiv{width: 100%;height: 3rem;line-height: 3rem;position: absolute;left: 0;bottom: 0;}
 .takePart .buttonDiv button{width: 100%;height: inherit;text-align: center;color: #fff;font-size: 1rem;

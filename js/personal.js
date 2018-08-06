@@ -204,7 +204,7 @@ $(function(){
 	PostingDynamic();
 	
 	//评论
-    $("#icon_share1,.icon_criticism").on("click",function(){
+    $(".icon_share1,.icon_criticism").on("click",function(){
     	layer.msg("此功能暂未开放，敬请期待！");
     });
 	

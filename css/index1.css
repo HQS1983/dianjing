@@ -368,6 +368,7 @@
 @media only screen and (max-width: 414px) {
 	.mobile .banner{height: 13.375rem;}
 	.AllGames .content .game img{height: 4.968rem;}
+	.TheCurrentEvent .content .main .GamePreview{height: 53.484px;}
 	.PopularEvents .events .description img{height: 1.697rem;}
 	.PopularEvents .events .condition span{margin-left: 0.55rem;width: 0.9rem;height:0.9rem;margin-top: 0.3rem;}
 	.PopularEvents .events .category{border-left: 2.5rem solid transparent;border-top: 2.5rem solid red;}
@@ -392,6 +393,7 @@
 @media only screen and (max-width: 412px) {
 	.mobile .banner{height: 13.313rem;}
 	.AllGames .content .game img{height: 4.944rem;}
+	.TheCurrentEvent .content .main .GamePreview{height: 53.219;}
 	.PopularEvents .events .description img{height: 1.688rem;}
 	.PopularEvents .events .condition span{margin-left: 0.55rem;width: 0.9rem;height:0.9rem;margin-top: 0.3rem;}
 	.PopularEvents .events .category{border-left: 2.5rem solid transparent;border-top: 2.5rem solid red;}
@@ -416,6 +418,7 @@
 @media only screen and (min-width: 376px) and (max-width: 411px) {
 	.mobile .banner{height: 13.313rem;}
 	.AllGames .content .game img{height: 4.932rem;}
+	.TheCurrentEvent .content .main .GamePreview{height: 53.078px;}
 	.PopularEvents .events .description img{height: 1.684rem;}
 	.PopularEvents .events .condition span{margin-left: 0.55rem;width: 0.9rem;height:0.9rem;margin-top: 0.3rem;}
 	.PopularEvents .events .category{border-left: 2.5rem solid transparent;border-top: 2.5rem solid red;}
@@ -445,6 +448,7 @@
 @media only screen and (min-width: 361px) and (max-width: 375px) {
 	.mobile .banner{height: 12.188rem;}
 	.AllGames .content .game img{height: 4.5rem;}
+	.TheCurrentEvent .content .main .GamePreview{height: 48.234px;}
 	.PopularEvents .events .description img{height: 1.595rem;}
 	.PopularEvents .events .condition span{margin-left: 0.5rem;width: 0.9rem;height:0.9rem;margin-top: 0.3rem;}
 	.PopularEvents .events .category{border-left: 2.5rem solid transparent;border-top: 2.5rem solid red;}
@@ -469,6 +473,7 @@
 @media only screen and (min-width: 321px) and (max-width: 360px) {
 	.mobile .banner{height: 11.688rem;}
 	.AllGames .content .game img{height: 4.32rem;}
+	.TheCurrentEvent .content .main .GamePreview{height: 46.219px;}
 	.PopularEvents .events .description img{height: 1.47rem;}
 	.PopularEvents .events .condition span{margin-left: 0.5rem;width: 0.85rem;height:0.85rem;margin-top: 0.325rem;}
 	.PopularEvents .events .category{border-left: 2.4rem solid transparent;border-top: 2.4rem solid red;}
@@ -493,6 +498,7 @@
 @media only screen and (max-width: 320px) {
 	.mobile .banner{height: 10.16114rem;}
 	.AllGames .content .game img{height: 3.84rem;}
+	.TheCurrentEvent .content .main .GamePreview{height: 40.844px;}
 	.PopularEvents .events .description img{height: 1.302rem;}
 	.PopularEvents .events .condition span{margin-left: 0.45rem;width: 0.8rem;height:0.8rem;margin-top: 0.35rem;}
 	.PopularEvents .events .category{border-left: 2.2rem solid transparent;border-top: 2.2rem solid red;}

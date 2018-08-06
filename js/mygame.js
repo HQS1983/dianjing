@@ -183,7 +183,7 @@ $(".occlude").on("click",function(){
 function paddingBottom(){
 	var height = $(window).height()-48;
 	if ( $(window).width() <= 450 ) {
-		if ( $(".mygame").attr("class") == "mygame fix dis_none" && $(".noGame").attr("class") == "noGame" ) {
+		if ( $(".mygame").attr("class") == "framing mygame fix dis_none" && $(".noGame").attr("class") == "noGame" ) {
 			$(".mobile").css("padding-bottom",height);
 		}
 	}

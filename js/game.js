@@ -58,10 +58,10 @@ function GameEvent(){
                 $.each(res.datas,function(i,item){
                     e_html += '<div class="events shadow2 fix">'+
                                     '<a class="fix" href="competition.html?event_id='+item.id+'">'+
-                                        '<p class="description apostrophe"><img src="img/public/icon_AllGames1.png"/>'+item.event_title+'</p>'+
-                                        '<p class="money"><img src="img/public/icon_PopularEvents1.png"/>'+item.total_bonus+'</p>'+
-                                        '<p class="time"><img src="img/public/icon_PopularEvents2.png"/>'+item.apply_start_time+' 报名开始</p>'+
-                                        '<p class="number"><img src="img/public/icon_PopularEvents3.png"/>'+item.has_member+'/'+item.max_member+'</p>'+
+                                        '<p class="description apostrophe"><img src="img/icon_AllGames1.png"/>'+item.event_title+'</p>'+
+                                        '<p class="money"><img src="img/icon_PopularEvents1.png"/>'+item.total_bonus+'</p>'+
+                                        '<p class="time"><img src="img/icon_PopularEvents2.png"/>'+item.apply_start_time+' 报名开始</p>'+
+                                        '<p class="number"><img src="img/icon_PopularEvents3.png"/>'+item.has_member+'/'+item.max_member+'</p>'+
                                         '<p class="condition"><span class="bgCondition1"></span>'+item.event_status+'</p>'+
                                         '<p class="category bgColor1"><span>'+item.event_type_name+'</span></p>'+
                                     '</a>'+

@@ -15,18 +15,13 @@ function popupClose(){ //弹窗、背景层 关闭
 }
 
 
-
-//$('.ShutDown').on('click', function() {
-//	popupClose();
-//	$(this).parent().addClass('dis_none');
-//});
-function ShutDown(e){
+function ShutDown(e){  //弹窗 右上角 关闭【X】按钮
     popupClose();
-    $(e).parent().addClass('dis_none');   
+    $(e).parent().addClass('dis_none');
 }
 function occlude(e){
     popupClose();
-    $(e).parent().parent().addClass('dis_none');   
+    $(e).parent().parent().addClass('dis_none');
 }
 $.smartScroll = function(container, selectorScrollable) {
 	// 如果没有滚动容器选择器，或者已经绑定了滚动时间，忽略
