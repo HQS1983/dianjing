@@ -305,7 +305,7 @@ $(function(){
 	function pClass(activeIndex){
 		var html="",playArea="";
 		for(var QQ=0; QQ<=activeIndex; QQ++ ){
-			if (activeIndex == 17 ) {
+			if (activeIndex == 4 ) {
 				playArea="王者荣耀";
 				$("#pClass").removeClass("pClass2");
 				$(".pullDown").attr("data-switch","0");
@@ -316,13 +316,13 @@ $(function(){
 //							'<p class="pClass" id="pClass">'+playArea+'</p>'+
 //							'<span></span>'+
 //						'</a>';
-			} else if( activeIndex == 21){
+			} else if( activeIndex == 5){
 				playArea="第五人格";
 				$("#pClass").removeClass("pClass2");
 				$(".pullDown").attr("data-switch","0");
 				$(".imgClass1").attr("src","img/allgame/4.png");
 				$(".imgClass1,.spanClass").css({opacity:"1",height:"2rem"});
-			} else if( activeIndex == 25){
+			} else if( activeIndex == 6){
 				playArea="山海经异兽录";
 				$("#pClass").removeClass("pClass2");
 				$(".pullDown").attr("data-switch","0");
@@ -354,7 +354,7 @@ $(function(){
 	//循环当前赛事当天包含的游戏【所有】
 	function EventList(activeIndex){
 		var html1="",html2="";
-		if (activeIndex == 17 || activeIndex == 21 || activeIndex == 25) {
+		if (activeIndex == 4 || activeIndex == 5 || activeIndex == 6) {
 			for(var hh=0; hh<=9; hh++ ){
 				var name;
 				if (hh==0) {
@@ -391,30 +391,43 @@ $(function(){
 	
 	//循环  当前赛事 的其中一种游戏的赛事情况
 	function arrangement(activeIndex){
-		var html="",html2="",colour="",bgCondition="",official="",state="";
-		if (activeIndex == 17 || activeIndex == 21 || activeIndex == 25) {
+		var DeviceWidth = $(window).width();//监听当前设备 的宽度，防止错位
+		
+		var html="",html2="",colour="",bgCondition="",official="",state="",gameTime="";
+		if( DeviceWidth<= 320 ){
+			console.log(DeviceWidth);
+			gameTime='<p class="gameTime">比赛时间：<br />16：00-18：00</p>';
+		}else{
+			console.log(DeviceWidth+"abc");
+			gameTime='<p class="gameTime">比赛时间：16：00-18：00</p>';
+		}
+		if (activeIndex == 4 || activeIndex == 5 || activeIndex == 6) {
 			for(var QQ=0; QQ<=2; QQ++ ){
 				if (QQ == 0) {
 					colour="fontColor1";
 					bgCondition="bgCondition1";
+					bgGameSort="bgGameSort1";
 					official="官方";
 					state="预告";
 				} else if(QQ==1){
 					colour="fontColor2";
 					bgCondition="bgCondition2";
+					bgGameSort="bgGameSort2";
 					official="平台";
 					state="直播";
 				}else{
 					colour="fontColor3";
 					bgCondition="bgCondition3";
+					bgGameSort="bgGameSort3";
 					official="业余";
 					state="集锦";
 				}
 				html += '<a class="main fix" href="competition.html">'+
 							'<img class="GamePreview" src="img/public/banner_Race'+(QQ+1)+'.png"/>'+
 							'<div class="description">'+
-		                    	'<p class="apostrophe">'+QQ+'年ZUEL 浙江省高校电子竞技联赛春季赛</p>'+
-		                    	'<p>'+official+'赛</p>'+
+		                    	'<p class="gameName apostrophe">'+QQ+'年ZUEL 浙江省高校电子竞技联赛春季赛</p>'+
+		                    	gameTime+
+		                    	'<p class="gameSort '+bgGameSort+'">'+official+'</p>'+
 		                    '</div>'+
 		                    '<div class="status">'+
 			                    '<p class="'+colour+'"><span class="'+bgCondition+'"></span>比赛中</p>'+
@@ -431,7 +444,7 @@ $(function(){
 		}
 		
 	}
-	
+
 	//首页 当前赛事  日历
 	var mySwiper = new Swiper('#bannerSwiper2',{
 			//loop: true,//在原本slide前后复制若干个slide(默认一个)并在合适的时候切换，让Swiper看起来是循环的
@@ -451,7 +464,7 @@ $(function(){
     			arrangement(swiper.activeIndex); //循环  当前赛事 的其中一种游戏的赛事情况
     			optionSelect();
     		}
-	});
+		});
 
 	//当前赛事  选择游戏  下拉列表
 	$(".pullDown").on("click",function(){
@@ -479,6 +492,7 @@ $(function(){
 				$(".EventList").css("height","0rem");
 				$(".EventList").addClass("dis_none");
 				$(".pullDown").attr("data-switch","0");
+				$(".spanClass").css("background-image","url(img/index/calendar_pullDown.png)");
 			}
 		});
 	}

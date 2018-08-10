@@ -175,17 +175,3 @@ $("#BindingRoleAffirm").on("click",function(){
 $(".occlude").on("click",function(){
 	$(".BindingRole").attr("data-judge","0");
 });
-
-
-
-//移动端 
-//防止页面无游戏、或游戏过少，导致页面背景颜色混乱
-function paddingBottom(){
-	var height = $(window).height()-48;
-	if ( $(window).width() <= 450 ) {
-		if ( $(".mygame").attr("class") == "framing mygame fix dis_none" && $(".noGame").attr("class") == "noGame" ) {
-			$(".mobile").css("padding-bottom",height);
-		}
-	}
-}
-//		paddingBottom();

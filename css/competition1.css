@@ -193,14 +193,14 @@
 										  -ms-transform: scale(0.75) rotate(45deg); 	/* IE 9 */
 										  -moz-transform: scale(0.75) rotate(45deg); 	/* Firefox */
 									      -webkit-transform: scale(0.75) rotate(45deg);/* Safari 和 Chrome */}
-/*赛事简介*/
+		/*赛事简介*/
 .particular .main .synopsis{width: 96%;margin: 0 auto 0.8rem;padding-bottom: 0.6rem;}
 .particular .main p.title{width: 94%;margin: 0 auto;height: 2.5rem;line-height: 2.5rem;
 						  color: #2d2d2d;font-size: 1rem;font-weight: 700;}
 .particular .main p.details{width: 94%;margin: 0 auto;line-height: 1.2rem;text-align: justify;
 							color: #999;font-size: 0.6rem;text-indent: 1.6rem;}
 
-/*赛事规则*/
+		/*赛事规则*/
 .particular .main .bonus{width: 96%;position: relative;margin: 2rem auto;clear: both;
 						 background: #fff url(../img/public/CrunchiesChampionBG.png) center 5.1rem / 100% no-repeat;}
 
@@ -241,14 +241,8 @@
 .particular .main .event_details .content{width: 96%;margin: 0 auto;padding-bottom: 1rem;}
 
 
-/*赛程*/
-		/*无   竞猜*/
-.videos .noGuessing{}
-.videos .noGuessing .title_con{}
-.videos .noGuessing .viewMore{}
-
+/*赛程  大逃杀  开始*/
 		/*有   竞猜*/
-.GameResults .main_con{}
 .GameResults .main_con .best{background: #f2f2f2;}
 .GameResults .main_con .best .contentHeader{text-align: center;}
 .GameResults .main_con .best .content{width: 96%;margin: 0.2rem auto 1rem;}
@@ -264,7 +258,6 @@
 .GameResults .main_con .best .content .chunk .equal .name{color: #2d2d2d;line-height: 1rem;margin-top: 2rem;}
 .GameResults .main_con .best .content .chunk .equal .count{color: #707070;line-height: 1rem;}
 
-.GameResults .main_con .arrange{}
 .GameResults .main_con .arrange .contentHeader{text-align: center;}
 .GameResults .main_con .arrange .content{text-align: center;}
 .GameResults .main_con .arrange .content .grouping{height: 3rem;line-height: 3rem;border-top: 1px #ccc solid;margin-bottom: 0.5rem;}
@@ -276,7 +269,6 @@
 																margin-top: 0.5rem;margin-bottom: 0.5rem;border-radius: 0.5rem;}
 .GameResults .main_con .arrange .content .grouping .right .avter{background: #51b5fe;color: #fff;border-color: #51b5fe;}
 
-
 .GameResults .main_con .arrange .content .block{border-top: 1px #ccc solid;margin-top: 0.2rem;background: #F2F2F2;}
 .GameResults .main_con .arrange .content .block .left{float: left;width:20%;font-size: 0.8rem;background: #fff;color: #373737;border-right: 1px #ccc solid;}
 .GameResults .main_con .arrange .content .block .left span{display: block;line-height: 2.5rem;font-size: 0.6rem; border-bottom:1px #e8e8e8 solid ;}
@@ -285,9 +277,16 @@
 .GameResults .main_con .arrange .content .block .right{width:80%;background: #fff;float: right; }
 .GameResults .main_con .arrange .content .block .right .titleButton{background: #488AFD;color: #fff;line-height: 2.5rem;}
 .GameResults .main_con .arrange .content .block .right .time{line-height: 2.5rem;color: #373737;font-size: 0.6rem;}
+/*赛程  大逃杀  结束*/
 
 
 
+
+/*赛程  对抗   开始*/
+
+
+
+/*赛程  对抗  结束*/
 
 
 
@@ -317,8 +316,7 @@
 											 box-shadow:0 0 4px 0px #777676;}
 .guessing .content .game:nth-of-type(2) img{display: block; width: 40%;margin: 0 auto;}
 .guessing .apostrophe{width: 100%;font-size: 0.7rem;color: #2f2f2f;margin: 0.5rem auto;font-weight: 600;}
-.status{background: #a02928;width: 70%;color: #fff;margin: 0.5rem auto;
-		font-size: 0.7rem;line-height: 1rem;position: relative;}
+.status{background: #a02928;width: 70%;color: #fff;margin: 0.5rem auto;font-size: 0.7rem;line-height: 1rem;position: relative;}
 .status span{border-top: 0.5rem solid transparent;border-bottom: 0.5rem solid transparent;position: absolute;top: 0;}
 .status .statusLeft{border-right: 0.5rem solid #a02928;left: -0.5rem;}
 .status .statusRight{border-left: 0.5rem solid #a02928;right: -0.5rem;}
@@ -330,7 +328,6 @@
 
 .guessing .guessingList{width: 100%;margin: 0rem auto 0.5rem;padding-top: 0.5rem;text-align: center;}
 .guessing .guessingList a{display: block;width: 96%;height: 100%;padding-top: 0.5rem 0;margin: 0.5rem auto;}
-.guessing .guessingList .game{}
 .guessing .guessingList .game:nth-of-type(1),.guessing .guessingList .game:nth-of-type(3){width: 32.5%;float: left;}
 .guessing .guessingList .game:nth-of-type(2){width: 15%;float: left;padding-top: 0.3rem;}
 
@@ -339,7 +336,6 @@
 .guessing .guessingList .game .module1 img{display: block; width: 68%;border-radius: 50%;margin: 1rem auto;}
 
 .guessing .guessingList .game .module2{width: 60%;float: left;}
-.guessing .guessingList .game .module2 .TeamName{}
 .guessing .guessingList .game .module2 .odds{color: #808080;font-size: 0.6rem;}
 .guessing .guessingList .status{margin: 0.2rem auto;}
 
@@ -355,8 +351,7 @@
 
 /*固定导航*/
 .mobile .nav{position: fixed;left: 0;width: 100%;height: 3rem;z-index: 4;}
-.mobile .nav .viewMore{display: block;height: 3rem;line-height: 3rem; font-size: 0.8rem;
-					   text-align: center;border: none;color: #fff;float: left;}
+.mobile .nav .viewMore{display: block;height: 3rem;line-height: 3rem; font-size: 0.8rem;text-align: center;border: none;color: #fff;float: left;}
 .share1{width: 100%;background: #ff3b30;}
 .share2{width: 70%;background: #0079fe;}
 .share3{width: 30%;background: #ff3b30;}
@@ -366,7 +361,7 @@
 .noGuessing{width: 100%;padding-top: 5rem;background: #fff;}
 .noGuessing .title_con{width: 100%; color: #808080;text-align: center;line-height: 3rem;font-size: 0.8rem;}
 .noGuessing .viewMore{display: block;text-align: center;width: 7rem;height: 2.5rem;line-height: 2.5rem;background: #fff;
-								border: 1.5px #959595 solid;color: #808080;font-size: 0.6rem;margin: 0 auto;border-radius: 0.4rem;margin-bottom: 10rem;}
+					  border: 1.5px #959595 solid;color: #808080;font-size: 0.6rem;margin: 0 auto;border-radius: 0.4rem;margin-bottom: 10rem;}
 
 
 /*弹窗  弹出层*/
@@ -384,8 +379,7 @@
 .takePart .content .selectDiv .module{float: left;}
 .takePart .content .selectDiv .module1{width: 30%;height: 3rem; background: #fff;}
 .takePart .content .selectDiv .module1 .borderDiv{width: 1.6rem;height: 1.6rem; border: 2px #787878 solid;border-radius: 0.1rem;margin: 0.75rem auto;}
-.takePart .content .selectDiv .module1 .borderDiv .pitchUp{display: block; width: 86%;height: 86%;border-radius: 0.1rem;
-															float: left; margin-top: 7%;margin-left: 7%;}
+.takePart .content .selectDiv .module1 .borderDiv .pitchUp{display: block; width: 86%;height: 86%;border-radius: 0.1rem;float: left; margin-top: 7%;margin-left: 7%;}
 
 .moduleBGcolor2{background: #787878;}
 .takePart .content .selectDiv .module2{width: 30%; height: inherit;}
@@ -393,23 +387,21 @@
 .takePart .content .selectDiv .module3{width: 40%; height: inherit;line-height: 3rem;}
 .takePart .content .selectDiv .module3 span{display: block; width: 100%;}
 
-.takePart .content .selectDiv input{display: block;width: 100%; line-height: 2rem;background: #e5e5e5;border-radius: 0.2rem;font-weight: 600;
-									font-size: 0.7rem;text-indent: 0.5rem;color: #787878;border: none;}
+.takePart .content .selectDiv input{display: block;width: 100%; line-height: 2rem;background: #e5e5e5;border-radius: 0.2rem;
+									font-size: 0.7rem;text-indent: 0.5rem;color: #787878;border: none;font-weight: 600;}
 
 .takePart .buttonDiv{width: 100%;height: 3rem;line-height: 3rem;position: absolute;left: 0;bottom: 0;}
-.takePart .buttonDiv button{width: 100%;height: inherit;text-align: center;color: #fff;font-size: 1rem;
-							border: none;background: #558efc;}
+.takePart .buttonDiv button{width: 100%;height: inherit;text-align: center;color: #fff;font-size: 1rem;border: none;background: #558efc;}
 
 		/*分享至*/
 .share{width: 100%;position: absolute;left: 0;background: #e5e5e5;padding-top: 0.5rem;z-index: 0;}
 .share .titleDiv{width: 100%;height: 1rem;}
 .share .titleDiv .title{font-size: 0.7rem;width: 90%;text-align: center;color: #848484;padding-bottom: 0.5rem;margin: 0 auto;position: relative;}
-.share .titleDiv .title:before,.share .titleDiv .title:after {
-            content: '';                 /*CSS伪类用法*/
-            position: absolute;         /*定位背景横线的位置*/
-            top: 32%;
-            background: #858585;       /*宽和高做出来的背景横线*/
-            width: 36%;height: 1px;}
+.share .titleDiv .title:before,.share .titleDiv .title:after{content: '';                 /*CSS伪类用法*/
+												            position: absolute;         /*定位背景横线的位置*/
+												            top: 32%;
+												            background: #858585;       /*宽和高做出来的背景横线*/
+												            width: 36%;height: 1px;}
 .share .title:before{left: 5%;   /*调整背景横线的左右距离*/}
 .share .title:after {right: 5%;}
 .share .content{width: 100%;margin-bottom: 0.5rem;}

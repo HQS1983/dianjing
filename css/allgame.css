@@ -151,7 +151,6 @@
  * 2018-07-17 18:23:35
  * HQS
  * */
-.vessel{position: fixed;top: 0;left: 0;right: 0;background: #F2F2F2; bottom: 4rem;overflow-y: scroll;}
 .allGameList a{display: block;background: #fff; float: left;width: 33%;border-right: 1px #ccc solid;border-bottom: 1px #ccc solid;}
 .allGameList a:nth-of-type(3),.allGameList a:nth-of-type(6),.allGameList a:nth-of-type(9),
 .allGameList a:nth-of-type(12),.allGameList a:nth-of-type(15),.allGameList a:nth-of-type(18),

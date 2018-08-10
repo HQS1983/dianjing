@@ -239,6 +239,7 @@ $(function(){
 	    });
 	}
 	
+	//赛事详情-大逃杀  开始
 	//赛程
 	//比赛结束后 生成  全场最佳
 	function chunk(){
@@ -301,7 +302,7 @@ $(function(){
 	function leftCategory(){
 		var html="";
 		var letter="";
-		for(var o=0;o<=2;o++ ){
+		for(var o=2;o>=0;o-- ){
 			if ( o == 0 ) {
 				letter = "一";
 			}else if( o == 1 ){
@@ -309,19 +310,26 @@ $(function(){
 			}else if( o == 2 ){
 				letter = "三";
 			}
-			html += '<span class="category">第'+letter+'轮</span>';
+			html += '<span class="category categoryButton">第'+letter+'轮</span>';
 		}
 		$(".arrange .content .block .left").append(html);
 		$(".arrange .content .block .left").children().eq(0).addClass("avtie");
 	}
 	leftCategory();
+	$(".categoryButton").on("click",function(){
+    	var numIndex = $(this).index();
+		$(this).addClass("avtie");
+		$(this).siblings().removeClass("avtie");
+//		$(".divContent").eq(numIndex).removeClass("dis_none");
+//		$(".divContent").eq(numIndex).siblings().addClass("dis_none");
+	});
 	
 	
 	//赛程  分组  排名
 	function CrunchiesRanking(){
 		var html="";
 		for(var o=0;o<=11;o++ ){
-			html += '<a href="edg_website.html">'+
+			html += '<a href="javascript:;">'+
 						'<div class="list">'+
 							'<span class="ranking">'+(o+1)+'</span>'+
 							'<span class="TeamName apostrophe">'+o+2+'</span>'+
@@ -344,6 +352,15 @@ $(function(){
 //		$(".divContent").eq(numIndex).siblings().addClass("dis_none");
 
 	});
+	
+	
+	//赛事详情-大逃杀  结束
+	
+	
+	
+	//赛事详情-对抗  开始
+	
+	//赛事详情-对抗  结束
 });
 
 	

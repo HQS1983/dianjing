@@ -225,7 +225,7 @@
 			<div class="union leaveTeam ToLogIn dis_none">
 				<p class="style title">尚未登录，请前往登录</p>
 				<div class="buttonDiv">
-					<button class="leftButton bgCondition1" id="leaveTeamAffirm goLogin" type="button">前往登录</button>
+					<button class="leftButton bgCondition1 goLogin" id="leaveTeamAffirm goLogin" type="button">前往登录</button>
 				</div>
 				<span class="ShutDown" id="" onclick="ShutDown(this)">X</span> 
 			</div>
@@ -272,7 +272,7 @@
 			}
 		});
 		
-		$("#goLogin").on("click",function(){
+		$(".goLogin").on("click",function(){
 			window.location="login.html";
 		});
 	</script>

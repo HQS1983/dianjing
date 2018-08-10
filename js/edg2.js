@@ -149,76 +149,6 @@
 	}
 //	StarTeamLeader();
 
-    function AllGame(){
-        $.ajax({
-            type:"get",
-            url:"/api/game/",
-            async:true,
-            data:{"offset":0,"limit":500},
-            contentType:"application/json",
-            dataType:"json",
-            success:function(res){
-                if ( res.code == 0 ) {
-                    var html = '<a class="aButton avter" id="TheTotalList">总榜</a>'
-                    $.each(res.data,function(i,item){
-                        html += '<a class="aButton" id="'+item.id+'" >'+item.game_name+'</a>'
-                    });
-                    $(".rankingList .content .gameList .fix").append(html);
-                    
-                    $(".aButton").on("click",function(){
-                        var num = $(this).index();
-                        var dataID = $(this).attr("id");
-
-                        $("#historyResults").attr("data-val",dataID);
-                        $("#NearlyWeek").attr("data-val",dataID);
-
-
-                        var game_id  = $(this).attr("id")
-                        if (game_id=='TheTotalList') {
-                            game_id = ''
-                        }
-                        if ($(".Crunchies").attr("class").indexOf('avter')>0){
-                            TeamRecord('historyResults',game_id,'check_game',"all")
-                        }else{
-                            //近一周
-                            TeamRecord('NearlyWeek',game_id, 'check_game',"w");
-
-                        }
-						$(this).addClass("avter");
-						$(this).siblings().removeClass("avter");
-					});
-                } else{
-                    console.log(res.msg);
-                }
-            },error:function(res){
-                console.log(res.message);
-            }
-        });       
-    }
-//  AllGame();
-    $(".aButton").on("click",function(){
-	    var num = $(this).index();
-	    var dataID = $(this).attr("id");
-	
-	    $("#historyResults").attr("data-val",dataID);
-	    $("#NearlyWeek").attr("data-val",dataID);
-	
-	
-	    var game_id  = $(this).attr("id")
-//	    if (game_id=='TheTotalList') {
-//	        game_id = ''
-//	    }
-//	    if ($(".Crunchies").attr("class").indexOf('avter')>0){
-//	        TeamRecord('historyResults',game_id,'check_game',"all")
-//	    }else{
-//	        //近一周
-//	        TeamRecord('NearlyWeek',game_id, 'check_game',"w");
-//	
-//	    }
-		$(this).addClass("avter");
-		$(this).siblings().removeClass("avter");
-	});
-    
     
     function Img(img_list){
         var image = '';
@@ -416,3 +346,160 @@
 //  }
 
     // setCookie('token',getUrlParms('token'))
+    
+    
+    	
+	//排行榜  的游戏 列表
+    function AllGame(){
+        $.ajax({
+            type:"get",
+            url:"/api/game/",
+            async:true,
+            data:{"offset":0,"limit":500},
+            contentType:"application/json",
+            dataType:"json",
+            success:function(res){
+                if ( res.code == 0 ) {
+                    var html = '<a class="aButton avter" id="TheTotalList">总榜</a>'
+                    $.each(res.data,function(i,item){
+                        html += '<a class="aButton" id="'+item.id+'" >'+item.game_name+'</a>'
+                    });
+                    $(".rankingList .content .gameList .fix").append(html);
+                    
+                    $(".aButton").on("click",function(){
+                        var num = $(this).index();
+                        var dataID = $(this).attr("id");
+
+                        $("#historyResults").attr("data-val",dataID);
+                        $("#NearlyWeek").attr("data-val",dataID);
+
+
+                        var game_id  = $(this).attr("id")
+                        if (game_id=='TheTotalList') {
+                            game_id = ''
+                        }
+                        if ($(".Crunchies").attr("class").indexOf('avter')>0){
+                            TeamRecord('historyResults',game_id,'check_game',"all")
+                        }else{
+                            //近一周
+                            TeamRecord('NearlyWeek',game_id, 'check_game',"w");
+
+                        }
+						$(this).addClass("avter");
+						$(this).siblings().removeClass("avter");
+					});
+                } else{
+                    console.log(res.msg);
+                }
+            },error:function(res){
+                console.log(res.message);
+            }
+        });       
+    }
+//  AllGame();
+    
+    
+    //循环 排行榜 的游戏清单
+	function gameList(){
+		var html="",name="";
+		for(var QQ=0; QQ<=9; QQ++ ){
+			if (QQ=="0") {
+				name="山海经异兽录";
+			} else if (QQ=="1") {
+				name="阴阳师";
+			} else if (QQ=="2") {
+				name="绝地求生";
+			} else if (QQ=="3") {
+				name="荒野行动";
+			} else if (QQ=="4") {
+				name="择天记";
+			} else if (QQ=="5") {
+				name="天涯明月刀";
+			} else if (QQ=="6") {
+				name="第五人格";
+			} else if (QQ=="7") {
+				name="楚留香";
+			} else if (QQ=="8") {
+				name="贪玩蓝月";
+			} else if (QQ=="9") {
+				name="王者荣耀";
+			}
+			html += '<a class="aButton" id="'+QQ+'">'+name+'</a>';
+		}
+		html2='<a class="aButton avter" id="TheTotalList">总榜</a>';
+		$("#rankingList .gameList .fix").append(html2+html);
+	}
+	gameList();
+	
+	$(".aButton").on("click",function(){
+	    var num = $(this).index();
+	    var dataID = $(this).attr("id");
+	
+	    $("#historyResults").attr("data-val",dataID);
+	    $("#NearlyWeek").attr("data-val",dataID);
+	
+	
+	    var game_id  = $(this).attr("id")
+//	    if (game_id=='TheTotalList') {
+//	        game_id = ''
+//	    }
+//	    if ($(".Crunchies").attr("class").indexOf('avter')>0){
+//	        TeamRecord('historyResults',game_id,'check_game',"all")
+//	    }else{
+//	        //近一周
+//	        TeamRecord('NearlyWeek',game_id, 'check_game',"w");
+//	
+//	    }
+		$(this).addClass("avter");
+		$(this).siblings().removeClass("avter");
+		var html="";
+		$(".historyResults .CrunchiesRanking").html(html);
+		$(".NearlyWeek .CrunchiesRanking").html(html);
+		historyResults(num);
+		NearlyWeek(num);
+		console.log(num);
+	});
+	
+	//循环 历史成绩
+	function historyResults(gameOrder){
+		var html="";
+		if (gameOrder==undefined) {
+			gameOrder1="";
+		}else{
+			gameOrder1=gameOrder;
+		}
+		for(var QQ=1; QQ<=10; QQ++ ){
+			html += '<a href="edg_website.html">'+
+						'<div class="list">'+
+							'<span class="ranking">'+gameOrder1+QQ+'</span><span class="TeamName apostrophe">你好</span>'+
+							'<span class="teamLogo"><img src="img/public/icon_Crunchies'+QQ+'.png"></span>'+
+							'<span class="member"><i class="" id="">1</i>/50</span>'+
+							'<span class="totalNumber">30</span><span class="combatGains"><img src="img/public/icon_medal.png">30</span>'+
+						'</div>'+
+					'</a>';
+		}
+		$(".historyResults .CrunchiesRanking").append(html);
+	}
+	historyResults();
+	
+	//循环 近一周
+	function NearlyWeek(gameOrder){
+		var html="";
+		if (gameOrder==undefined) {
+			gameOrder1="";
+		}else{
+			gameOrder1=gameOrder;
+		}
+		for(var QQ=1; QQ<=10; QQ++ ){
+			html += '<div class="list">'+
+						'<span class="ranking">'+gameOrder1+QQ+'</span>'+
+						'<span class="TeamName apostrophe">DSAA</span>'+
+						'<span class="teamLogo"><img src="img/public/icon_Crunchies'+QQ+'.png"/></span>'+
+						'<span class="member"><i class="" id="">30</i>/50</span>'+
+						'<span class="totalNumber">120</span>'+
+						'<span class="combatGains"><img src="img/public/icon_medal.png"/>70</span>'+
+					'</div>';
+		}
+		$(".NearlyWeek .CrunchiesRanking").append(html);
+	}
+	NearlyWeek();

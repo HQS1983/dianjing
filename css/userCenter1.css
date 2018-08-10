@@ -475,9 +475,7 @@
  * 
  * 贴吧电竞  易战  个人中心  二级页面
  * */
-.vessel{position: fixed;top: 0;left: 0;right: 0;background: #F2F2F2; bottom: 4rem;overflow-y: scroll;}
-.vessel1{ bottom: 7rem!important;}
-.vessel2{ bottom: 3rem!important;}
+
 /*以下为 移动端   我的游戏 样式*/
 .mygame{padding-bottom: 1rem;}
 .mygame .content{width: 100%;padding-top: 1rem;}
@@ -621,7 +619,16 @@
 									  margin: 0.1rem auto;color: #fff;border-radius: 0.2rem;}
 
 /*以下为 移动端   我的竞猜 样式*/
-
+.myquizzes{padding-top: 0.5rem;}
+.myquizzes .module{width: 92%;margin: 0 auto 1rem;}
+.myquizzes .module .above{width: 100%;background: #fff;border: 1px #bfbfbf solid;margin-bottom: 0.3rem!important;}
+.myquizzes .module .above .line{display: block; width: inherit;height: 2.5rem;line-height: 2.5rem;color: #333;
+								font-size: 0.7rem;border-bottom: 1px #bfbfbf solid;font-weight: 600;text-align: center;}
+.myquizzes .module .above .line span{display: block; width: 24%;float: left;border-right: 1px #bfbfbf solid;}
+.myquizzes .module .above .line p{width: 75%;float: left;padding: 0 0.4rem;}
+.myquizzes .recruit{display: block; width: 100%;height: 2rem;line-height: 2rem;text-align: left;
+					color: #fff;border-radius: 0.1rem;margin: 0.4rem auto 0;border: none;}
+.myquizzes .recruit img{display: inline-block;width: 0.9rem;float: left;margin-top: 0.55rem;}
 
 
 
@@ -641,6 +648,7 @@
 	.addGame .main{height: 24rem;}
 	.addGame .main a img{height: 2.708rem;}
 	.mygame .content .module .left img{height: 4.704rem;}
+	.myquizzes .recruit img{margin-left: 10.9rem;}
 }
 /*5.96英寸  412*732尺寸的屏幕  如谷歌Nexus 6   2K 2560x1440  /3.5★*/
 @media only screen and (max-width: 412px) {
@@ -648,6 +656,7 @@
 	.addGame .main{height: 23rem;}
 	.addGame .main a img{height: 2.694rem;}
 	.mygame .content .module .left img{height: 4.681rem;}
+	.myquizzes .recruit img{margin-left: 11rem;}
 }
 /*5.2英寸   411*731尺寸的屏幕  如 谷歌Nexus 5x   1920x1080  /2.625★*/
 @media only screen and (min-width: 376px) and (max-width: 411px) {
@@ -655,6 +664,7 @@
 	.addGame .main{height: 22rem;}
 	.addGame .main a img{height: 2.688rem;}
 	.mygame .content .module .left img{height: 4.669rem;}
+	.myquizzes .recruit img{margin-left: 10.5rem;}
 }
 /*4.7英寸   375*667尺寸的屏幕  如iPhone6、iPhone7、iPhone 6s   1334x750*/
 @media only screen and (min-width: 361px) and (max-width: 375px) {
@@ -662,6 +672,7 @@
 	.addGame .main{height: 20rem;}
 	.addGame .main a img{height: 2.45rem;}
 	.mygame .content .module .left img{height: 4.26rem;}
+	.myquizzes .recruit img{margin-left: 10rem;}
 }
 /*4.95英寸  360*640尺寸的屏幕  如 谷歌Nexus 5     1920x1080 /3★*/
 @media only screen and (min-width: 321px) and (max-width: 360px) {
@@ -669,6 +680,7 @@
 	.addGame .main{height: 19rem;}
 	.addGame .main a img{height: 2.351rem;}
 	.mygame .content .module .left img{height: 4.027rem;}
+	.myquizzes .recruit img{margin-left: 9rem;}
 }
 /*4.0英寸   320*568尺寸的屏幕  如iPhone5、iPhone SE   1136x640*/
 @media only screen and (max-width: 320px) {
@@ -676,4 +688,5 @@
 	.addGame .main{height: 16rem;}
 	.addGame .main a img{height: 2.086rem;}
 	.mygame .content .module .left img{height: 3.635rem;}
+	.myquizzes .recruit img{margin-left: 8rem;}
 }

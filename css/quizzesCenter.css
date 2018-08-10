@@ -183,175 +183,114 @@
 
 /*
  * 以下为移动端样式
- * 2018-05-05
+ * 2018-08-06  15:51:40
  * HQS
  * */
-.mobile {width: 100%;max-width: 750px;background: #fff;padding-top: 3.001rem;}
-
-/*头部导航菜单*/
-.mobile .top{display: block;width: 100%;max-width: 750px; height: 3.001rem;
-			 background: #fff;border-bottom: 1px #000 solid;
-			 position:fixed;top: 0;left: 0;
-			 box-shadow:0 0  10px 1px #040404;z-index: 10;}
-.mobile .top a.logo{display: block; float: left;width: 4rem; margin-top: 0.59rem; margin-left: 1.2rem;}
-.mobile .top a.logo img{display: block; width: 100%;}
-.mobile .top ul{float: right;width: 14rem; height: inherit;display: block;}
-.mobile .top ul li{display: inline-block; float: left;width:33%; height: inherit;text-align: center;}
-.mobile .top ul li a{display: inline-block;width:100%; font-weight: 800;-webkit-tap-highlight-color:transparent;
-					 height: inherit;line-height: 3.001rem;font-size: 0.97rem; color: #eb8b00;}
-.mobile .top ul li a:hover{border-top: 2px #eb8b00 solid; background: #e6e6e6;}
+/*顶部功能区*/
 
 
 
-.mobile .main{width: 100%;}
-/*顶部海报*/
-.mobile .banner{display: block;width: 100%; height: auto; position: relative; }
-.mobile .banner .banner_and{display: block;position: absolute;
-							width: 6.8rem; height: 2rem;
-							border-radius: 0.4rem; z-index: 3;}
-.mobile .banner .erweima{position: absolute;top: 11.3rem;left: 8.96rem;display: none;
-						 width: 5.3rem;height: 5.3rem;background: #fff;border-radius: 0.3rem; }
-.mobile .banner .erweima p{display: block;height: 1rem;line-height: 1rem;color: #d78305;
-							font-size: 0.6rem;text-align: center;margin-bottom: 0.3rem;}
-.mobile .banner .erweima img{ display: block; width: 70%;margin: 0 auto;}
+/*下滑列表选择*/
+.mobile .Ribbon{padding-top: 0.5rem;padding-bottom: 0.2rem;}
+.mobile .Ribbon>div{float: left;text-align: center;position: relative;}
+.mobile .Ribbon .title{color: #fff;font-size: 0.8rem;font-weight: 800;}
+.mobile .Ribbon div .module{position: absolute;top: 0;left: 0; width: 100%;height: 100%;z-index: 3;}
+.mobile .Ribbon .shop{width: 50%;margin-top: 0.3rem;}
+.mobile .Ribbon .shop .bg_shop{display: block;width: 94%;;margin-left: 3%;border-radius: 0.2rem;}
+.mobile .Ribbon .shop .module .icon_shop{display:block;width: 44%;margin: 1rem auto 0rem;}
 
+.mobile .Ribbon .guessing{width: 47%;margin-top: 0.3rem;margin-bottom: 0.3rem;}
+.mobile .Ribbon .guessing .bg_guessing{display: block;width: 100%;float: left;border-radius: 0.2rem;}
+.mobile .Ribbon .guessing .module .icon_guessing{display: inline-block;width: 1rem; vertical-align: sub;}
+.mobile .Ribbon .guessing .module .title{display: inline-block;}
+.mobile .Ribbon .recharge{width: 47%;}
+.mobile .Ribbon .recharge .bg_recharge{display: block;width: 100%;float: left;border-radius: 0.2rem;}
+.mobile .Ribbon .recharge .module .icon_recharge{display: block;width: 2.5rem;margin: 1rem auto -0.2rem;}
+.mobile .Ribbon .recharge .module .title{display: inline-block;}
 
-/*四大特色*/
-.mobile .feature{display: block;width: 100%;max-width: 750px;height: auto;position: relative;}
+.mobile .select .nav{height: 3rem;background: #fff;}
+.mobile .select .nav .inputList{display: block;width: 34%;height: 2rem;line-height: 2rem;border: 1px #D4D4D4 solid;color: #A2A2A2;
+								text-align: center;font-size: 0.8rem;font-weight: 800;margin-top: 0.5rem;border-radius: 0.1rem;position: relative;}
+.mobile .select .nav .inputList input{display: inline-block;position: absolute;top: 0;left: 0;width: 100%;height: 2rem;opacity: 0;border: none;background: transparent;z-index: 4;}
+.mobile .select .nav .inputList .lsit{position: absolute;top: 1.8rem;left: 0;width: 100%;height: 0;overflow-y: scroll;background: #fff;border: 1px #ccc solid;opacity: 0;}
+.mobile .select .nav .inputList .lsit p{height:1.5rem;line-height: 1.5rem;font-size: 0.6rem;color: #777777;text-indent: 0.5rem;text-align: left;border-bottom: 1px #f5f5f5 solid;}
 
-/*校园大使*/
-.mobile .ambassador{display: block;width: 100%;max-width: 750px;height: auto;position: relative; }
-.mobile .ambassador a.sign_up{display: block;position: absolute;
-							width: 7rem; height: 2rem; z-index: 3;}
+.mobile .select .nav .selectGame{float: left;margin-left: 10%;}
+.mobile .select .nav .selectStatus{float: right;margin-right: 10%;}
+.mobile .select .nav .inputList .gameName{display: inline-block;}
+.mobile .select .nav .inputList .icon_dropDown{display: inline-block;width: 1rem;vertical-align: super;}
+.mobile .select .nav .inputList .GameList{max-height: 10rem;}
 
-/*大使收获*/
-.mobile .harvest{display: block;width: 100%;max-width: 750px;height: auto; background: #fff;position: relative;}
+.bg_overlay{position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 0;background: rgba(0,0,0,0.3);}
 
+		/*有 投注详情*/
+.betDetails{width: 100%;margin: 0.8rem auto 0.5rem;text-align: center;color: #515151;}
+.betDetails .contentHeader{width: 90%;}
 
-/*大使职责*/
-.mobile .responsibility{display: block;width: 100%;max-width: 750px;height: auto;position: relative; }
+.betDetails .guessingList{width: 90%;margin: 0rem auto 0.8rem;text-align: center;background: #fff;}
+.betDetails .guessingList .title{text-align: center;font-size: 0.6rem;}
+.betDetails .guessingList .stair{border-bottom: 1px #ccc solid;line-height: 2rem;}
+.betDetails .guessingList .second{line-height: 1.3rem;}
 
+.betDetails .guessingList .zone{display: block;width: 100%;height: 100%;margin: 0.5rem auto;}
+.betDetails .guessingList .zone .game1,
+.betDetails .guessingList .zone .game3{width: 35%;float: left;}
+.betDetails .guessingList .zone .game2{width: 30%;float: left;}
+.betDetails .guessingList .zone .game2 p{font-size: 0.6rem;line-height: 2rem;}
+.betDetails .guessingList .zone .game .module1{width: 60%;float: left;}
+.betDetails .guessingList .zone .game .module1 img{display: block; width: 92%;border-radius: 50%;margin: 0rem auto;}
+.betDetails .guessingList .zone .game .module1 .teamName{text-align: center;font-size: 0.6rem;color: #2F2F2F;}
+.betDetails .guessingList .zone .game .module2{width: 40%;float: left;padding-top: 0.8rem;}
+.betDetails .guessingList .zone .game .module2 .TeamName{font-weight: 700;}
+.betDetails .guessingList .zone .game .module2 .odds{font-size: 0.6rem;font-weight: 700;}
+.betDetails .guessingList .zone .game .status{margin: 1rem auto 0.2rem;}
+.betDetails .guessingList .zone .game .status .bottomPour{display: block;width: 86%;color: #fff;border-radius: 0.1rem;background: #52b1fc;
+														  height: 1.8rem;line-height: 1.8rem;border: none;margin: 0rem auto;font-weight: 700;}
 
-/*报名条件*/
-.mobile .condition{display: block;width: 100%;max-width: 750px;height: auto;position: relative; }
-
-
-/*联系我们*/
-.mobile .about{display: block;width: 100%;max-width: 750px;height: auto;position: relative; padding-top: 1rem;padding-bottom: 2rem;clear: both;}
-.mobile .about .about_main{display: block;width:100%;height: auto;}
-.mobile .about p{color: #000;display: block; text-align: center;}
-.mobile .about .about_main .about_title{width: 100%; font-size: 1.3rem;height: 2rem;line-height: 2rem;
-										margin-top: 2rem;}
-.mobile .about .about_main .about_describe{width: 100%; font-size: 0.7rem;height: 1rem;line-height: 1rem;margin-bottom: 1rem;}
-
-.mobile .about .about_main form{display: inline-block;width: 100%;height: auto;}
-.mobile .about .about_main form input{ display: block; width: 73%;height: 2rem; color: #a8a8a8;font-size: 1rem;margin: 0 auto 0.5rem;
-									   line-height: 2rem;text-indent: 10px;border: 1px #eca234 solid;}
-#qq::-webkit-inner-spin-button,#mobile::-webkit-inner-spin-button,#contact_number::-webkit-inner-spin-button { -webkit-appearance: none!important; ; }
-#qq,#mobile,#contact_number{ -moz-appearance: textfield; }
-.mobile .about .about_main form #content{ display: block;width: 73%; height: 5rem; color: #a8a8a8;font-size: 1rem;
-											margin-bottom: 10px; line-height: 2rem;margin: 0 auto 0.5rem;
-											border: 1px #eca234 solid;padding-left: 7px;}
-.mobile .about .about_main form .contact_submit{ width: 15rem; height: 2rem; color: #fff;font-size: 1rem;
-												line-height: 2rem;border-radius: 0.3rem;
-												background: #e88901;-webkit-tap-highlight-color:transparent;}
-
-.mobile .about .about_main .about_address{display: block;width: 100%;height: auto;margin-top: 2rem;}
-.mobile .about .about_main .about_address p{font-size: 0.7rem;height: 1rem;line-height: 1rem;}
-
-.mobile .about ul.foot{display: block;width: 20rem;height: 1rem;margin: 1rem auto 1rem;}
-.mobile .about ul.foot li{display: inline-block;float: left;height: auto;}
-.mobile .about ul.foot li:nth-of-type(1){border-right: 1px #4b4b4b solid;}
-.mobile .about ul.foot li:nth-of-type(1) a{margin-left: 3rem;margin-right: 1rem;}
-.mobile .about ul.foot li:nth-of-type(2){border-right: 1px #4b4b4b solid;}
-.mobile .about ul.foot li a{color: #000;font-size: 1rem;height: 1rem;line-height: 1rem;
-							margin-left: 1rem;margin-right: 1rem;-webkit-tap-highlight-color:transparent;}
-.mobile .about .provider{display: block; color: #000; width: 100%;font-size: 1rem;}
-
-
-
-
-/*报名表*/
-.mobile .application{width: 100%;max-width: 750px; position: relative;background: #ca4206;}
-.mobile .application .application_bg{display: block; width: 100%;z-index: 1;}
-
-.mobile .application .entry_main{display: block;width:100%;height: auto;z-index: 3;
-								 position: absolute;top: 18rem;left: 0; }
-.mobile .application .entry_main .entry_title{text-align: center; font-size: 2rem;color: #fff;
-											height: 2rem;line-height: 2rem;margin-bottom: 2rem;}
-.mobile .application .entry_main form#application_form{display: block;width:98%;height: auto;margin: 0 auto;}
-
-.mobile .application .message{height: 15rem;width: 100%;}
-.mobile .application .message div{ display: inline-block; width: 50%;height: 2rem;line-height: 2rem;float: left;margin-bottom: 1rem;}
-.mobile .application .message div label{ display: inline-block; width: 3rem;font-size: 1rem;color: #fff; text-align: center;float: left;}
-.mobile .application .message div input{ display: inline-block;width: 6rem;height: 2rem;font-size: 1.2rem;
-										 color: #272727;padding-left: 0.4rem;margin-left: 9px;float: left;}
-
-.mobile .application .message div span{ display: inline-block; width: 3rem;font-size: 1rem;color: #fff; text-align: center;float: left;}
-.mobile .application .message div input.radio{ display: inline-block;width: 1rem;height: 1rem; line-height: 1rem;float: left;
-												font-size: 2rem;color: #ccc;padding-left: 0.1rem;margin-left: 1rem;margin-top: 0.5rem;}
-.mobile .application .message div label.gender_label{width: 1rem;font-size: 1rem;margin: 0 0 0 0.4rem;float: left;}
-
-.mobile .application label.address_title{ display: inline-block; width: 8rem;font-size: 1rem;height:1rem;
-									line-height: 1rem; color: #fff;padding-left: 1rem;}
-.mobile .application input.address{ display: block;width: 90%;height: 2rem;font-size: 1.2rem;margin: 0.5rem auto 3rem;
-									color: #272727;padding-left: 0.4rem;}
-
-.mobile .application .entry_main_title{text-align: center; font-size: 2rem;color: #fff;
-									   height: 2rem;line-height: 2rem;margin-bottom: 2rem;}
-.mobile .application p.content_title{ display: block; width: 96%;font-size: 1rem;margin: 1rem auto 0.2rem;
-									  line-height: 1.8rem; color: #fff; text-align: left;padding-left: 0.8rem;}
-.mobile .application textarea{display: block;font-size: 1rem;padding-left: 0.8rem; color: #524e4e;
-								line-height: 1.8rem;border-radius: 0.2rem;
-								width: 90%; height: 5rem;margin: 0 auto;}
-
-.mobile .application #application_submit{display: block;width: 60%; height: 2.6rem;line-height: 2.6rem;background: #fe8d08;
-										color: #fff;font-size: 1.5rem; text-align: center;
-										border: 0px; border-radius: 0.4rem;margin: 2rem auto;
-										-webkit-tap-highlight-color:transparent;}
-
+.betDetails .guessingList .moreGuessing{display: block;margin: 0rem auto; width: 100%;height: 2rem;line-height: 2rem;
+										border-top: 1px #eee solid;background: #fff;}
 
 
 
 /*5.5英寸   414*736尺寸的屏幕  如iPhone6 Plus、iPhone6s Plus、iPhone7 Plus、魅族MX5  1920x1080  /3★*/ 
 @media only screen and (max-width: 414px) {
-	.banner_and{top: 11.29rem;left: 1.6rem;}
-	.mobile .ambassador a.sign_up{top: 12rem;left: 15rem;}
-	
-	.mobile .application{height: 95rem;}
+	.mobile .Ribbon .guessing{line-height: 34.58px;}
+	.mobile .Ribbon .recharge .module .icon_recharge{width: 4.1rem;margin: 0.6rem auto -0.5rem;}
+	.mobile .select .nav .inputList .gameName{max-width: 6.9rem;}
+	.betDetails .guessingList .zone .game .module1 img{height: 4.499rem;}
 }
 /*5.96英寸  412*732尺寸的屏幕  如谷歌Nexus 6   2K 2560x1440  /3.5★*/
 @media only screen and (max-width: 412px) {
-	.banner_and{top: 11rem;left: 1.6rem;}
-	.mobile .ambassador a.sign_up{top: 12rem;left: 15rem;}
-	
-	.mobile .application{height: 96rem;}
+	.mobile .Ribbon .guessing{line-height: 34.42px;}
+	.mobile .Ribbon .recharge .module .icon_recharge{width: 4rem;margin: 0.6rem auto -0.5rem;}
+	.mobile .select .nav .inputList .gameName{max-width: 6.8rem;}
+	.betDetails .guessingList .zone .game .module1 img{height: 4.477rem;}
 }
 /*5.2英寸   411*731尺寸的屏幕  如 谷歌Nexus 5x   1920x1080  /2.625★*/
 @media only screen and (min-width: 376px) and (max-width: 411px) {
-	.banner_and{top: 11rem;left: 1.6rem;}
-	.mobile .ambassador a.sign_up{top: 12rem;left: 15rem;}
-	
-	.mobile .application{height: 96rem;}
+	.mobile .Ribbon .guessing{line-height: 34.33px;}
+	.mobile .Ribbon .recharge .module .icon_recharge{width: 3.8rem;margin: 0.6rem auto -0.5rem;}
+	.mobile .select .nav .inputList .gameName{max-width: 6.7rem;}
+	.betDetails .guessingList .zone .game .module1 img{height: 4.466rem;}
 }
 /*4.7英寸   375*667尺寸的屏幕  如iPhone6、iPhone7、iPhone 6s   1334x750*/
 @media only screen and (min-width: 361px) and (max-width: 375px) {
-	.banner_and{top: 10rem;left: 1rem;}
-	.mobile .ambassador a.sign_up{top: 11rem;left: 13rem;}
-	
-	.mobile .application{height: 97rem;}
+	.mobile .Ribbon .guessing{line-height: 31.33px;}
+	.mobile .Ribbon .recharge .module .icon_recharge{width: 3.2rem;margin: 0.7rem auto -0.2rem;}
+	.mobile .select .nav .inputList .gameName{max-width: 6.1rem;}
+	.betDetails .guessingList .zone .game .module1 img{height: 4.076rem;}
 }
 /*4.95英寸  360*640尺寸的屏幕  如 谷歌Nexus 5     1920x1080 /3★*/
 @media only screen and (min-width: 321px) and (max-width: 360px) {
-	.banner_and{top: 9.5rem;left: 1rem;}
-	.mobile .ambassador a.sign_up{top: 10.5rem;left: 12rem;}
-	
-	.mobile .application{height: 98rem;}
+	.mobile .Ribbon .guessing{line-height: 30.06px;}
+	.mobile .Ribbon .recharge .module .icon_recharge{width: 3rem;margin: 0.7rem auto -0.4em;}
+	.mobile .select .nav .inputList .gameName{max-width: 6rem;}
+	.betDetails .guessingList .zone .game .module1 img{height: 3.974rem;}
 }
 /*4.0英寸   320*568尺寸的屏幕  如iPhone5、iPhone SE   1136x640*/
 @media only screen and (max-width: 320px) {
-	.banner_and{top: 8.5rem;left: 1rem;}
-	.mobile .ambassador a.sign_up{top: 9rem;left: 11rem;}
-	
-	.mobile .application{height: 99rem;}
+	.mobile .Ribbon .guessing{line-height: 26.73px;}
+	.mobile .Ribbon .recharge .module .icon_recharge{width: 2.4rem;margin: 0.7rem auto -0.4rem;}
+	.mobile .select .nav .inputList .gameName{max-width: 5rem;}
+	.betDetails .guessingList .zone .game .module1 img{height: 3.477rem;}
 }

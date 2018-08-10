@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/commonality.css"/>
 	<link rel="stylesheet" type="text/css" href="css/userCenter1.css"/>
 	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 	<div class="pc" style="display: none;">
@@ -193,48 +194,195 @@
 			<p class="noGame dis_none">暂无消息~</p>
 			
 			<!--有信息-->
-			<div class="mynews fix">
-				<div class="content fix">
-	                <a href="javascript:;">
-	                    <p class="abstract">您关注的X战队在明天（2018-5-27  16:00）会有一场比赛，记 得为他们加油打气哟~</p>
-	                    <p class="time"><img src="img/userCenter/icon_time.png"/>&nbsp;&nbsp;2018-05-26  09：00</p>
-	                </a>
-	            </div>
-				<div class="content fix">
-	                <a href="javascript:;">
-	                    <p class="abstract">您关注的X战队在明天（2018-5-27  16:00）会有一场比赛，记 得为他们加油打气哟~</p>
-	                    <p class="time"><img src="img/userCenter/icon_time.png"/>&nbsp;&nbsp;2018-05-26  09：00</p>
-	                </a>
-	            </div>
-				<div class="content fix">
-	                <a href="javascript:;">
-	                    <p class="abstract">您关注的X战队在明天（2018-5-27  16:00）会有一场比赛，记 得为他们加油打气哟~</p>
-	                    <p class="time"><img src="img/userCenter/icon_time.png"/>&nbsp;&nbsp;2018-05-26  09：00</p>
-	                </a>
-	            </div>
-				<div class="content fix">
-	                <a href="javascript:;">
-	                    <p class="abstract">您关注的X战队在明天（2018-5-27  16:00）会有一场比赛，记 得为他们加油打气哟~</p>
-	                    <p class="time"><img src="img/userCenter/icon_time.png"/>&nbsp;&nbsp;2018-05-26  09：00</p>
-	                </a>
-	            </div>
-				<div class="content fix">
-	                <a href="javascript:;">
-	                    <p class="abstract">您关注的X战队在明天（2018-5-27  16:00）会有一场比赛，记 得为他们加油打气哟~</p>
-	                    <p class="time"><img src="img/userCenter/icon_time.png"/>&nbsp;&nbsp;2018-05-26  09：00</p>
-	                </a>
-	            </div>
-				<div class="content fix">
-	                <a href="javascript:;">
-	                    <p class="abstract">您关注的X战队在明天（2018-5-27  16:00）会有一场比赛，记 得为他们加油打气哟~</p>
-	                    <p class="time"><img src="img/userCenter/icon_time.png"/>&nbsp;&nbsp;2018-05-26  09：00</p>
-	                </a>
-	            </div>
+			<div class="myquizzes fix">
+				<!--<div class="module fix">
+					<div class="above shadow2 fix">
+						<div class="line">
+							<span class="spanLeft">赛事主题</span>
+							<p class="describe apostrophe">2018-06-09 荒野行动第三赛季黄金超级奖杯</p>
+						</div>
+						<div class="line">
+							<span class="spanLeft">竞猜项</span>
+							<p class="describe apostrophe">吃鸡队伍的击杀数为单数还是双数</p>
+						</div>
+						<div class="line">
+							<span class="spanLeft">选择</span>
+							<p class="describe apostrophe">单</p>
+						</div>
+						<div class="line">
+							<span class="spanLeft">投入彩豆</span>
+							<p class="describe apostrophe">100</p>
+						</div>
+						<div class="line">
+							<span class="spanLeft">回馈</span>
+							<p class="describe">0</p>
+						</div>
+						<div class="line">
+							<span class="spanLeft">结果</span>
+							<p class="describe apostrophe">未结束</p>
+						</div>
+					</div>
+					<button class="share recruit bgCondition1" type="button">
+						<img src="img/userCenter/icon_myquizzes_share.png"/>&nbsp;分享
+					</button>
+				</div>-->
 			</div>
 		</div>
 	</div>
 	
 	<script src="js/sUserAgent.js" type="text/javascript" charset="utf-8"></script>
-	<!--<script src="js/mynews.js" type="text/javascript" charset="utf-8"></script>-->
+	<script type="text/javascript">
+		//循环 竞猜
+		function module(){
+			var html="";
+			var statu="";
+			for(var i=1; i<=5; i++ ){
+				if ( i==1 ) {
+					statu = "未开始";
+				} else if ( i==2 ) {
+					statu = "即将开始";
+				} else if ( i==3 ) {
+					statu = "进行中/比赛中";
+				} else if ( i==4 ) {
+					statu = "已结束";
+				} else if ( i==5 ) {
+					statu = "已取消";
+				}
+				html += '<div class="module fix">'+
+							'<div class="above shadow2 fix">'+
+								'<div class="line">'+
+									'<span class="spanLeft">赛事主题</span>'+
+									'<p class="describe apostrophe">2018-06-0'+i+' 荒野行动第三赛季黄金超级奖杯</p>'+
+								'</div>'+
+								'<div class="line">'+
+									'<span class="spanLeft">竞猜项</span>'+
+									'<p class="describe apostrophe">'+ statu +'吃鸡队伍的击杀数为单数还是双数</p>'+
+								'</div>'+
+								'<div class="line">'+
+									'<span class="spanLeft">选择</span>'+
+									'<p class="describe apostrophe">单</p>'+
+								'</div>'+
+								'<div class="line">'+
+									'<span class="spanLeft">投入彩豆</span>'+
+									'<p class="describe apostrophe">100</p>'+
+								'</div>'+
+								'<div class="line">'+
+									'<span class="spanLeft">回馈</span>'+
+									'<p class="describe">0</p>'+
+								'</div>'+
+								'<div class="line">'+
+									'<span class="spanLeft">结果</span>'+
+									'<p class="describe apostrophe">'+ statu +'</p>'+
+								'</div>'+
+							'</div>'+
+							'<button class="share recruit bgCondition1" type="button">'+
+								'<img src="img/userCenter/icon_myquizzes_share.png"/>&nbsp;分享'+
+							'</button>'+
+						'</div>';
+			}
+			$(".myquizzes").append(html);
+			
+			$(".recruit").on("click",function(){
+				layer.msg("此功能暂未开放，可点击右上角进行分享");
+			});
+		}
+		module();
+	</script>
+	
+	<!--微信分享-->
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
+	<script>
+//		url=location.href;
+//		$.ajax({
+//			type : "get",
+//			url : "http://xxxxxxxxx/jssdk.php?url="+url,//替换网址，xxx根据自己jssdk文件位置修改 
+//			dataType : "jsonp",
+//			jsonp: "callback",
+//			jsonpCallback:"success_jsonpCallback",
+//			success : function(data){
+//				wx.config({
+//					appId: data.appId,
+//					timestamp: data.timestamp,
+//					nonceStr: data.nonceStr,
+//					signature: data.signature,
+//					jsApiList: [
+//						"onMenuShareTimeline", //分享给好友 
+//						"onMenuShareAppMessage", //分享到朋友圈 
+//						"onMenuShareQQ", //分享到QQ
+//						"onMenuShareWeibo" //分享到微博 
+//					]
+//				});
+//			},
+//		    error:function(data){
+//		    	alert("连接失败！");
+//		    }
+//		});
+//		wx.ready(function (){
+//			var shareData = {
+//					title: '标题',
+//					desc: '简介',//这里请特别注意是要去除html
+//					link: '链接',
+//					imgUrl: '题图'
+//				};
+//			wx.onMenuShareAppMessage(shareData);
+//			wx.onMenuShareTimeline(shareData);
+//			wx.onMenuShareQQ(shareData);
+//			wx.onMenuShareWeibo(shareData);
+//		}); 
+	</script>
+	
+	<script type="text/javascript">
+		// 微信分享
+//  	var wx = require('wechat-sdk');
+//	    rewardsResultService.getWechatInfo().then(function(data) {
+//	        var conf = data;
+//	        wx.config({
+//	        debug: false,
+//	        appId: 'wx34e783920b37ee91',
+//	        timestamp: conf.timestamp,
+//	        nonceStr: conf.noncestr,
+//	        signature: conf.signature,
+//	        jsApiList: ['onMenuShareAppMessage', 'onMenuShareTimeline','onMenuShareQQ']
+//	        });
+//	        configWeChatInterface();
+//	    });
+// 
+//	    var iconUrl = 'http://'+location.host+'/images/icon-200yuan.png';
+//	    function configWeChatInterface() {
+//	        //分享给朋友
+//	        wx.onMenuShareAppMessage({
+//		        title: '一言不合就发红包，金蛛送您200元红包！',
+//		        desc: '一言不合就发红包，金蛛送您200元红包！',
+//		        link: location.href,
+//		        imgUrl: iconUrl,
+//		        type: 'link',
+//		        success: function() {
+//		        	// alert('share success');
+//		        },
+//		        cancel: function() {
+//		 
+//		        }
+//	        });
+//	        //分享到朋友圈
+//	        wx.onMenuShareTimeline({
+//		        title: '一言不合就发红包，金蛛送您200元红包！',
+//		        link: location.href, // 分享链接
+//		        imgUrl: iconUrl
+//	        });
+//	        //分享到QQ
+//	        wx.onMenuShareQQ({
+//		        title: '一言不合就发红包，金蛛送您200元红包！', // 分享标题
+//		        desc: '一言不合就发红包，金蛛送您200元红包！', // 分享描述
+//		        link: location.href, // 分享链接
+//		        imgUrl: iconUrl, // 分享图标
+//		        success: function () {
+//		        	// 用户确认分享后执行的回调函数
+//		        },
+//		        cancel: function () {
+//		       		// 用户取消分享后执行的回调函数
+//		        }
+//	        });
+//	    }
+	</script>
 </body>
 </html>

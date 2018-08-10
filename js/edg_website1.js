@@ -203,58 +203,27 @@
 //	})
     //循环  成员管理
     function management(){
-    	var html="",html2="",html3="",html4="",html5="",html6="",html7="",post="";
-		for(var QQ=0; QQ<=2; QQ++ ){
-			if (QQ==0) {
-				for(var i=1; i<=8; i++ ){
-					if ( i==1) {
-						post="队长";
-					}else if( i==2||i==3){
-						post="副队长";
-						html3='<button type="button" class="buttonManage">管理</button>';
-					}else{
-						post="队员";
-						html3='<button type="button" class="buttonManage">管理</button>';
-					}
-					html4 += '<div class="game">'+
-								'<a class="fix" href="personal.html">'+
-									'<img src="img/edg/captain'+i+'.png">'+
-									'<p class="name apostrophe">'+i+'第一页</p>'+
-									'<p class="position">'+"第"+i+post+'</p>'+
-								'</a>'+
-								html3+
-							'</div>';
-				}
-				html += '<div class="swiper-slide">'+html4+'</div>';
-			}else if (QQ==1) {
-				for(var i=9; i<=16; i++ ){
-					post="队员";
-					html3='<button type="button" class="buttonManage">管理</button>';
-					html5 += '<div class="game">'+
-								'<a class="fix" href="personal.html">'+
-									'<img src="img/edg/captain'+(i-8)+'.png">'+
-									'<p class="name apostrophe">'+i+'第二页</p>'+
-									'<p class="position">'+"第"+i+post+'</p>'+
-								'</a>'+
-								html3+
-							'</div>';
-				}
-				html += '<div class="swiper-slide">'+html5+'</div>';
-			}else if (QQ==2) {
-				for(var i=17; i<=24; i++ ){
-					post="队员";
-					html3='<button type="button" class="buttonManage">管理</button>';
-					html6 += '<div class="game">'+
-								'<a class="fix" href="personal.html">'+
-									'<img src="img/edg/captain'+(i-16)+'.png">'+
-									'<p class="name apostrophe">'+i+'第三页</p>'+
-									'<p class="position">'+"第"+i+post+'</p>'+
-								'</a>'+
-								html3+
-							'</div>';
-				}
-				html += '<div class="swiper-slide">'+html6+'</div>';
+    	var html="",html2="",html3="",html4="",html5="",html6="",firstPage="",post="";
+		for(var i=1; i<=23; i++ ){
+			if ( i==1) {
+				post="队长";
+			}else if( i==2||i==3){
+				post="副队长";
+				html3='<button type="button" class="buttonManage">管理</button>';
+			}else{
+				post="队员";
+				html3='<button type="button" class="buttonManage">管理</button>';
 			}
+			html +='<div class="swiper-slide">'+
+						'<div class="game">'+
+							'<a class="fix" href="personal.html">'+
+								'<img src="img/edg_website/captain/captain'+i+'.png">'+
+								'<p class="name apostrophe">'+i+'天劫</p>'+
+								'<p class="position">'+post+'</p>'+
+							'</a>'+
+							html3+
+						'</div>'+
+					'</div>';
 		}
 		$(".management .swiper-wrapper").append(html);
     }
@@ -270,6 +239,12 @@
         autoplayDisableOnInteraction : false,
 		pagination: '#bannerpagination',
 		paginationType : 'fraction',//把轮播的分页器 点点 改为 数字
+		slidesPerView : 4,//一行显示4个
+		slidesPerGroup : 4,//在carousel mode下定义slides的数量多少为一组
+		slidesPerColumn : 2,//显示2行
+		slidesPerColumnFill : 'column',//列
+		
+		spaceBetween : 5,
 		paginationClickable :true,//此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换。
 		nextButton: '.ArightButton',
 		prevButton: '.AleftButton',

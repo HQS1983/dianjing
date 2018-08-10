@@ -112,21 +112,6 @@
  * 2018-05-05
  * HQS
  * */
-.mobile {width: 100%;max-width: 750px;background: #fff;padding-top: 3.001rem;}
-
-/*头部导航菜单*/
-.mobile .top{display: block;width: 100%;max-width: 750px; height: 3.001rem;
-			 background: #fff;border-bottom: 1px #000 solid;
-			 position:fixed;top: 0;left: 0;
-			 box-shadow:0 0  10px 1px #040404;z-index: 10;}
-.mobile .top a.logo{display: block; float: left;width: 4rem; margin-top: 0.59rem; margin-left: 1.2rem;}
-.mobile .top a.logo img{display: block; width: 100%;}
-.mobile .top ul{float: right;width: 14rem; height: inherit;display: block;}
-.mobile .top ul li{display: inline-block; float: left;width:33%; height: inherit;text-align: center;}
-.mobile .top ul li a{display: inline-block;width:100%; font-weight: 800;-webkit-tap-highlight-color:transparent;
-					 height: inherit;line-height: 3.001rem;font-size: 0.97rem; color: #eb8b00;}
-.mobile .top ul li a:hover{border-top: 2px #eb8b00 solid; background: #e6e6e6;}
-
 
 
 .mobile .main{width: 100%;}
