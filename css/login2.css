@@ -228,14 +228,12 @@
 
 /*用户登录   【非】微信提示登录弹窗*/
 .main .modules{width: 100%;}
-.main .modules2{}
 .main .modules2 .modulesDiv{width: 88%;background: #fff; margin: 0 auto;font-size: 0.6rem;color: #000;text-align: center;}
 .main .modules2 .modulesDiv .topTitle{height: 3rem;line-height: 3rem;}
-.main .modules2 .modulesDiv .topTitle span{}
 .main .modules2 .modulesDiv .topTitle .left{width: 5rem;float: left;font-size: 0.8rem;font-weight: 800;}
 .main .modules2 .modulesDiv .topTitle .right{width: 5rem;float: right;color: #0079FE;}
-.main .modules2 .modulesDiv .erweima{display: block;width: 80%;height: 16rem; margin: 1rem auto 0rem;border: 1px #ccc solid;}
-.main .modules2 .modulesDiv .title{}
+.main .modules2 .modulesDiv #frameA{display: block;width: 80%;margin: 1rem auto 0rem;border: 1px #ccc solid;}
+.main .modules2 .modulesDiv #frameA iframe{width: 100%;height: inherit;}
 .main .modules2 .modulesDiv .bottomTips{width: 88%;margin: 0 auto; line-height: 3rem;text-align: left;}
 .main .modules2 .modulesDiv .bottomTips a{color: #0079FE;}
 
@@ -327,6 +325,7 @@
 	
 	.main .qqClass{bottom: 6.5rem;left: 6.5rem;}
 	.main .weChatClass{bottom: 6.5rem;right: 6.5rem;}
+	#frameA{height: 18.3rem;}
 }
 /*5.96英寸  412*732尺寸的屏幕  如谷歌Nexus 6   2K 2560x1440  /3.5★*/
 @media only screen and (max-width: 412px) {
@@ -334,6 +333,7 @@
 	
 	.main .qqClass{bottom: 6rem;left: 6.5rem;}
 	.main .weChatClass{bottom: 6rem;right: 6.5rem;}
+	#frameA{height: 18.3rem;}
 }
 /*5.2英寸   411*731尺寸的屏幕  如 谷歌Nexus 5x   1920x1080  /2.625★*/
 @media only screen and (min-width: 376px) and (max-width: 411px) {
@@ -341,6 +341,7 @@
 	
 	.main .qqClass{bottom: 6rem;left: 6.5rem;}
 	.main .weChatClass{bottom: 6rem;right: 6.5rem;}
+	#frameA{height: 18.1rem;}
 }
 /*iPhoneX*/
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
@@ -348,6 +349,7 @@
 	
 	.main .qqClass{bottom: 6.5rem;left: 5rem;}
 	.main .weChatClass{bottom: 6.5rem;right: 5rem;}
+	#frameA{height: 16rem;}
 }
 
 /*4.7英寸   375*667尺寸的屏幕  如iPhone6、iPhone7、iPhone 6s   1334x750*/
@@ -356,6 +358,7 @@
 	
 	.main .qqClass{bottom: 5.5rem;left: 6rem;}
 	.main .weChatClass{bottom: 5.5rem;right: 6rem;}
+	#frameA{height: 16.7rem;}
 }
 /*4.95英寸  360*640尺寸的屏幕  如 谷歌Nexus 5    1920x1080 /3★ */
 @media only screen and (min-width: 321px) and (max-width: 360px) {
@@ -363,6 +366,7 @@
 	
 	.main .qqClass{bottom: 5rem;left: 5.5rem;}
 	.main .weChatClass{bottom: 5rem;right: 5.5rem;}
+	#frameA{height: 16rem;}
 }
 /*4.0英寸   320*568尺寸的屏幕  如iPhone5、iPhone SE   1136x640*/
 @media only screen and (max-width: 320px) {
@@ -370,4 +374,5 @@
 	
 	.main .qqClass{bottom: 4rem;left: 5rem;}
 	.main .weChatClass{bottom: 4rem;right: 5rem;}
+	#frameA{height: 14rem;}
 }

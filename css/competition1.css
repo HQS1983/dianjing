@@ -283,6 +283,50 @@
 
 
 /*赛程  对抗   开始*/
+		/*分组*/
+.GameResults .two .first{background: #F2F2F2;}
+.GameResults .two .first .module1{width: 100%;background: #fff;padding-top: 0.5rem;padding-bottom: 0.5rem;}
+.GameResults .two .first .module1 .module{width: 80%; margin: 0 auto;}
+.GameResults .two .first .module1 a{width: 26%;float: left;text-align: center;border: 1px #6F6F6F solid;border-radius: 0.2rem;color: #6F6F6F;
+									height: 2rem;line-height: 2rem;font-size: 0.6rem;}
+.GameResults .two .first .module1 a:nth-of-type(1){margin-right: 11%;}
+.GameResults .two .first .module1 a:nth-of-type(2){margin-right: 11%;}
+.GameResults .two .first .module1 a.avter{background: #51b2fc;color: #fff;border-color: #51b2fc;}
+
+.GameResults .two .first .module2{width: 100%;padding-top: 1rem;padding-bottom: 0.3rem;}
+.GameResults .two .first .module2 .module{width: 86%; margin: 0 auto;}
+.GameResults .two .first .module2 a{width: 30%;float: left;text-align: center;border: 1px #6F6F6F solid;border-radius: 0.2rem;color: #6F6F6F;
+									height: 2rem;line-height: 2rem;font-size: 0.6rem;margin-bottom: 0.5rem;background: #fff;margin-right: 5%;}
+.GameResults .two .first .module2 a:nth-of-type(3),
+.GameResults .two .first .module2 a:nth-of-type(6),
+.GameResults .two .first .module2 a:nth-of-type(9),
+.GameResults .two .first .module2 a:nth-of-type(12),
+.GameResults .two .first .module2 a:nth-of-type(15),
+.GameResults .two .first .module2 a:nth-of-type(18),
+.GameResults .two .first .module2 a:nth-of-type(21),
+.GameResults .two .first .module2 a:nth-of-type(24),
+.GameResults .two .first .module2 a:nth-of-type(27){margin-right: 0%;}
+.GameResults .two .first .module2 a.avter{background: #51b2fc;color: #fff;border-color: #51b2fc;}
+		/*结构图*/
+.GameResults .two .second{background: #fff;padding: 1rem 0;}
+.GameResults .two .second .module{height: 10rem;float: left;}
+.GameResults .two .second .one{width: 20%;text-align: center;}
+.GameResults .two .second .one p{color: #707070;font-size: 0.6rem;line-height: 1rem;}
+.GameResults .two .second .one .area{height: 3rem;line-height: 3rem;color: #fff;font-size: 0.6rem;}
+.GameResults .two .second .one .area:nth-of-type(1){background: #52B1FC;}
+.GameResults .two .second .one .area:nth-of-type(2){background: #BFBFBF;}
+.GameResults .two .second .one .area img{display: inline-block; width: 1rem;}
+.GameResults .two .second .two{width: 15%;}
+.GameResults .two .second .three{width: 1%;}
+.GameResults .two .second .four{width: 10%;}
+.GameResults .two .second .five{width: 1%;}
+.GameResults .two .second .six{width: 10%;}
+.GameResults .two .second .seven{width: 20%;}
+
+
+
+
+
 
 
 

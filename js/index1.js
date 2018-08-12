@@ -137,27 +137,46 @@ $(function(){
 		acquisitionTime();
 //	    NoCompetitiontoday();
 		strDate=1;
-	    window.d = new Date(year, (date.getMonth()+1), 0);
-	    window.dataNum=d.getDate();
-
 	    var i = parseInt($(this).attr("data-num"));
+	    var val = parseInt($(this).attr("data-val"));
 	    
 		var dataMonth = parseInt($(this).attr("data-month"));//当前月份
 		var addUp = parseInt($(this).attr("data-addUp"));//当前跳转月份
-		
-	    if (addUp>=1) {
-	   		
-	    	dd = new Date(year, (addUp), 0);
-	    	dataNum2=dd.getDate();
-	    	month2 = date.getMonth() + 1-i;
-	    	console.log(addUp);
-	    	console.log(month2);
-		    console.log(dataNum2);
+		console.log(addUp);
+	    if ( (addUp-1) >= 1 ) {
+	    	if ( (addUp-1) < (date.getMonth() + 1) ) {
+	    		dd = new Date(year, (date.getMonth() + 1-val), 0);
+		    	dataNum2=dd.getDate();
+			    $(this).attr("data-val",val+1);
+		    	$(".Aright").attr("data-val",val+1);
+		    	
+		    	console.log((date.getMonth() + 1-val)+"月份");
+			    console.log(dataNum2+"个日子");
+	    	}else if( (addUp-1) == (date.getMonth() + 1) ){
+	    		dd = new Date(year, (date.getMonth() + 1), 0);
+		    	dataNum2=dd.getDate();
+		    	$(this).attr("data-val","1");
+		    	$(".Aright").attr("data-val","1");
+		    	
+		    	console.log((date.getMonth() + 1)+"月份");
+			    console.log(dataNum2+"个日子");
+	    	}else{
+	    		dd = new Date(year, (date.getMonth() + 1+(val-2)), 0);
+		    	dataNum2=dd.getDate();
+		    	$(this).attr("data-val",val-1);
+		    	$(".Aright").attr("data-val",val-1);
+		    	
+		    	console.log((date.getMonth() + 1+(val-2))+"月份");
+			    console.log(dataNum2+"个日子");
+	    	}
+		    	
 		    html="";
 		    $("#bannerSwiper2 .swiper-wrapper").html(html);
 		    bannerSwiper2(dd.getDate());
 		    $(this).attr("data-num",i+1);
+		    
 		    $(".Aleft,.Aright").attr("data-addUp",addUp-1);
+		    mySwiper.slideTo(0, 1000, false);
 	    }else{
 	    	return false;
 	    }
@@ -213,27 +232,45 @@ $(function(){
 	//当前赛事  月份选择 【右边】
 	$(".Aright").on("click",function(){
 		acquisitionTime();
-//	    NoCompetitiontoday(strDate);
-		strDate=1;
-	    window.d = new Date(year, (addUp), 0);
-	    window.dataNum=d.getDate();
-
 	    var i = parseInt($(this).attr("data-num"));
+	    var val = parseInt($(this).attr("data-val"));
 	    
 		var dataMonth = parseInt($(this).attr("data-month"));//当前月份
 		var addUp = parseInt($(this).attr("data-addUp"));//当前跳转月份
-	    if (addUp<12) {
-	   		
-	    	dd = new Date(year, (date.getMonth()+1+i), 0);
-	    	dataNum2=dd.getDate();
-	    	month2 = date.getMonth() + 1+i;
-	    	console.log(month2);
-		    console.log(dataNum2);
+		console.log(addUp);
+	    if ( (addUp+1) <= 12 ) {
+	    	if ( (addUp+1) > (date.getMonth() + 1) ) {
+	    		dd = new Date(year, (date.getMonth() + 1+val), 0);
+		    	dataNum2=dd.getDate();
+			    $(this).attr("data-val",val+1);
+			    $(".Aleft").attr("data-val",val+1);
+			    
+		    	console.log((date.getMonth() + 1+val)+"月份");
+			    console.log(dataNum2+"个日子");
+	    	}else if( (addUp+1) == (date.getMonth() + 1) ){
+	    		dd = new Date(year, (date.getMonth() + 1), 0);
+		    	dataNum2=dd.getDate();
+		    	$(this).attr("data-val","1");
+		    	$(".Aright").attr("data-val","1");
+		    	
+		    	console.log((date.getMonth() + 1)+"月份");
+			    console.log(dataNum2+"个日子");
+	    	} else{
+	    		dd = new Date(year, (date.getMonth() + 1-(val-2)), 0);
+		    	dataNum2=dd.getDate();
+			    $(this).attr("data-val",val-1);
+			    $(".Aleft").attr("data-val",val-1);
+			    
+		    	console.log((date.getMonth() + 1-(val-2))+"月份");
+			    console.log(dataNum2+"个日子");
+	    	}
+		    	
 		    html="";
 		    $("#bannerSwiper2 .swiper-wrapper").html(html);
 		    bannerSwiper2(dd.getDate());
 		    $(this).attr("data-num",i+1);
 		    $(".Aleft,.Aright").attr("data-addUp",addUp+1);
+		    mySwiper.slideTo(0, 1000, false);
 	    }else{
 	    	return false;
 	    }
@@ -307,30 +344,28 @@ $(function(){
 		for(var QQ=0; QQ<=activeIndex; QQ++ ){
 			if (activeIndex == 4 ) {
 				playArea="王者荣耀";
+				$(".indexModule").removeClass("dis_none");
 				$("#pClass").removeClass("pClass2");
 				$(".pullDown").attr("data-switch","0");
 				$(".imgClass1").attr("src","img/allgame/1.png");
 				$(".imgClass1,.spanClass").css({opacity:"1",height:"2rem"});
-//				html += '<a class="pullDown" href="javascript:;" data-switch="0">'+
-//							'<img class="imgClass" src="img/public/icon_AllGames3.png"/>'+
-//							'<p class="pClass" id="pClass">'+playArea+'</p>'+
-//							'<span></span>'+
-//						'</a>';
 			} else if( activeIndex == 5){
 				playArea="第五人格";
+				$(".indexModule").removeClass("dis_none");
 				$("#pClass").removeClass("pClass2");
 				$(".pullDown").attr("data-switch","0");
 				$(".imgClass1").attr("src","img/allgame/4.png");
 				$(".imgClass1,.spanClass").css({opacity:"1",height:"2rem"});
 			} else if( activeIndex == 6){
 				playArea="山海经异兽录";
+				$(".indexModule").removeClass("dis_none");
 				$("#pClass").removeClass("pClass2");
 				$(".pullDown").attr("data-switch","0");
 				$(".imgClass1").attr("src","img/allgame/7.png");
 				$(".imgClass1,.spanClass").css({opacity:"1",height:"2rem"});
 			}else{
-				playArea="今日无赛事";
 				$("#pClass").addClass("pClass2");
+				$(".indexModule").addClass("dis_none");
 				$(".pullDown").attr("data-switch","3");
 				$(".imgClass1").attr("src","");
 				$(".imgClass1,.spanClass").css({opacity:"0",height:"0"});
@@ -341,8 +376,8 @@ $(function(){
 	//循环月初第一天  若是无赛事 的 特殊情况
 	function NoCompetitiontoday(strDate){
 		if ((strDate-1)==0) {
-			$("#pClass").text("今日无赛事");
 			$("#pClass").addClass("pClass2");
+			$(".indexModule").addClass("dis_none");
 			$(".pullDown").attr("data-switch","3");
 			$(".imgClass1").attr("src","");
 			$(".imgClass1,.spanClass").css({opacity:"0",height:"0"});
@@ -392,10 +427,8 @@ $(function(){
 	//循环  当前赛事 的其中一种游戏的赛事情况
 	function arrangement(activeIndex){
 		var DeviceWidth = $(window).width();//监听当前设备 的宽度，防止错位
-		
 		var html="",html2="",colour="",bgCondition="",official="",state="",gameTime="";
 		if( DeviceWidth<= 320 ){
-			console.log(DeviceWidth);
 			gameTime='<p class="gameTime">比赛时间：<br />16：00-18：00</p>';
 		}else{
 			console.log(DeviceWidth+"abc");
@@ -447,18 +480,14 @@ $(function(){
 
 	//首页 当前赛事  日历
 	var mySwiper = new Swiper('#bannerSwiper2',{
-			//loop: true,//在原本slide前后复制若干个slide(默认一个)并在合适的时候切换，让Swiper看起来是循环的
-			//autoplay:3000,
-			//speed:3000,
 			slidesPerView : 7,//设置slider容器能够同时显示的slides数量(carousel模式)
 	        autoplayDisableOnInteraction : false,
 	        initialSlide:(strDate-1),//用来设定页面加载完成时，第几张图片先显示出来
     		centeredSlides: true,
-    		observer:true,
-    		//observer:true,//修改swiper自己或子元素时，自动初始化swiper
+    		observer:true,//修改swiper自己或子元素时，自动初始化swiper
     		//observeParents:true,//修改swiper的父元素时，自动初始化swiper
     		onSlideChangeStart: function(swiper){ //回调函数，swiper从一个slide过渡到另一个slide结束时执行
-    			console.log(strDate);
+    			console.log(strDate+"号");
     			pClass(swiper.activeIndex);  //当发生  滚动日历的操作，就自动循环当天的第一个游戏是否存在
     			EventList(swiper.activeIndex); //循环当前赛事当天包含的游戏【所有】
     			arrangement(swiper.activeIndex); //循环  当前赛事 的其中一种游戏的赛事情况
