@@ -352,13 +352,30 @@ $(function(){
 //		$(".divContent").eq(numIndex).siblings().addClass("dis_none");
 
 	});
-	
-	
 	//赛事详情-大逃杀  结束
 	
 	
 	
 	//赛事详情-对抗  开始
+	//对阵图、赛程、排行
+	$(".classification").on("click",function(){
+//		$(this).index();
+		$(this).addClass("avter");
+		$(this).siblings().removeClass("avter");
+		if ( $(this).index()==0 || $(this).index()==1 ) {
+			$(".first .module2").removeClass("dis_none");
+		} else{
+			$(".first .module2").addClass("dis_none");
+		}
+	});
+	//小组赛、淘汰赛、决赛
+	$(".grouping").on("click",function(){
+//		$(this).index();
+		$(this).addClass("avter");
+		$(this).siblings().removeClass("avter");
+		$(".sortTitle").text($(this).text());
+	});
+	
 	
 	//赛事详情-对抗  结束
 });

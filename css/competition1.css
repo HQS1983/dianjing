@@ -283,7 +283,7 @@
 
 
 /*赛程  对抗   开始*/
-		/*分组*/
+		/*赛程  对抗  分组*/
 .GameResults .two .first{background: #F2F2F2;}
 .GameResults .two .first .module1{width: 100%;background: #fff;padding-top: 0.5rem;padding-bottom: 0.5rem;}
 .GameResults .two .first .module1 .module{width: 80%; margin: 0 auto;}
@@ -307,23 +307,69 @@
 .GameResults .two .first .module2 a:nth-of-type(24),
 .GameResults .two .first .module2 a:nth-of-type(27){margin-right: 0%;}
 .GameResults .two .first .module2 a.avter{background: #51b2fc;color: #fff;border-color: #51b2fc;}
-		/*结构图*/
-.GameResults .two .second{background: #fff;padding: 1rem 0;}
-.GameResults .two .second .module{height: 10rem;float: left;}
-.GameResults .two .second .one{width: 20%;text-align: center;}
-.GameResults .two .second .one p{color: #707070;font-size: 0.6rem;line-height: 1rem;}
-.GameResults .two .second .one .area{height: 3rem;line-height: 3rem;color: #fff;font-size: 0.6rem;}
-.GameResults .two .second .one .area:nth-of-type(1){background: #52B1FC;}
-.GameResults .two .second .one .area:nth-of-type(2){background: #BFBFBF;}
-.GameResults .two .second .one .area img{display: inline-block; width: 1rem;}
+		/*赛程  对抗   结构图*/
+.GameResults .two .second{background: #fff;}
+.GameResults .two .second .box{width: 90%;margin: 0 auto;padding-top: 2rem;}
+.GameResults .two .second .module{float: left;}
+
+.GameResults .two .second .equal{width: 30%;text-align: center;}
+.GameResults .two .second .one .module1{margin-bottom: 2rem;}
+.GameResults .two .second .equal div p{color: #707070;font-size: 0.6rem;line-height: 1rem;margin-bottom: 0.3rem;}
+.GameResults .two .second .equal div .area{height: 2.5rem;line-height: 2.5rem;color: #fff;font-size: 0.6rem;margin-bottom: 0.3rem;}
+.GameResults .two .second .equal div .area:nth-of-type(1){background: #52B1FC;}
+.GameResults .two .second .equal div .area:nth-of-type(2){background: #BFBFBF;}
+.GameResults .two .second .equal div .area img{display: inline-block;width: 16px;height: 16px; margin: 0.75rem 0.15rem 0 1.5rem;float: left;}
+.GameResults .two .second .equal div .area span{display: inline;float: left;}
+
+.GameResults .two .second .two,.three,.six{height: 2.5rem;}
+.GameResults .two .second .stair{height: inherit;}
+.GameResults .two .second .stair .line{height: inherit;position: relative;}
+
+.GameResults .two .second .line:before{display: block;width: 100%;
+								       content: '';                 /*CSS伪类用法*/
+								       position: absolute;         /*定位背景横线的位置*/
+								       background: #6f6f6f;       /*宽和高做出来的背景横线*/}
+
+.GameResults .two .second .two  .line:before,
+.GameResults .two .second .four .line:before,
+.GameResults .two .second .six  .line:before{top: 50%;width: 100%;height: 2px;}
+
+.GameResults .two .second .three .line:nth-of-type(1):before{top: 102%;height: 47px;}
+.GameResults .two .second .three .line:nth-of-type(2):before{top: 434%;height: 46px;}
+.GameResults .two .second .five{height: 16rem;}
+.GameResults .two .second .five .line{height: 16rem;}
+.GameResults .two .second .five .line:before{top: 25%;height: 174.5px;}
+.GameResults .two .second .six  .line{height: 16rem;}
+
 .GameResults .two .second .two{width: 15%;}
-.GameResults .two .second .three{width: 1%;}
-.GameResults .two .second .four{width: 10%;}
-.GameResults .two .second .five{width: 1%;}
-.GameResults .two .second .six{width: 10%;}
-.GameResults .two .second .seven{width: 20%;}
+.GameResults .two .second .four,.GameResults .two .second .six{width: 10%;}
+.GameResults .two .second .seven{margin-top: 4.15rem;}
+			/*赛程  对抗  赛程*/ 
+.box2 .content{width: 100%;text-align: center;padding-top: 1rem;}
+.box2 .content .diamonds{width: 90%;margin: 0 auto;}
+.box2 .content .diamonds .section .contentTime{width: 100%;margin: 0 auto;height: 2.5rem;line-height: 2.5rem;background: #fff;text-align: left;
+									  color: #2d2d2d;font-size: 0.6rem;font-weight: 900;text-indent: 2rem;}
+.box2 .content .diamonds .section .contentTitle{width: 100%;margin: 0 auto;height: 2.5rem;line-height: 2.5rem;background: #fff;
+									  color: #2d2d2d;font-size: 0.6rem;font-weight: 900;}
+.box2 .content .diamonds .section .contentTime span{}
 
+.box2 .content .game:nth-of-type(1),.box2 .content .game:nth-of-type(3){width: 30%;float: left;}
+.box2 .content .game:nth-of-type(2){width: 40%;float: left;padding-top: 0.3rem;}
+.box2 .content .game:nth-of-type(1) img,.box2 .content .game:nth-of-type(3) img{
+									display: block; width: 68%;border-radius: 50%;margin: 0 auto;vertical-align: middle;
+											 -webkit-box-shadow:0 0 4px 0px #777676;  
+											 -moz-box-shadow:0 0 4px 0px #777676;  
+											 box-shadow:0 0 4px 0px #777676;}
+.box2 .content .game:nth-of-type(2) img{display: block; width: 40%;margin: 0 auto;}
+.box2 .apostrophe{width: 100%;font-size: 0.7rem;color: #2f2f2f;margin: 0.5rem auto;font-weight: 600;}
+.box2 .content .diamonds .section .status{background: #0159cf;}
+.box2 .content .diamonds .section .status span{border-top: 0.5rem solid transparent;border-bottom: 0.5rem solid transparent;position: absolute;top: 0;}
+.box2 .content .diamonds .section .status .statusLeft{border-right: 0.5rem solid #0159cf;}
+.box2 .content .diamonds .section .status .statusRight{border-left: 0.5rem solid #0159cf;}
+.box2 .content .game:nth-of-type(2) p{color: #818181;font-weight: 700;}
 
+.box2 .moreGuessing{text-align: center;}
+			/*赛程  对抗  排行*/ 
 
 
 
@@ -390,7 +436,7 @@
 .guessing .guessingList .buttonArea .bottomPour{display: block;width: 70%;color: #fff;border-radius: 0.2rem;
 									  height: 1.8rem;line-height: 1.8rem;border: none;margin: 1rem auto;}
 
-.moreGuessing{display: block;margin: 1rem auto; width: 96%;height: 2rem;line-height: 2rem;color: #828282;
+.moreGuessing{display: block;margin: 1rem auto; width: 96%;height: 2rem;line-height: 1.8rem;color: #828282;
 				border: 1.5px #959595 solid;background: #fff;border-radius: 0.2rem;}
 
 /*固定导航*/
@@ -468,6 +514,9 @@
 	
 	.mobile .nav{bottom: 4rem;}
 	.share{bottom: 7rem;}
+	
+	.GameResults .two .second .three,.GameResults .two .second .five{width: 0.5%;}
+	.GameResults .two .second .equal div .area span{max-width: 62%;}
 }
 /*5.96英寸  412*732尺寸的屏幕  如谷歌Nexus 6   2K 2560x1440  /3.5★*/
 @media only screen and (max-width: 412px) {
@@ -481,6 +530,9 @@
 	
 	.mobile .nav{bottom: 4rem;}
 	.share{bottom: 7rem;}
+	
+	.GameResults .two .second .three,.GameResults .two .second .five{width: 0.5%;}
+	.GameResults .two .second .equal div .area span{max-width: 61%;}
 }
 /*5.2英寸   411*731尺寸的屏幕  如 谷歌Nexus 5x   1920x1080  /2.625★*/
 @media only screen and (min-width: 376px) and (max-width: 411px) {
@@ -494,6 +546,9 @@
 	
 	.mobile .nav{bottom: 4rem;}
 	.share{bottom: 7rem;}
+	
+	.GameResults .two .second .three,.GameResults .two .second .five{width: 0.6%;}
+	.GameResults .two .second .equal div .area span{max-width: 60%;}
 }
 
 /*4.7英寸   375*667尺寸的屏幕  如iPhone6、iPhone7、iPhone 6s   1334x750*/
@@ -508,6 +563,9 @@
 	
 	.mobile .nav{bottom: 4rem;}
 	.share{bottom: 7rem;}
+	
+	.GameResults .two .second .three,.GameResults .two .second .five{width: 0.7%;}
+	.GameResults .two .second .equal div .area span{max-width: 58%;}
 }
 /*4.95英寸  360*640尺寸的屏幕  如 谷歌Nexus 5     1920x1080 /3★*/
 @media only screen and (min-width: 321px) and (max-width: 360px) {
@@ -521,6 +579,9 @@
 	
 	.mobile .nav{bottom: 4rem;}
 	.share{bottom: 7rem;}
+	
+	.GameResults .two .second .three,.GameResults .two .second .five{width: 0.8%;}
+	.GameResults .two .second .equal div .area span{max-width: 56%;}
 }
 /*4.0英寸   320*568尺寸的屏幕  如iPhone5、iPhone SE   1136x640*/
 @media only screen and (max-width: 320px) {
@@ -534,4 +595,7 @@
 	
 	.mobile .nav{bottom: 4rem;}
 	.share{bottom: 7rem;}
+	
+	.GameResults .two .second .three,.GameResults .two .second .five{width: 0.8%;}
+	.GameResults .two .second .equal div .area span{max-width: 50%;}
 }
