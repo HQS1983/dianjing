@@ -246,6 +246,29 @@ p.contentHeader img{width: 6%;margin-right: 0.5rem;vertical-align: middle;}
 
 .moduleBGcolor1{background: #fff;}
 
+/*固定导航*/
+.mobile .nav{position: fixed;left: 0;width: 100%;height: 3rem;z-index: 4;}
+.mobile .nav .viewMore{display: block;height: 3rem;line-height: 3rem; font-size: 0.8rem;text-align: center;border: none;color: #fff;float: left;}
+.share1{width: 100%;background: #ff3b30;}
+
+		/*分享至*/
+.share{width: 100%;position: absolute;left: 0;background: #e5e5e5;padding-top: 0.5rem;z-index: 0;}
+.share .titleDiv{width: 100%;height: 1rem;}
+.share .titleDiv .title{font-size: 0.7rem;width: 90%;text-align: center;color: #848484;padding-bottom: 0.5rem;margin: 0 auto;position: relative;}
+.share .titleDiv .title:before,.share .titleDiv .title:after{content: '';                 /*CSS伪类用法*/
+												            position: absolute;         /*定位背景横线的位置*/
+												            top: 32%;
+												            background: #858585;       /*宽和高做出来的背景横线*/
+												            width: 36%;height: 1px;}
+.share .title:before{left: 5%;   /*调整背景横线的左右距离*/}
+.share .title:after {right: 5%;}
+.share .content{width: 100%;margin-bottom: 0.5rem;}
+.share .content .styleHeight{width: 25%;float: left;}
+.share .content .styleHeight a{display: block; width: 100%;height: 100%;}
+.share .content .styleHeight a img{display: block; width: 2rem;vertical-align: middle;margin: 0.5rem auto;}
+.share .content .styleHeight a p{height: 1rem;line-height: 1rem;color: #000;text-align: center;font-size: 0.7rem;}
+
+
 
 
 /*超出文本  自动省略号*/

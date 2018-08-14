@@ -1,0 +1,297 @@
+/*
+ * 2018-08-13  20：02：31
+ * HQS
+ * 
+ * 赛事详情-对抗   战报
+ * */
+            
+
+.pc{width: 100%;position: relative;padding-top: 102px;}
+/*头部导航菜单*/
+.pc .top{height: 102px; position:fixed;top: 0;left: 0;border-bottom: 1px #000 solid;
+		-webkit-box-shadow:0 0  10px 1px #040404;  
+		-moz-box-shadow:0 0  10px 1px #040404;  
+		box-shadow:0 0  10px 1px #040404;z-index: 10;}
+.pc .top .top_div{display: block;width: 1158px;height: inherit;margin: 0 auto;}
+.pc .top .top_div a.logo{display: block; float: left;width: 162px; margin-top: 19px;}
+.pc .top .top_div a.logo img{display: block; width: 100%;}
+.pc .top .top_div ul{float: right;width: 606px; height: inherit;}
+.pc .top .top_div ul li{display: inline-block; float: left;width:80px;
+						height: inherit;line-height: 102px;text-align: center;}
+.pc .top .top_div ul li a{display: inline-block;width:inherit; color: #eb8b00;
+							height: inherit;line-height: inherit;font-size: 16px;}
+.pc .top .top_div ul li a:hover{border-top: 2px #eb8b00 solid; background: #e6e6e6;}
+
+
+.pc .main{width: 100%;min-width: 1158px;}
+
+/*顶部海报*/
+.pc .banner{height: 780px;position: relative;}
+.pc .banner .banner_bg{display: block;width: 100%;height: 158px;position: absolute;left: 0;z-index: 0;}
+.pc .banner .banner_bg1{top: 0px;  background: url(../img/banner_1.jpg) no-repeat center center;}
+.pc .banner .banner_bg2{top: 158px;background: url(../img/banner_2.jpg) no-repeat center center;}
+.pc .banner .banner_bg3{top: 316px;background: url(../img/banner_3.jpg) no-repeat center center;}
+.pc .banner .banner_bg4{top: 474px;background: url(../img/banner_4.jpg) no-repeat center center;}
+.pc .banner .banner_bg5{top: 632px;height: 148px;background: url(../img/banner_5.jpg) no-repeat center center;}
+
+.pc .banner .banner_content{display: block;width: 1158px;height: 780px;margin: 0 auto;padding-top: 200px;position: relative;}
+.pc .banner .banner_content .banner_character{display: block;width: 594px;height: 179px;
+											margin-left: 81px;}
+.pc .banner .banner_content .banner_android_app{display: block;width: 323px;height: 84px;
+											margin-left: 55px;margin-top: 117px; position: relative;}
+.pc .banner .banner_content .banner_android_app .banner_qr_code{display: none;width: 206px; height: 206px;
+															border-radius: 8px; padding-top: 4px;
+															position: absolute;top: 0; left: 351px;}
+.pc .banner .banner_content .banner_android_app .banner_qr_code p{display: block; width: 100%; color: #d58505;text-align: center;
+															  height: 43px;line-height:43px;font-size: 24.28px;}
+.pc .banner .banner_content .banner_android_app .banner_qr_code img{display: block;width: 140px; margin: 0 auto;}
+.pc .banner .banner_content .banner_android_app:hover .banner_qr_code{display: block;}
+
+.pc .banner .banner_content .banner_ios_app{display: block;width: 323px;height: 84px;
+											margin-left: 55px;margin-top: 38px;}
+
+
+
+/*游戏列表*/
+.pc .GamesList{height: 244px; padding-top: 32px;background: #CA4206;}
+.pc .GamesList .GamesList_div{display: block;width:1158px;height: 180px;margin: 0 auto;background: #A8A8A8;}
+
+
+
+
+/*时事*/
+.pc .content{height: 748px;position: relative;
+			background: #D58505;}
+.pc .content .content_div{ width: 1158px;height: inherit;}
+/*热门赛事*/
+.pc .content .PopularEvents{width: 50%;height: inherit;background: #E6E6E6;float: left;}
+
+/*新闻资讯*/
+.pc .content .news{width: 50%;height: inherit;background: #F00;float: right;}
+
+
+
+
+
+/*大使收获*/
+.pc .crunchies{height: 518px;background: #D58505;}
+.pc .crunchies .crunchies_div{display: block; width: 1158px; height: 498px;margin: 10px auto;}
+/*战队榜*/
+.pc .crunchies .edg{width: 50%;height: inherit;background: #794d4d;float: left;}
+/*赛事榜*/
+.pc .crunchies .Competition{width: 50%;height: inherit;background: #00e6ff;float: right;}
+
+
+
+
+/*联系我们*/
+.pc .about{height: 465px;background: #fff;}
+.pc .about .about_main{display: block;width:1158px;height: 380px;margin: 0 auto; padding-top: 57px;position: relative;}
+.pc .about .about_main p{color: #000;display: block;}
+.pc .about .about_main .about_title{width: 100%; font-size: 45.6px;height: 45.6px;line-height: 45.6px;margin-bottom: 20px; text-align: center;}
+.pc .about .about_main .about_describe{width: 100%; font-size: 20.85px;height: 20.85px;line-height: 20.85px;margin-bottom: 37px;text-align: center;}
+
+.pc .about .about_main .about_address{display: inline-block;width: 375px;height: 196px;float: left;margin-right: 50px;}
+.pc .about .about_main .about_address p{font-size: 16.33px;margin-bottom: 5px;}
+
+
+#qq::-webkit-inner-spin-button,#mobile::-webkit-inner-spin-button,#contact_number::-webkit-inner-spin-button { -webkit-appearance: none!important; ; }
+#qq,#mobile,#contact_number{ appearance: textfield;
+							-moz-appearance: textfield;
+							-webkit-appearance: textfield; }
+#qq:hover,#mobile:hover,#contact_number:hover{ appearance: textfield;
+												-moz-appearance: textfield;
+												-webkit-appearance: textfield; }
+.pc .about .about_main form .form_right{display: inline-block;width: 301px;height: inherit;margin-right: 22px;float: left;}
+.pc .about .about_main form .form_right #content{min-width: 302px;max-width: 302px; color: #a8a8a8;font-size: 13.54px;
+												margin-bottom: 10px;min-height: 79px;max-height: 79px;
+												line-height: 32px;
+												border: 1px #eca234 solid;padding-left: 7px;}
+
+.pc .about .about_main form .form_right #contact_submit{width: 302px;height: 34px; color: #fff;font-size: 11.94px;
+										  height: 32px; line-height: 32px;text-align: center;
+										  background: #e88901;-webkit-tap-highlight-color:transparent;}
+.pc .about .about_main form .form_right #contact_submit:hover{background: #cc7700;}
+
+.pc .about ul.foot{display: block;width: 290px;height: 20px;margin: 20px auto 10px;clear: both;}
+.pc .about ul.foot li{display: block;float: left;height: 20px;}
+.pc .about ul.foot li:nth-of-type(1){border-right: 1px #4b4b4b solid;}
+.pc .about ul.foot li:nth-of-type(2){border-right: 1px #4b4b4b solid;}
+.pc .about ul.foot li a{display: block; color: #000;font-size: 15.4px;height: 20px;line-height: 20px;
+								margin-left: 22px;margin-right: 22px;}
+.pc .about ul.foot li a:hover{background: #CCCCCC;}
+.pc .about .provider{display: block; color: #000; width: 100%;font-size: 16.72px;text-align: center;}
+
+
+
+.pc #com_d { cursor: pointer;  width: 90px; height: 90px;border: 0px;
+		 margin: 0px; padding: 0px;
+		 position: fixed; right: 40px; bottom: 40px;
+		 background: url("../img/top.png") no-repeat center center; z-index: 999; }
+.pc #com_d:hover { background: url("../img/top.png") no-repeat center center; }
+
+
+
+/*弹窗提示*/
+
+.pop_up_prompts,.toastInfo{display:none;position:absolute;width:100%;
+			text-align:center;font-size:1rem;height:30px;line-height:30px;color:#fff;}
+.pop_up_prompts span,.toastInfo span{background-color:#a5a3a3;display:inline-block;border-radius:5px;padding:0px 10px;}
+.toastInfo{bottom: 35px;}
+.pop_up_prompts{bottom: 160px;}
+
+/*PC端样式   结束*/
+
+
+
+
+
+/*
+ * 以下为移动端样式
+ * 2018-08-13  20：02：31
+ * HQS
+ * */
+/*赛程  对抗  赛程*/ 
+.box2{width: 100%;text-align: center;background: #fff;}
+.box2 .diamonds{width: 90%;margin: 0 auto;}
+.box2 .diamonds .jointly{width: 100%;color: #2d2d2d;font-size: 1rem;font-weight: 900;font-family: sans-serif;}
+.box2 .diamonds .contentTitle{margin: 0 auto;height: 3rem;line-height: 3rem;}
+.box2 .diamonds .contentTime span{display: block; width: 1%;height: inherit;float: left;background: #54b1fa;}
+.box2 .game{float: left;}
+.box2 .game:nth-of-type(1),.box2 .game:nth-of-type(3){width: 36%;}
+.box2 .game:nth-of-type(2){width: 28%;}
+.box2 .game:nth-of-type(1) img,
+.box2 .game:nth-of-type(3) img{display: block; width: 68%;border-radius: 50%;margin: 0.5rem auto 0;}
+.box2 .game:nth-of-type(1) p,.box2 .game:nth-of-type(3) p{line-height: 3.2rem;}
+.box2 .game:nth-of-type(2) .Record{color: #2d2d2d;font-weight: 900;font-size: 0.7rem;}
+.box2 .game:nth-of-type(2) .condition{color: #818181;font-weight: 700;font-size: 0.6rem;
+												-webkit-transform: scale(0.85);
+											    transform: scale(0.85);
+											    -o-transform: scale(0.85);    /*针对能识别-webkit的opera browser设置*/}
+.box2 .game:nth-of-type(2) .score{color: #2d2d2d;font-weight: 900;font-size: 1.3rem;}
+
+
+/*循环 列表*/
+.box3{text-align: center;background: #fff;}
+.box3 .lump{margin-bottom: 1rem;}
+.box3 .lump .contentHeader{border-bottom: none;color: #303030;}
+.box3 .lump .chunk{width: 94%;float: right;clear: both;line-height:2rem;}
+.box3 .lump .chunk .piece{border-top: 1px #c9c9c9 solid;border-left: 1px #c9c9c9 solid;}
+.box3 .lump .chunk .piece .left{width: 25%;float: left;}
+.box3 .lump .chunk .piece .left .list{display: block;width: 100%; height: 2rem;font-weight: 600;color: #343434;font-size: 0.6rem;border-bottom: 1px #c9c9c9 solid;}
+.box3 .lump .chunk .piece .left .lineHeight{line-height:1rem;}
+
+.box3 .lump .chunk .piece .content{width: 75%;float: right;}
+.box3 .lump .chunk .piece .content .list{width: 25%;float: left;}
+.box3 .lump .chunk .piece .content .list span{display: block;width: 100%;height: 2rem;font-size: 0.6rem;border-bottom: 1px #c9c9c9 solid;}
+.box3 .lump .chunk .piece .content .list .ranking{color: #797979;}
+.box3 .lump .chunk .piece .content .list .teamLogo img{width: 1.2rem;vertical-align: middle;}
+.box3 .lump .chunk .piece .content .list .TeamName{color: #616161;}
+
+.box3 .lump .chunk .receptacle{width: 92%; margin-top: 1rem;float: left;
+							   height: 0.7rem;border-radius: 0.35rem;background: #c9c9c9;}
+.box3 .lump .chunk .receptacle span{display: block;height: inherit;background: #51B2FC;border-radius: 0.35rem;float: left;}
+
+
+
+/*固定导航*/
+.share1{background: #0079fe;}
+
+
+/*5.5英寸   414*736尺寸的屏幕  如iPhone6 Plus、iPhone6s Plus、iPhone7 Plus、魅族MX5  1920x1080  /3★*/ 
+@media only screen and (max-width: 414px) {
+	.particular .main .bonus{background-position-y: 6.6rem;height: 14.2rem;}
+	.information .info_left .info_left_top .signature{width: 45%;}
+	
+	.takePart{ margin-top: 26%;}
+	.takePart .content .selectDiv .module2 img{width: 49%;margin: 0.3rem auto;}
+	
+	.guessing .content .game:nth-of-type(1) img,.guessing .content .game:nth-of-type(3) img{height: 5.278rem;}
+	
+	.mobile .nav{bottom: 4rem;}
+	.share{bottom: 7rem;}
+	
+	.GameResults .two .second .three,.GameResults .two .second .five{width: 0.5%;}
+	.GameResults .two .second .equal div .area span{max-width: 62%;}
+}
+/*5.96英寸  412*732尺寸的屏幕  如谷歌Nexus 6   2K 2560x1440  /3.5★*/
+@media only screen and (max-width: 412px) {
+	.particular .main .bonus{background-position-y: 6.6rem;height: 14.1rem;}
+	.information .info_left .info_left_top .signature{width: 46%;}
+	
+	.takePart{ margin-top: 26%;}
+	.takePart .content .selectDiv .module2 img{width: 50%;margin: 0.3rem auto;}
+	
+	.guessing .content .game:nth-of-type(1) img,.guessing .content .game:nth-of-type(3) img{height: 5.252rem;}
+	
+	.mobile .nav{bottom: 4rem;}
+	.share{bottom: 7rem;}
+	
+	.GameResults .two .second .three,.GameResults .two .second .five{width: 0.5%;}
+	.GameResults .two .second .equal div .area span{max-width: 61%;}
+}
+/*5.2英寸   411*731尺寸的屏幕  如 谷歌Nexus 5x   1920x1080  /2.625★*/
+@media only screen and (min-width: 376px) and (max-width: 411px) {
+	.particular .main .bonus{background-position-y: 6.5rem;height: 14rem;}
+	.information .info_left .info_left_top .signature{width: 47%;}
+	
+	.takePart{ margin-top: 24%;}
+	.takePart .content .selectDiv .module2 img{width: 50%;margin: 0.3rem auto;}
+	
+	.guessing .content .game:nth-of-type(1) img,.guessing .content .game:nth-of-type(3) img{height: 5.24rem;}
+	
+	.mobile .nav{bottom: 4rem;}
+	.share{bottom: 7rem;}
+	
+	.GameResults .two .second .three,.GameResults .two .second .five{width: 0.6%;}
+	.GameResults .two .second .equal div .area span{max-width: 60%;}
+}
+
+/*4.7英寸   375*667尺寸的屏幕  如iPhone6、iPhone7、iPhone 6s   1334x750*/
+@media only screen and (min-width: 361px) and (max-width: 375px) {
+	.particular .main .bonus{background-position-y: 5.9rem;height: 12rem;}
+	.information .info_left .info_left_top .signature{width: 51%;}
+	
+	.takePart{ margin-top: 16%;}
+	.takePart .content .selectDiv .module2 img{width: 60%;margin: 0.1rem auto;}
+	
+	.guessing .content .game:nth-of-type(1) img,.guessing .content .game:nth-of-type(3) img{height: 4.782rem;}
+	
+	.mobile .nav{bottom: 4rem;}
+	.share{bottom: 7rem;}
+	
+	.GameResults .two .second .three,.GameResults .two .second .five{width: 0.7%;}
+	.GameResults .two .second .equal div .area span{max-width: 58%;}
+}
+/*4.95英寸  360*640尺寸的屏幕  如 谷歌Nexus 5     1920x1080 /3★*/
+@media only screen and (min-width: 321px) and (max-width: 360px) {
+	.particular .main .bonus{background-position-y: 5.7rem;height: 11rem;}
+	.information .info_left .info_left_top .signature{width: 52%;}
+	
+	.takePart{ margin-top: 12%;}
+	.takePart .content .selectDiv .module2 img{width: 60%;margin: 0.3rem auto;}
+	
+	.guessing .content .game:nth-of-type(1) img,.guessing .content .game:nth-of-type(3) img{height: 4.5899rem;}
+	
+	.mobile .nav{bottom: 4rem;}
+	.share{bottom: 7rem;}
+	
+	.GameResults .two .second .three,.GameResults .two .second .five{width: 0.8%;}
+	.GameResults .two .second .equal div .area span{max-width: 56%;}
+}
+/*4.0英寸   320*568尺寸的屏幕  如iPhone5、iPhone SE   1136x640*/
+@media only screen and (max-width: 320px) {
+	.particular .main .bonus{background-position-y: 5.1rem;height: 10rem;}
+	.information .info_left .info_left_top .signature{width: 58%;}
+	
+	.takePart{ margin-top: 3%;}
+	.takePart .content .selectDiv .module2 img{width: 60%;margin: 0.3rem auto;}
+	
+	.guessing .content .game:nth-of-type(1) img,.guessing .content .game:nth-of-type(3) img{height: 4.08rem;}
+	
+	.mobile .nav{bottom: 4rem;}
+	.share{bottom: 7rem;}
+	
+	.GameResults .two .second .three,.GameResults .two .second .five{width: 0.8%;}
+	.GameResults .two .second .equal div .area span{max-width: 50%;}
+}

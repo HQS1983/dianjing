@@ -354,7 +354,11 @@ $(function(){
 	});
 	//赛事详情-大逃杀  结束
 	
-	
+
+
+
+
+
 	
 	//赛事详情-对抗  开始
 	//对阵图、赛程、排行
@@ -364,18 +368,84 @@ $(function(){
 		$(this).siblings().removeClass("avter");
 		if ( $(this).index()==0 || $(this).index()==1 ) {
 			$(".first .module2").removeClass("dis_none");
+			if($(this).index()==0){
+				$(".box1").removeClass("dis_none");
+				$(".box1").siblings().addClass("dis_none");
+			}else{
+				$(".box2").removeClass("dis_none");
+				$(".box2").siblings().addClass("dis_none");
+			}
+			$(".first .module2").attr("data-val",$(this).index());
 		} else{
 			$(".first .module2").addClass("dis_none");
+			$(".box3").removeClass("dis_none");
+			$(".box3").siblings().addClass("dis_none");
 		}
 	});
 	//小组赛、淘汰赛、决赛
 	$(".grouping").on("click",function(){
-//		$(this).index();
+		var dataVal = $(this).parent().parent().attr("data-val");
 		$(this).addClass("avter");
 		$(this).siblings().removeClass("avter");
-		$(".sortTitle").text($(this).text());
+		if (dataVal==0) {
+			$(".box1 .sortTitle").text($(this).text());
+		} else{
+			$(".box2 .contentTitle").text($(this).text());
+		}
 	});
 	
+	//排行   比赛结束后 生成  全场最佳
+	function chunk2(){
+		var html="";
+		for(var o=0;o<=2;o++ ){
+			html += '<div class="chunk">'+
+						'<div class="mold">'+
+							'<img src="img/competition/icon_integral.png"/>'+
+						'</div>'+
+						'<div class="equal first">'+
+							'<div class="space">'+
+								'<img src="img/edg/captain1.png"/>'+
+							'</div>'+
+							'<p class="name apostrophe">'+o+'暴风眼</p>'+
+							'<p class="count apostrophe">520</p>'+
+						'</div>'+
+						'<div class="equal second">'+
+							'<div class="space">'+
+								'<img src="img/edg/captain2.png"/>'+
+							'</div>'+
+							'<p class="name apostrophe">2暴风眼</p>'+
+							'<p class="count apostrophe">123</p>'+
+						'</div>'+
+						'<div class="equal third">'+
+							'<div class="space">'+
+								'<img src="img/edg/captain3.png"/>'+
+							'</div>'+
+							'<p class="name apostrophe">2暴风眼</p>'+
+							'<p class="count apostrophe">88</p>'+
+						'</div>'+
+					'</div>';
+		}
+		$(".best2 .content").append(html);
+	}
+	chunk2();
+	
+	//赛程    排行
+	function CrunchiesRanking2(){
+		var html="";
+		for(var o=0;o<=9;o++ ){
+			html += '<a href="javascript:;">'+
+						'<div class="list">'+
+							'<span class="ranking">'+(o+1)+'</span>'+
+							'<span class="TeamName apostrophe">'+o+2+'</span>'+
+							'<span class="teamLogo"><img src="img/public/icon_Crunchies'+(o+1)+'.png"></span>'+
+							'<span class="member">50</span>'+
+							'<span class="totalNumber">30</span><span class="combatGains">30</span>'+
+						'</div>'+
+					'</a>';
+		}
+		$(".box3 .CrunchiesRanking").append(html);
+	}
+	CrunchiesRanking2();
 	
 	//赛事详情-对抗  结束
 });

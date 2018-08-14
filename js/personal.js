@@ -194,7 +194,7 @@ $(function(){
 							'<div class="bottomFunction">'+
 								'<p class="like apostrophe"><a class="icon_like" id="icon_like1" href="javascript:;"><img src="img/personal/icon_like.png"/><span>'+2+qj+1+'</span></a></p>'+
 								'<p class="criticism"><a class="icon_criticism" id="icon_criticism1" href="javascript:;"><img src="img/personal/icon_criticism.png"/>评论(<span class="num">+'+2+qj+'</span>)</a></p>'+
-								'<p class="share"><a class="icon_share" id="icon_share1" href="javascript:;"><img src="img/personal/icon_share.png"/>分享</a></p>'+
+								'<p class=""><a class="icon_share" id="icon_share1" href="javascript:;"><img src="img/personal/icon_share.png"/>分享</a></p>'+
 							'</div>'+
 						'</div>'+
 					'</div>';

@@ -28,13 +28,12 @@ $(function(){
     
     
     //moble/移动端部分js代码
-        
     //点击关注按钮
     $("#navButtonAttention").on("click",function(){
     	layer.msg("此功能暂未开放！");
     });
 
-	//循环首页 顶部  海报
+	//循环 顶部  海报
 	function bannerSwiper(){
 		var html="";
 		for(var QQ=0; QQ<=3; QQ++ ){
@@ -48,13 +47,62 @@ $(function(){
 			loop: true,//在原本slide前后复制若干个slide(默认一个)并在合适的时候切换，让Swiper看起来是循环的
 //			autoplay:3000,
 //			speed:3000,
-			//grabCursor : true,//鼠标覆盖Swiper时指针会变成手掌形状，拖动时指针会变成抓手形状
-			//parallax:true,//开启视差效果,需要的元素上增加data-swiper-parallax属性
 	        autoplayDisableOnInteraction : false,
 			pagination: '#bannerpagination',
 			paginationClickable :true,//此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换。
 	});
-	
+
+	//所有游戏
+	function AllGames(){
+		//var neme = {"offset":0,"limit":4};
+		$.ajax({
+			type:"get",
+			url:"/api/game/",
+			async:true,
+//			data:JSON.stringify(neme),
+			//data:{"offset":0,"limit":4},   
+			contentType:"application/json",
+			dataType:"json",               
+			success:function(res){
+				if ( res.code == 0 ) {
+					if ( res.data.length ) {
+						$.each(res.data,function(i,item){
+							if( i>3 ){ return false; }
+							$(".AllGames .content").append('<a class="game"  href="game.html?game_id='+
+							item["id"]+'"><img src="'+
+							item["icon"]+'"/><p>'+
+							item["game_name"]+'</p>');
+						});
+                        if (res.data.length>4){
+    						$(".AllGamesButton").removeClass("dis_none");
+                            
+                        }
+					} else{
+						//没有 游戏
+						if (res.data.length == 0) {
+							$(".AllGames .content").append('<p class="noGame">暂无游戏~</p>');
+						}
+						$(".AllGamesButton").addClass("dis_none");
+					}
+					//var Html = "";
+//					for (var i=0; i <= res.data.length; i++) {
+//						Html+='<a class="game" target="_blank" href="'+res.data[i].tieba_url+'"><img src="'+res.data[i].icon+'"/><p class="">'+res.data[i].game_name+'</p>'; 
+//							
+//						console.log(res.data[i].tieba_url);
+//						console.log(res.data[i].icon);
+//						console.log(res.data[i].game_name);
+//						console.log(res.data[i].id);
+//					}
+//					$(".AllGames .content").html(Html);
+				} else{
+					console.log(res.msg);
+				}
+			},error:function(res){
+				console.log(res.message);
+			}
+		});
+	}
+//	AllGames();
     
     //获取完整的日期
     function acquisitionTime(){
@@ -64,10 +112,9 @@ $(function(){
 	    window.strDate = date.getDate();
     }
     
-    //获取完整的日期
+    //获取现在时间
 	function getNowFormatDate() {
 	    acquisitionTime();
-	    NoCompetitiontoday(strDate);
 	    window.d = new Date(year, (date.getMonth()+1), 0);
 	    window.dataNum=d.getDate();
 		bannerSwiper2(d.getDate());
@@ -131,43 +178,80 @@ $(function(){
 	}
 	getNowFormatDate();
 	
+	//当前赛事
+	function TheCurrentEvent(){
+        var year = 2018;
+        var month = 7
+		$.ajax({
+			type:"get",
+			url:"/api/eventforeshow/",
+			async:true,
+			data:{"offset":0,"limit":100,"year":year,"month":month},
+			contentType:"application/json",
+			dataType:"json",
+			success:function(res){
+				if ( res.code == 0 ) {
+					$.each(res.datas,function(i,item){
+                        var status = item['status']
+                        var status_class = 'status_underway'
+                        var isvideo = '直播'
+                        if (status=='等待开赛') {
+                            isvideo = '敬请期待'
+                        }else if(status =='比赛中'){
+                            isvideo = '直播'
+                        }else{
+                            isvideo ='集锦'
+                            status_class = 'status_complete'
+                        }
+                        var html = '<a class="main fix" href="competition.html?event_id='+item['event_id']+'"><img class="GamePreview" src="'+item['event_icon']+'"/><div class="description">'
+                        html += '<p class="apostrophe">'+item['events_title']+'</p><p>'+item['event_type_name']+'</p>'
+                        html += '</div><div class="status">'
+                        html += '<p class="'+status_class+'"><span></span> '+item['status']+'</p>'
+                        html += '<button type="button"><img src="img/icon_play.png"/> '+isvideo+'</button>'
+                        html += '</div>'
+                        html +='</a>'
+						$(".TheCurrentEvent .content").append(html);
+					});
+				} else{
+					console.log(res.msg);
+				}
+			},error:function(res){
+				console.log(res.message);
+			}
+		});
+	}
+//	TheCurrentEvent();
+	
 	
     //当前赛事  月份选择 【左边】
 	$(".Aleft").on("click",function(){
 		acquisitionTime();
-//	    NoCompetitiontoday();
 		strDate=1;
+		
+		pClass();
+		EventList();
+		
 	    var i = parseInt($(this).attr("data-num"));
 	    var val = parseInt($(this).attr("data-val"));
 	    
 		var dataMonth = parseInt($(this).attr("data-month"));//当前月份
 		var addUp = parseInt($(this).attr("data-addUp"));//当前跳转月份
-		console.log(addUp);
 	    if ( (addUp-1) >= 1 ) {
 	    	if ( (addUp-1) < (date.getMonth() + 1) ) {
 	    		dd = new Date(year, (date.getMonth() + 1-val), 0);
 		    	dataNum2=dd.getDate();
 			    $(this).attr("data-val",val+1);
 		    	$(".Aright").attr("data-val",val+1);
-		    	
-		    	console.log((date.getMonth() + 1-val)+"月份");
-			    console.log(dataNum2+"个日子");
 	    	}else if( (addUp-1) == (date.getMonth() + 1) ){
 	    		dd = new Date(year, (date.getMonth() + 1), 0);
 		    	dataNum2=dd.getDate();
 		    	$(this).attr("data-val","1");
 		    	$(".Aright").attr("data-val","1");
-		    	
-		    	console.log((date.getMonth() + 1)+"月份");
-			    console.log(dataNum2+"个日子");
 	    	}else{
 	    		dd = new Date(year, (date.getMonth() + 1+(val-2)), 0);
 		    	dataNum2=dd.getDate();
 		    	$(this).attr("data-val",val-1);
 		    	$(".Aright").attr("data-val",val-1);
-		    	
-		    	console.log((date.getMonth() + 1+(val-2))+"月份");
-			    console.log(dataNum2+"个日子");
 	    	}
 		    	
 		    html="";
@@ -183,7 +267,7 @@ $(function(){
 
 		var thisText = $(this).text();
 		if( thisText == "一月" ){
-			$(this).text("去年十二月");
+			$(this).text("去年");
 			$(".MONTH").text("一月");
 			$(".Aright").text("二月");
 		} else if( thisText == "二月" ){
@@ -232,12 +316,16 @@ $(function(){
 	//当前赛事  月份选择 【右边】
 	$(".Aright").on("click",function(){
 		acquisitionTime();
+		
+		pClass();
+		EventList();
+		
 	    var i = parseInt($(this).attr("data-num"));
 	    var val = parseInt($(this).attr("data-val"));
 	    
 		var dataMonth = parseInt($(this).attr("data-month"));//当前月份
 		var addUp = parseInt($(this).attr("data-addUp"));//当前跳转月份
-		console.log(addUp);
+
 	    if ( (addUp+1) <= 12 ) {
 	    	if ( (addUp+1) > (date.getMonth() + 1) ) {
 	    		dd = new Date(year, (date.getMonth() + 1+val), 0);
@@ -252,17 +340,11 @@ $(function(){
 		    	dataNum2=dd.getDate();
 		    	$(this).attr("data-val","1");
 		    	$(".Aright").attr("data-val","1");
-		    	
-		    	console.log((date.getMonth() + 1)+"月份");
-			    console.log(dataNum2+"个日子");
 	    	} else{
 	    		dd = new Date(year, (date.getMonth() + 1-(val-2)), 0);
 		    	dataNum2=dd.getDate();
 			    $(this).attr("data-val",val-1);
 			    $(".Aleft").attr("data-val",val-1);
-			    
-		    	console.log((date.getMonth() + 1-(val-2))+"月份");
-			    console.log(dataNum2+"个日子");
 	    	}
 		    	
 		    html="";
@@ -320,7 +402,7 @@ $(function(){
 		} else if( thisText == "十二月" ){
 			$(".Aleft").text("十一月");
 			$(".MONTH").text("十二月");
-			$(this).text("新年一月");
+			$(this).text("新年");
 			return false;
 		}
 	});
@@ -331,14 +413,15 @@ $(function(){
 		var html="",playArea="";
 		for(var QQ=1; QQ<=dataNum; QQ++ ){
 			html += '<div class="swiper-slide"><a href="javascript:;">'+QQ+'</a></div>';
+			pClass(dataNum);
+			arrangement(dataNum);
 		}
 		$("#bannerSwiper2 .swiper-wrapper").append(html);
-		//$("#bannerSwiper2 .swiper-slide").eq(0).remove();
 	}
 	bannerSwiper2();
 	
 	
-	//循环当前赛事当天包含的游戏【第一个】
+	//那天有的游戏  即  那天的赛事 的游戏名称
 	function pClass(activeIndex){
 		var html="",playArea="";
 		for(var QQ=0; QQ<=activeIndex; QQ++ ){
@@ -373,20 +456,8 @@ $(function(){
 		}
 		$("#pClass").text(playArea);
 	}
-	//循环月初第一天  若是无赛事 的 特殊情况
-	function NoCompetitiontoday(strDate){
-		if ((strDate-1)==0) {
-			$("#pClass").addClass("pClass2");
-			$(".indexModule").addClass("dis_none");
-			$(".pullDown").attr("data-switch","3");
-			$(".imgClass1").attr("src","");
-			$(".imgClass1,.spanClass").css({opacity:"0",height:"0"});
-			$("#arrangement").html('<p align="center" class="notHave">暂无赛事情况喔~</p>');
-		}
-	}
 	
-	
-	//循环当前赛事当天包含的游戏【所有】
+	//循环当前赛事当天包含的【所有】游戏列表
 	function EventList(activeIndex){
 		var html1="",html2="";
 		if (activeIndex == 4 || activeIndex == 5 || activeIndex == 6) {
@@ -413,7 +484,7 @@ $(function(){
 				} else if (hh==9) {
 					name = "择天记";
 				}
-				html1 += '<a class="option" href="javascript:;">'+
+				html1 +='<a class="option" href="javascript:;">'+
 							'<img class="imgClass" src="img/allgame/'+(hh+1)+'.png"/>'+
 							'<p class="pClass apostrophe">'+name+'</p>'+
 						'</a>';
@@ -431,7 +502,6 @@ $(function(){
 		if( DeviceWidth<= 320 ){
 			gameTime='<p class="gameTime">比赛时间：<br />16：00-18：00</p>';
 		}else{
-			console.log(DeviceWidth+"abc");
 			gameTime='<p class="gameTime">比赛时间：16：00-18：00</p>';
 		}
 		if (activeIndex == 4 || activeIndex == 5 || activeIndex == 6) {
@@ -471,12 +541,20 @@ $(function(){
 			$("#arrangement").html(html2);
 			$("#arrangement").append(html);
 		}else{
-			html='<p align="center" class="notHave">暂无赛事情况喔~</p>';
-			$("#arrangement").html(html);
-			
+			NoCompetitiontoday();
 		}
-		
 	}
+	
+	//循环  无赛事
+	function NoCompetitiontoday(){
+		$("#pClass").addClass("pClass2");
+		$(".indexModule").addClass("dis_none");
+		$(".pullDown").attr("data-switch","3");
+		$(".imgClass1").attr("src","");
+		$(".imgClass1,.spanClass").css({opacity:"0",height:"0"});
+		$("#arrangement").html('<p align="center" class="notHave">暂无赛事情况喔~</p>');
+	}
+	
 
 	//首页 当前赛事  日历
 	var mySwiper = new Swiper('#bannerSwiper2',{
@@ -487,7 +565,6 @@ $(function(){
     		observer:true,//修改swiper自己或子元素时，自动初始化swiper
     		//observeParents:true,//修改swiper的父元素时，自动初始化swiper
     		onSlideChangeStart: function(swiper){ //回调函数，swiper从一个slide过渡到另一个slide结束时执行
-    			console.log(strDate+"号");
     			pClass(swiper.activeIndex);  //当发生  滚动日历的操作，就自动循环当天的第一个游戏是否存在
     			EventList(swiper.activeIndex); //循环当前赛事当天包含的游戏【所有】
     			arrangement(swiper.activeIndex); //循环  当前赛事 的其中一种游戏的赛事情况
@@ -511,7 +588,7 @@ $(function(){
 			$(".spanClass").css("background-image","url(img/index/calendar_pullDown.png)");
 		}
 	});
-	
+
 	//当前赛事  选择游戏
 	function optionSelect(){
 		$(".option").on("click",function(){
@@ -525,6 +602,9 @@ $(function(){
 			}
 		});
 	}
+	//首页日历  轮播当前赛事   【结束】
+	
+	
 
 	function GetQueryString(name) {
 	     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
@@ -567,116 +647,6 @@ $(function(){
 		});			
 	}
 
-    $(".Crunchies").on("click",function(){
-    	if ( $(this).index() == 0 ) {
-    		$(this).addClass("avter");
-    		$(this).siblings().removeClass("avter");
-    		$(".TeamLIst").removeClass("dis_none");
-    		$(".EventsLIst").addClass("dis_none");
-    	} else{
-    		$(this).addClass("avter");
-    		$(this).siblings().removeClass("avter");
-    		$(".EventsLIst").removeClass("dis_none");
-    		$(".TeamLIst").addClass("dis_none");
-    	}
-	});
-	
-	//所有游戏
-	function AllGames(){
-		//var neme = {"offset":0,"limit":4};
-		$.ajax({
-			type:"get",
-			url:"/api/game/",
-			async:true,
-//			data:JSON.stringify(neme),
-			//data:{"offset":0,"limit":4},   
-			contentType:"application/json",
-			dataType:"json",               
-			success:function(res){
-				if ( res.code == 0 ) {
-					if ( res.data.length ) {
-						$.each(res.data,function(i,item){
-							if( i>3 ){ return false; }
-							$(".AllGames .content").append('<a class="game"  href="game.html?game_id='+
-							item["id"]+'"><img src="'+
-							item["icon"]+'"/><p>'+
-							item["game_name"]+'</p>');
-						});
-                        if (res.data.length>4){
-    						$(".AllGamesButton").removeClass("dis_none");
-                            
-                        }
-					} else{
-						//没有 游戏
-						if (res.data.length == 0) {
-							$(".AllGames .content").append('<p class="noGame">暂无游戏~</p>');
-						}
-						$(".AllGamesButton").addClass("dis_none");
-					}
-					//var Html = "";
-//					for (var i=0; i <= res.data.length; i++) {
-//						Html+='<a class="game" target="_blank" href="'+res.data[i].tieba_url+'"><img src="'+res.data[i].icon+'"/><p class="">'+res.data[i].game_name+'</p>'; 
-//							
-//						console.log(res.data[i].tieba_url);
-//						console.log(res.data[i].icon);
-//						console.log(res.data[i].game_name);
-//						console.log(res.data[i].id);
-//					}
-//					$(".AllGames .content").html(Html);
-				} else{
-					console.log(res.msg);
-				}
-			},error:function(res){
-				console.log(res.message);
-			}
-		});
-	}
-//	AllGames();
-
-	//当前赛事
-	function TheCurrentEvent(){
-        var year = 2018;
-        var month = 7
-		$.ajax({
-			type:"get",
-			url:"/api/eventforeshow/",
-			async:true,
-			data:{"offset":0,"limit":100,"year":year,"month":month},
-			contentType:"application/json",
-			dataType:"json",
-			success:function(res){
-				if ( res.code == 0 ) {
-					$.each(res.datas,function(i,item){
-                        var status = item['status']
-                        var status_class = 'status_underway'
-                        var isvideo = '直播'
-                        if (status=='等待开赛') {
-                            isvideo = '敬请期待'
-                        }else if(status =='比赛中'){
-                            isvideo = '直播'
-                        }else{
-                            isvideo ='集锦'
-                            status_class = 'status_complete'
-                        }
-                        var html = '<a class="main fix" href="competition.html?event_id='+item['event_id']+'"><img class="GamePreview" src="'+item['event_icon']+'"/><div class="description">'
-                        html += '<p class="apostrophe">'+item['events_title']+'</p><p>'+item['event_type_name']+'</p>'
-                        html += '</div><div class="status">'
-                        html += '<p class="'+status_class+'"><span></span> '+item['status']+'</p>'
-                        html += '<button type="button"><img src="img/icon_play.png"/> '+isvideo+'</button>'
-                        html += '</div>'
-                        html +='</a>'
-						$(".TheCurrentEvent .content").append(html);
-					});
-				} else{
-					console.log(res.msg);
-				}
-			},error:function(res){
-				console.log(res.message);
-			}
-		});
-	}
-//	TheCurrentEvent();
-	
 	//热门赛事
 	function PopularEvents(){
 		$.ajax({
@@ -719,8 +689,24 @@ $(function(){
         });
         return image
     }
-    
-    //首页 排行榜  战队榜
+
+	//排行榜 信息 切换
+    $(".Crunchies").on("click",function(){
+    	if ( $(this).index() == 0 ) {
+    		$(this).addClass("avter");
+    		$(this).siblings().removeClass("avter");
+    		$(".TeamLIst").removeClass("dis_none");
+    		$(".EventsLIst").addClass("dis_none");
+    	} else{
+    		$(this).addClass("avter");
+    		$(this).siblings().removeClass("avter");
+    		$(".EventsLIst").removeClass("dis_none");
+    		$(".TeamLIst").addClass("dis_none");
+    	}
+	});
+	
+
+    //排行榜  战队榜
     function  TeamEvent(){
         $.ajax({
             type:"get",
@@ -798,7 +784,7 @@ $(function(){
     }
 //  TeamEvent();
 
-    //赛事榜
+    //排行榜  赛事榜
     function EventRank(){
         $.ajax({
             type:"get",
@@ -861,7 +847,6 @@ $(function(){
         setCookie('token',getUrlParms('token'))
     }
     if(getCookie('user_id')=='null'){
-
         setCookie("user_id",getUrlParms('user_id'))
     }
 	

@@ -203,10 +203,11 @@
 //	})
     //循环  成员管理
     function management(){
-    	var html="",html2="",html3="",html4="",html5="",html6="",firstPage="",post="";
+    	var html="",html2="",html3="",post="";
 		for(var i=1; i<=23; i++ ){
 			if ( i==1) {
 				post="队长";
+				html3='';
 			}else if( i==2||i==3){
 				post="副队长";
 				html3='<button type="button" class="buttonManage">管理</button>';
@@ -229,13 +230,8 @@
     }
     management();
     
-    //首页 顶部 海报  图片轮播
+    //成员管理 轮播
 	var mySwiper = new Swiper('#bannerSwiper',{
-		//loop: true,//在原本slide前后复制若干个slide(默认一个)并在合适的时候切换，让Swiper看起来是循环的
-		//autoplay:3000,
-		//speed:3000,
-		//grabCursor : true,//鼠标覆盖Swiper时指针会变成手掌形状，拖动时指针会变成抓手形状
-		//parallax:true,//开启视差效果,需要的元素上增加data-swiper-parallax属性
         autoplayDisableOnInteraction : false,
 		pagination: '#bannerpagination',
 		paginationType : 'fraction',//把轮播的分页器 点点 改为 数字

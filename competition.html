@@ -158,7 +158,7 @@
 				<a class="aButton" id="guessing" href="javascript:;">竞猜</a>
 			</div>
 			<div class="main fix">
-				<div class="divContent event_details dis_none">
+				<div class="divContent event_details">
 					<div class="events shadow2 fix">
 						<a class="fix" href="competition.html">
 							<p class="description"><img src="img/public/icon_AllGames1.png"/>2018ZUEL 浙江省高校电子竞技联赛春季赛</p>
@@ -223,9 +223,9 @@
 						</p>
 					</div>
 				</div>
-				<div class="divContent GameResults ">
+				<div class="divContent GameResults dis_none">
 					<!--赛事详情 大逃杀-->
-					<div class="one fix dis_none">
+					<div class="one fix">
 						<!--赛程   开始前-->
 						<div class="noGuessing shadow fix dis_none">
 							<p class="title_con">暂无赛程~</p>
@@ -324,7 +324,7 @@
 					</div>
 					
 					<!--赛事详情 对抗-->
-					<div class="two shadow fix ">
+					<div class="two shadow fix dis_none">
 						<div class="first shadow fix">
 							<div class="module1 fix">
 								<div class="module fix">
@@ -333,7 +333,7 @@
 									<a class="classification" href="javascript:;">排行</a>
 								</div>
 							</div>
-							<div class="module2 fix">
+							<div class="module2 fix" data-val="0">
 								<div class="module fix">
 									<a class="grouping avter" href="javascript:;">小组赛A组</a>
 									<a class="grouping" href="javascript:;">小组赛B组</a>
@@ -345,7 +345,12 @@
 							</div>
 						</div>
 						<div class="second shadow fix">
-							<div class="box box1 fix dis_none">
+							<!--对阵图 的内容-->
+							<div class="box box1 fix">
+								<!--无赛程-->
+								<p class="noGame dis_none">暂无对阵图信息~</p>
+								
+								<!--有对阵图信息-->
 								<div class="module one equal fix">
 									<div class="module1">
 										<p class="sortTitle apostrophe">淘汰赛（BO1）</p>
@@ -417,52 +422,105 @@
 									</div>
 								</div>
 							</div>
-							<div class="box2 fix">
+							
+							<!--赛程 的内容-->
+							<div class="box2 fix dis_none">
 								<!--无赛程-->
 								<p class="noGame dis_none">暂无赛程~</p>
 								
 								<!--有 赛程-->
 								<div class="content shadow fix ">
 									<div class="diamonds fix">
-										<div class="section shadow2 fix">
-											<p class="contentTime"><span></span>6月09日&nbsp;&nbsp;星期六</p>
-											<p class="contentTitle">小组赛A组</p>
-											<div class="game">
-												<img src="img/game/icon_Wings1.png"/>
-												<p class="apostrophe">FunPlusx</p>
-											</div>
-											<div class="game">
-												<img src="img/game/icon_vsBig.png"/>
-												<div class="status"><span class="statusLeft"></span>剩余时间<span class="statusRight"></span></div>
-												<p class="">16：00</p>
-											</div>
-											<div class="game">
-												<img src="img/game/icon_Wings2.png"/>
-												<p class="apostrophe">SunimgGaming</p>
+										<div class="section fix">
+											<p class="jointly contentTime"><span></span>6月09日&nbsp;&nbsp;星期六</p>
+											<div class="range shadow2 fix">
+												<p class="jointly contentTitle">小组赛A组</p>
+												<div class="game">
+													<img src="img/game/icon_Wings1.png"/>
+													<p class="apostrophe">FunPlusx</p>
+												</div>
+												<div class="game">
+													<p class="Record">2：0</p>
+													<div class="status"><span class="statusLeft"></span>集锦<span class="statusRight"></span></div>
+													<p class="condition">已结束</p>
+												</div>
+												<div class="game">
+													<img src="img/game/icon_Wings2.png"/>
+													<p class="apostrophe">SunimgGaming</p>
+												</div>
 											</div>
 										</div>
 										<a class="moreGuessing" href="shark.html">查看战报</a>
 									</div>
 									<div class="diamonds fix">
-										<div class="section shadow2 fix">
-											<p class="contentHeader">6月09日&nbsp;&nbsp;星期六</p>
-											<p class="contentHeader">小组赛A组</p>
-											<div class="game">
-												<img src="img/game/icon_Wings1.png"/>
-												<p class="apostrophe">FunPlusx</p>
+										<div class="section fix">
+											<p class="jointly contentTime"><span></span>6月29日&nbsp;&nbsp;星期日</p>
+											<div class="range shadow2 fix">
+												<p class="jointly contentTitle">淘汰赛（BO1）</p>
+												<div class="game">
+													<img src="img/game/icon_Wings1.png"/>
+													<p class="apostrophe">FunPlusx</p>
+												</div>
+												<div class="game">
+													<p class="Record">-：-</p>
+													<div class="status statusbg"></div>
+													<p class="condition">未开始</p>
+												</div>
+												<div class="game">
+													<img src="img/game/icon_Wings2.png"/>
+													<p class="apostrophe">SunimgGaming</p>
+												</div>
 											</div>
-											<div class="game">
-												<img src="img/game/icon_vsBig.png"/>
-												<div class="status"><span class="statusLeft"></span>剩余时间<span class="statusRight"></span></div>
-												<p class="">16：00</p>
-											</div>
-											<div class="game">
-												<img src="img/game/icon_Wings2.png"/>
-												<p class="apostrophe">SunimgGaming</p>
+										</div>
+									</div>
+									<div class="diamonds fix">
+										<div class="section fix">
+											<p class="jointly contentTime"><span></span>6月30日&nbsp;&nbsp;星期日</p>
+											<div class="range shadow2 fix">
+												<p class="jointly contentTitle">淘汰赛（BO1）</p>
+												<div class="game">
+													<img src="img/game/icon_Wings1.png"/>
+													<p class="apostrophe">FunPlusx</p>
+												</div>
+												<div class="game">
+													<p class="Record">-：-</p>
+													<div class="status statusbg"></div>
+													<p class="condition">进行中</p>
+												</div>
+												<div class="game">
+													<img src="img/game/icon_Wings2.png"/>
+													<p class="apostrophe">SunimgGaming</p>
+												</div>
 											</div>
 										</div>
 									</div>
 									
+								</div>
+							</div>
+							
+							<!--排行的内容-->
+							<div class="box3 fix dis_none">
+								<div class="best2 fix">
+									<p class="contentHeader"><img src="img/public/icon_2.png"/>全场最佳</p>
+									<div class="content fix"></div>
+								</div>
+								<!--赛程   结束后 生成以上   这个DIV-->
+								
+								<!--赛程   发生过程  和结束以后过后-->
+								<div class="classes fix">
+									<span class="list">排名</span>
+									<span class="list">战队名称</span>
+									<span class="list">战队徽章</span>
+									<span class="list">行进</span>
+									<span class="list">存活</span>
+									<span class="list">积分</span>
+								</div>
+								<div class="content fix">
+									<!--无  成绩信息-->
+									<p class="noGame dis_none">暂无成绩信息~</p>
+									
+									<!--历史成绩1-->
+									<div class="CrunchiesRanking pool fix"></div>
 								</div>
 							</div>
 						</div>

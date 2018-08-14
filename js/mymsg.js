@@ -39,6 +39,11 @@ function mymsg(){
 }
 mymsg();
 
+$(".dialogBox").on("click",function(){
+	$(".top").addClass("dis_none");
+	$(".mymsg .content").addClass("dis_none");
+	$(".mymsg .chat").removeClass("dis_none");
+});
 
 //更改绑定
 $("#send").on("click",function(){

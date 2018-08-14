@@ -222,7 +222,7 @@
 																		background: url(../img/index/calendar_pullDown.png) center center / 60% no-repeat;float: right;}
 
 .TheCurrentEvent .calendar .calendar_bottom .EventList{position: absolute;top: 2rem;left: 0;width: 100%;height: 0rem; max-height: 10rem;overflow-y: scroll;
-														border-radius: 0.3rem;background: #eae8e8;}
+														border-radius: 0.3rem;background: #eae8e8;z-index: 9;}
 .TheCurrentEvent .calendar .calendar_bottom .EventList a{display: block;width: 100%;height: 2rem;}
 
 .TheCurrentEvent .content{width: 100%;background: #fff;margin-bottom: 0.5rem;}
@@ -239,7 +239,7 @@
 														-moz-transform: scale(0.9); 	/* Firefox */
 													    -webkit-transform: scale(0.9);/* Safari 和 Chrome */}
 
-.TheCurrentEvent .content .main .description p.gameSort{display: inline-block;font-size: 0.6rem;color: #fff;padding: 0.2rem 0.3rem;border-radius: 0.2rem;}
+.TheCurrentEvent .content .main .description p.gameSort{display: inline-block;font-size: 0.6rem;color: #fff;padding: 0.2rem 0.3rem;border-radius: 0.2rem;width: 34px;height: 22px;overflow: hidden;}
 
 .bgGameSort1{background: #c33333!important;}
 .bgGameSort2{background: #2391de!important;}
