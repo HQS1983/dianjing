@@ -211,6 +211,7 @@
 	$('.CreateTeam').on("click",function(){
 //      if(getLoginStatus()){
     		popupArise();
+    		$(".bg_content").removeClass("dis_none");
 //      }
 	});
 
@@ -234,52 +235,6 @@
     		}
     	});
     	
-    	$("#file").change(function() {
-    		var objUrl = getObjectURL(this.files[0]);
-            if (this.files[0].size > 1050356 ) {
-                layer.msg("图片不能大于1MB");
-                return false;
-            }else{
-        		if (objUrl) {
-        			$(".previewImg").attr("src", objUrl);
-        		}
-            }
-
-            var imgUrl = objUrl;
-	        window.URL = window.URL || window.webkitURL;
-	      	var xhr = new XMLHttpRequest();
-	      	xhr.open("get", imgUrl, true);
-	      	// 至关重要
-	      	xhr.responseType = "blob";
-	      	xhr.onload = function () {
-		        if (this.status == 200) {
-		          	var blob = this.response;
-		          	let oFileReader = new FileReader();
-		          	oFileReader.onloadend = function (e) {
-			            let base64 = e.target.result;
-			            $("#imgBase").val(base64);
-			            return base64;
-		          	};
-		
-		          	oFileReader.readAsDataURL(blob);
-		 
-		        }
-	      	}
-      		xhr.send();
-    	});
-    	//建立一個可存取到該file的url
-    	function getObjectURL(file) {
-    		var url = null;
-    		if (window.createObjectURL != undefined) { // basic
-    			url = window.createObjectURL(file);
-    		} else if (window.URL != undefined) { // mozilla(firefox)
-    			url = window.URL.createObjectURL(file);
-    		} else if (window.webkitURL != undefined) { // webkit or chrome
-    			url = window.webkitURL.createObjectURL(file);
-    		}
-    		return url;
-    	}
-    	
     	$(".found").on("click",function(){
     		if ( $("#teamName").val() == "" ) {
     			layer.msg("战队名称不能为空！");
@@ -294,12 +249,14 @@
     			layer.msg("战队宣言不能为空！");
     			return false;
     		}
-
+			
+			$(".waitBg").removeClass("dis_none");
+			
             var _data = {"token":getCookie('yz_tk'),
                 "user_id":getCookie('yz_id'),"team_name":$("#teamName").val(),"team_details":$(".teamManifesto").val(),
                 "team_type":$("#type").val()}
-            var team_icon = $("#imgBase").val()
-            _data['team_icon'] = team_icon
+            var team_icon = $("#previewImg").attr("src");
+            _data['team_icon'] = team_icon;
             var __data = JSON.stringify(_data);
 
             $.ajax({
@@ -311,6 +268,9 @@
                 success:function(res){
 
                     if (res.code==0){
+                    	$(".bg_content,.waitBg").addClass("dis_none");
+                    	popupClose();
+                    	
                         layer.msg(res.msg);
 
                         $('.TeamManage').addClass('dis_none');
@@ -326,22 +286,16 @@
                             window.location = "login.html";
                         },1000);
                     }else{
+                    	$(".waitBg").addClass("dis_none");
                         layer.msg(res.msg);
                     }
                 },error:function(res){
-                    // $(".previewImg").attr("src", objUrl);
-                    // alert(this.files[0].size);
-                    // if (true) {
-
-                    // }
+                    $(".waitBg").addClass("dis_none");
                     layer.msg('出错了')
                     layer.msg(res);
                 }
             });
             
-    	});
-    	$(".ShutDownFound").on("click",function(){
-    		popupClose();
     	});
 //  }
 
@@ -481,6 +435,29 @@
 		$(".historyResults .CrunchiesRanking").append(html);
 	}
 	historyResults();
+	
+	$(window).scroll(function(){
+     
+        var scrollTop = $(this).scrollTop();    //滚动条距离顶部的高度
+        var scrollHeight = $(document).height();   //当前页面的总高度
+        var clientHeight = $(this).height();    //当前可视的页面高度
+        if(scrollTop + clientHeight >= scrollHeight){   //距离顶部+当前高度 >=文档总高度 即代表滑动到底部 count++;         //每次滑动count加1
+          // filterData(serviceTypeId,industryId,cityId,count); //调用筛选方法，count为当前分页数
+            if ( $(".CrunchiesRanking").attr("class").indexOf("avter")>-1){
+				TeamRecord(0,5,'historyResults','',"","all");
+    			TeamRecord(0,5,'NearlyWeek','', '',"w");
+            }else{
+
+            }
+          console.log('下拉bottom');
+     
+        }
+        // else if(scrollTop<=0){
+        //   //滚动条距离顶部的高度小于等于0 
+        //   //alert("下拉刷新，要在这调用啥方法？");
+     //         console.log('上拉top');
+        // }
+    });
 	
 	//循环 近一周
 	function NearlyWeek(gameOrder){

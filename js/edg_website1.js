@@ -205,6 +205,11 @@
     function management(){
     	var html="",html2="",html3="",post="";
 		for(var i=1; i<=23; i++ ){
+			if (i<=4) {
+				$(".management .content .ButtonStyle").css("opacity","0");
+			} else{
+				$(".management .content .ButtonStyle").css("opacity","1");
+			}
 			if ( i==1) {
 				post="队长";
 				html3='';
@@ -238,7 +243,7 @@
 		slidesPerView : 4,//一行显示4个
 		slidesPerGroup : 4,//在carousel mode下定义slides的数量多少为一组
 		slidesPerColumn : 2,//显示2行
-		slidesPerColumnFill : 'column',//列
+		slidesPerColumnFill : 'row',//列
 		
 		spaceBetween : 5,
 		paginationClickable :true,//此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换。

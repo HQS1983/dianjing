@@ -141,6 +141,8 @@ p.contentHeader img{width: 6%;margin-right: 0.5rem;vertical-align: middle;}
 .bgCondition2{background: #f93d3b!important;}
 .bgCondition3{background: #787878!important;}
 
+.areabg1{background: #52B1FC;}
+.areabg2{background: #BFBFBF;}
 
 .bgColor1{border-top-color: #c23433!important;}
 .bgColor2{border-top-color: #2493df!important;}
@@ -224,6 +226,7 @@ p.contentHeader img{width: 6%;margin-right: 0.5rem;vertical-align: middle;}
 .active {-webkit-transition: none;transition: none;visibility: visible;}
 .active > .bg_overlay {opacity: .6;}
 .active > .bg_content {-webkit-transform: translate(0%, 0%);transform: translate(0%, 0%);}
+.active .waitBg .wait {-webkit-transform: translate(0%, 0%);transform: translate(0%, 0%);}
 
 .bg .ShutDown{position: absolute;top:-0.8rem;right: -0.8rem;font-weight: 700;
 			  width: 3rem;height: 3rem;color: #fff;background: #000;z-index: 54;

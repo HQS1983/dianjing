@@ -275,14 +275,18 @@
 .bg_content .main .divClass .teamManifesto{display: block;min-height: 4.5rem;max-height: 4.5rem; line-height: 1.1rem;
 										   text-align: justify;padding: 0.2rem 0.3rem;}
 
-.bg_content .main .bottomButton{position: fixed;left: 0;bottom: 0;width: 100%; height: 3rem;}
-.bg_content .main .bottomButton button{width: 50%;height: 3rem;line-height: 3rem;color: #fff;font-size: 0.8rem;
+.bg_content .bottomButton{position: fixed;left: 0;bottom: 0;width: 100%; height: 3rem;}
+.bg_content .bottomButton button{width: 50%;height: 3rem;line-height: 3rem;color: #fff;font-size: 0.8rem;
 									   text-align: center;border-radius: 0.1rem;border: none;display: block;float: left;}
-.bg_content .main .found{background: #3dcbec;}
-.bg_content .main .ShutDownFound{background: #548dfb;}
-
-
-
+.bg_content .found{background: #3dcbec;}
+.bg_content .ShutDownFound{background: #548dfb;}
+			/*等待上传*/
+.waitBg{position: fixed;top: 0; right: 0; bottom: 0; left: 0;background: rgba(0,0,0,0.6);}
+.waitBg .wait{width: 76%;margin-left: 12%;background-color: white;
+			  border-radius: 0.1rem;position: relative;text-align: center;padding-bottom: 2rem;
+		      -webkit-transition: transform .15s;transition: transform .15s;
+		      -webkit-transform: translateX(100%);transform: translateX(100%);}
+.waitBg .wait img{margin: 25px auto;vertical-align: middle;}
 
 
 
@@ -292,6 +296,8 @@
 	.bg .bg_content{margin-top: 20%;}
 	.bg_content .main .divClass .uploading .preview{height: 8.355rem;}
 	.banner .content .classTeam{height: 7.8rem;}
+	
+	.wait{margin-top: 46%;}
 }
 /*5.96英寸  412*732尺寸的屏幕  如谷歌Nexus 6   2K 2560x1440  /3.5★*/
 @media only screen and (max-width: 412px) {
@@ -299,6 +305,8 @@
 	.bg .bg_content{margin-top: 20%;}
 	.bg_content .main .divClass .uploading .preview{height: 8.315rem;}
 	.banner .content .classTeam{height: 7.8rem;}
+	
+	.wait{margin-top: 44%;}
 }
 /*5.2英寸   411*731尺寸的屏幕  如 谷歌Nexus 5x   1920x1080  /2.625★*/
 @media only screen and (min-width: 376px) and (max-width: 411px) {
@@ -306,9 +314,11 @@
 	.bg .bg_content{margin-top: 19%;}
 	.bg_content .main .divClass .uploading .preview{height: 8.294rem;}
 	.banner .content .classTeam{height: 7.7rem;}
+	
+	.wait{margin-top: 43%;}
 }
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
-	
+	.wait{margin-top: 58%;}
 }
 /*4.7英寸   375*667尺寸的屏幕  如iPhone6、iPhone7、iPhone 6s   1334x750*/
 @media only screen and (min-width: 361px) and (max-width: 375px) {
@@ -316,6 +326,8 @@
 	.bg .bg_content{margin-top: 15%;}
 	.bg_content .main .divClass .uploading .preview{height: 7.569rem;}
 	.banner .content .classTeam{height: 7.1rem;}
+	
+	.wait{margin-top: 42%;}
 }
 /*4.95英寸  360*640尺寸的屏幕  如 谷歌Nexus 5     1920x1080 /3★*/
 @media only screen and (min-width: 321px) and (max-width: 360px) {
@@ -323,6 +335,8 @@
 	.bg .bg_content{margin-top: 10%;}
 	.bg_content .main .divClass .uploading .preview{height: 7.265rem;}
 	.banner .content .classTeam{height: 6.8rem;}
+	
+	.wait{margin-top: 40%;}
 }
 /*4.0英寸   320*568尺寸的屏幕  如iPhone5、iPhone SE   1136x640*/
 @media only screen and (max-width: 320px) {
@@ -330,4 +344,73 @@
 	.bg .bg_content{margin-top: 2%;}
 	.bg_content .main .divClass .uploading .preview{height: 6.458rem;}
 	.banner .content .classTeam{height: 6rem;}
+	
+	.wait{margin-top: 34%;}
+}
+
+
+/*战队 创建战队  上传图片 弹窗样式 */
+.l-btn{display: inline-block;outline: none;resize: none;border: none;
+       padding:5px 10px;background: #8C85E6;color: #fff;
+       border:solid 1px #8C85E6;border-radius: 3px;font-size: 14px;}
+.l-btn:hover{background: #8078e3;animation: anniu 1s infinite;}
+.l-btn:active{box-shadow: 0 2px 3px rgba(0,0,0,.2) inset;}
+.hidden{display: none;}
+.tailoring-container, .tailoring-container div, .tailoring-container p{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;}
+.tailoring-container{position: fixed;width: 100%;height: 100%;z-index: 1000;top: 0;left: 0;}
+.tailoring-container .black-cloth{position: fixed;width: 100%;height: 100%;background: #111;opacity: .9;z-index: 1001;}
+.tailoring-container .tailoring-content{
+    position: absolute;width: 768px;
+    height: 560px;background: #fff;z-index: 1002;left: 0;top: 0;
+
+    /* 水平垂直居中 浏览器版本号低的不支持transform */
+    /*left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -weblit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);*/
+   border-radius: 10px;box-shadow: 0 0 10px #000;padding: 10px;}
+
+.tailoring-content-one{height: 40px;width: 100%;border-bottom: 1px solid #DDD;}
+.tailoring-content .choose-btn{float: left;}
+.tailoring-content .close-tailoring{
+    display: inline-block;height: 30px;width: 30px;
+    border-radius: 100%;background: #eee;
+    color: #fff;font-size: 22px;
+    text-align: center;line-height: 30px;
+    float: right;cursor: pointer;}
+.tailoring-content .close-tailoring:hover{background: #ccc;}
+
+.tailoring-content .tailoring-content-two{width: 100%;height: 460px;position: relative;padding: 5px 0;}
+.tailoring-content .tailoring-box-parcel{
+    width: 520px;
+    height: 450px;
+    position: absolute;
+    left: 0;border: solid 1px #ddd;}
+.tailoring-content .preview-box-parcel{
+    display: inline-block;
+    width: 228px;
+    height: 450px;
+    position: absolute;
+    right: 0;padding: 4px 14px;}
+.preview-box-parcel p{color: #555;}
+
+.preview-box-parcel .square{margin-top: 10px;border: solid 1px #ddd;}
+.preview-box-parcel .circular{border-radius: 100%;margin-top: 10px;border: solid 1px #ddd;}
+
+.tailoring-content .tailoring-content-three{width: 100%;height: 40px;border-top: 1px solid #DDD;padding-top: 10px;}
+.sureCut{float: right;}
+
+@media all and (max-width: 768px) {
+    .tailoring-container .tailoring-content{width: 100%;min-width: 320px;height: 460px;}
+    .tailoring-content .tailoring-content-two{height: 360px;}
+    .tailoring-content .tailoring-box-parcel{height: 350px;}
+    .tailoring-container .tailoring-box-parcel{width: 100%;}
+    .tailoring-container .preview-box-parcel{display: none;}
 }

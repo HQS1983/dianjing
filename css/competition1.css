@@ -316,10 +316,11 @@
 .GameResults .two .second .one .module1{margin-bottom: 2rem;}
 .GameResults .two .second .equal div p{color: #707070;font-size: 0.6rem;line-height: 1rem;margin-bottom: 0.3rem;}
 .GameResults .two .second .equal div .area{height: 2.5rem;line-height: 2.5rem;color: #fff;font-size: 0.6rem;margin-bottom: 0.3rem;}
-.GameResults .two .second .equal div .area:nth-of-type(1){background: #52B1FC;}
-.GameResults .two .second .equal div .area:nth-of-type(2){background: #BFBFBF;}
 .GameResults .two .second .equal div .area img{display: inline-block;width: 16px;height: 16px; margin: 0.75rem 0.15rem 0 1.5rem;float: left;}
 .GameResults .two .second .equal div .area span{display: inline;float: left;}
+
+/*结果未出，为 问号 时*/
+.sapnResult{margin-left: 50%;}
 
 .GameResults .two .second .two,.three,.six{height: 2.5rem;}
 .GameResults .two .second .stair{height: inherit;}
